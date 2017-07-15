@@ -31,6 +31,12 @@
 		28268A5D1F1A632B008226F5 /* ProfileFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28268A5C1F1A632B008226F5 /* ProfileFeedViewController.swift */; };
 		28268A5F1F1A634B008226F5 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28268A5E1F1A634B008226F5 /* EditProfileViewController.swift */; };
 		28268A611F1A6360008226F5 /* BannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28268A601F1A6360008226F5 /* BannerViewController.swift */; };
+		28268A631F1A640F008226F5 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28268A621F1A640F008226F5 /* CommentTableViewCell.swift */; };
+		28268A661F1A646A008226F5 /* StoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28268A651F1A646A008226F5 /* StoryTableViewCell.swift */; };
+		28268A6C1F1A64E8008226F5 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28268A6B1F1A64E8008226F5 /* UserTableViewCell.swift */; };
+		28268A6E1F1A6503008226F5 /* ViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28268A6D1F1A6503008226F5 /* ViewHelper.swift */; };
+		28268A701F1A6522008226F5 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28268A6F1F1A6522008226F5 /* ProfileView.swift */; };
+		28268A731F1A6557008226F5 /* AuthLogoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28268A721F1A6557008226F5 /* AuthLogoView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +87,12 @@
 		28268A5C1F1A632B008226F5 /* ProfileFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileFeedViewController.swift; path = Controllers/ProfileFeedViewController.swift; sourceTree = "<group>"; };
 		28268A5E1F1A634B008226F5 /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EditProfileViewController.swift; path = Controllers/EditProfileViewController.swift; sourceTree = "<group>"; };
 		28268A601F1A6360008226F5 /* BannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BannerViewController.swift; path = Controllers/BannerViewController.swift; sourceTree = "<group>"; };
+		28268A621F1A640F008226F5 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommentTableViewCell.swift; path = Views/CommentTableViewCell.swift; sourceTree = "<group>"; };
+		28268A651F1A646A008226F5 /* StoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StoryTableViewCell.swift; path = Views/StoryTableViewCell.swift; sourceTree = "<group>"; };
+		28268A6B1F1A64E8008226F5 /* UserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserTableViewCell.swift; path = Views/UserTableViewCell.swift; sourceTree = "<group>"; };
+		28268A6D1F1A6503008226F5 /* ViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewHelper.swift; path = Views/ViewHelper.swift; sourceTree = "<group>"; };
+		28268A6F1F1A6522008226F5 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileView.swift; path = Views/ProfileView.swift; sourceTree = "<group>"; };
+		28268A721F1A6557008226F5 /* AuthLogoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AuthLogoView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,13 +143,12 @@
 		28268A0A1F1A5F96008226F5 /* Pictorious */ = {
 			isa = PBXGroup;
 			children = (
+				28268A401F1A6107008226F5 /* Models */,
+				28268A641F1A6418008226F5 /* Views */,
 				28268A4F1F1A6209008226F5 /* Controllers */,
 				28268A0B1F1A5F96008226F5 /* AppDelegate.swift */,
-				28268A401F1A6107008226F5 /* Models */,
 				28268A3C1F1A607E008226F5 /* Constants.swift */,
-				28268A0F1F1A5F96008226F5 /* Main.storyboard */,
-				28268A151F1A5F96008226F5 /* Assets.xcassets */,
-				28268A171F1A5F96008226F5 /* LaunchScreen.storyboard */,
+				28268A711F1A6548008226F5 /* Assets */,
 				28268A1A1F1A5F96008226F5 /* Info.plist */,
 				28268A121F1A5F96008226F5 /* Pictorious.xcdatamodeld */,
 			);
@@ -190,6 +201,29 @@
 				28268A601F1A6360008226F5 /* BannerViewController.swift */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		28268A641F1A6418008226F5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				28268A6B1F1A64E8008226F5 /* UserTableViewCell.swift */,
+				28268A6D1F1A6503008226F5 /* ViewHelper.swift */,
+				28268A6F1F1A6522008226F5 /* ProfileView.swift */,
+				28268A621F1A640F008226F5 /* CommentTableViewCell.swift */,
+				28268A651F1A646A008226F5 /* StoryTableViewCell.swift */,
+				28268A0F1F1A5F96008226F5 /* Main.storyboard */,
+				28268A171F1A5F96008226F5 /* LaunchScreen.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		28268A711F1A6548008226F5 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				28268A721F1A6557008226F5 /* AuthLogoView.xib */,
+				28268A151F1A5F96008226F5 /* Assets.xcassets */,
+			);
+			name = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,6 +339,7 @@
 				28268A191F1A5F96008226F5 /* LaunchScreen.storyboard in Resources */,
 				28268A161F1A5F96008226F5 /* Assets.xcassets in Resources */,
 				28268A111F1A5F96008226F5 /* Main.storyboard in Resources */,
+				28268A731F1A6557008226F5 /* AuthLogoView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,23 +366,28 @@
 			files = (
 				28268A141F1A5F96008226F5 /* Pictorious.xcdatamodeld in Sources */,
 				28268A4E1F1A6203008226F5 /* WelcomeViewController.swift in Sources */,
+				28268A6C1F1A64E8008226F5 /* UserTableViewCell.swift in Sources */,
+				28268A6E1F1A6503008226F5 /* ViewHelper.swift in Sources */,
 				28268A0C1F1A5F96008226F5 /* AppDelegate.swift in Sources */,
 				28268A611F1A6360008226F5 /* BannerViewController.swift in Sources */,
 				28268A4A1F1A61B4008226F5 /* Like.swift in Sources */,
 				28268A511F1A623F008226F5 /* AuthPickerViewController.swift in Sources */,
 				28268A591F1A62DC008226F5 /* CreateViewController.swift in Sources */,
+				28268A631F1A640F008226F5 /* CommentTableViewCell.swift in Sources */,
 				28268A5B1F1A62FC008226F5 /* ProfileViewController.swift in Sources */,
 				28268A3D1F1A607E008226F5 /* Constants.swift in Sources */,
 				28268A5F1F1A634B008226F5 /* EditProfileViewController.swift in Sources */,
 				28268A461F1A6171008226F5 /* Comment.swift in Sources */,
 				28268A571F1A62B5008226F5 /* CommentsTableViewController.swift in Sources */,
 				28268A551F1A628A008226F5 /* StoryViewController.swift in Sources */,
+				28268A701F1A6522008226F5 /* ProfileView.swift in Sources */,
 				28268A5D1F1A632B008226F5 /* ProfileFeedViewController.swift in Sources */,
 				28268A421F1A6135008226F5 /* User.swift in Sources */,
 				28268A4C1F1A61D6008226F5 /* Favorite.swift in Sources */,
 				28268A3F1F1A60EB008226F5 /* ModelBase.swift in Sources */,
 				28268A531F1A6266008226F5 /* FeedViewController.swift in Sources */,
 				28268A441F1A6159008226F5 /* Story.swift in Sources */,
+				28268A661F1A646A008226F5 /* StoryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
