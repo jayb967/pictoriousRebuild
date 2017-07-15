@@ -1,0 +1,556 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		28268A0C1F1A5F96008226F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28268A0B1F1A5F96008226F5 /* AppDelegate.swift */; };
+		28268A0E1F1A5F96008226F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28268A0D1F1A5F96008226F5 /* ViewController.swift */; };
+		28268A111F1A5F96008226F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28268A0F1F1A5F96008226F5 /* Main.storyboard */; };
+		28268A141F1A5F96008226F5 /* Pictorious.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 28268A121F1A5F96008226F5 /* Pictorious.xcdatamodeld */; };
+		28268A161F1A5F96008226F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28268A151F1A5F96008226F5 /* Assets.xcassets */; };
+		28268A191F1A5F96008226F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28268A171F1A5F96008226F5 /* LaunchScreen.storyboard */; };
+		28268A241F1A5F96008226F5 /* PictoriousTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28268A231F1A5F96008226F5 /* PictoriousTests.swift */; };
+		28268A2F1F1A5F96008226F5 /* PictoriousUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28268A2E1F1A5F96008226F5 /* PictoriousUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		28268A201F1A5F96008226F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 28268A001F1A5F96008226F5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 28268A071F1A5F96008226F5;
+			remoteInfo = Pictorious;
+		};
+		28268A2B1F1A5F96008226F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 28268A001F1A5F96008226F5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 28268A071F1A5F96008226F5;
+			remoteInfo = Pictorious;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		28268A081F1A5F96008226F5 /* Pictorious.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pictorious.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		28268A0B1F1A5F96008226F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		28268A0D1F1A5F96008226F5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		28268A101F1A5F96008226F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		28268A131F1A5F96008226F5 /* Pictorious.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Pictorious.xcdatamodel; sourceTree = "<group>"; };
+		28268A151F1A5F96008226F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		28268A181F1A5F96008226F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		28268A1A1F1A5F96008226F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28268A1F1F1A5F96008226F5 /* PictoriousTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PictoriousTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		28268A231F1A5F96008226F5 /* PictoriousTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictoriousTests.swift; sourceTree = "<group>"; };
+		28268A251F1A5F96008226F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28268A2A1F1A5F96008226F5 /* PictoriousUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PictoriousUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		28268A2E1F1A5F96008226F5 /* PictoriousUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictoriousUITests.swift; sourceTree = "<group>"; };
+		28268A301F1A5F96008226F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		28268A051F1A5F96008226F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28268A1C1F1A5F96008226F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28268A271F1A5F96008226F5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		282689FF1F1A5F96008226F5 = {
+			isa = PBXGroup;
+			children = (
+				28268A0A1F1A5F96008226F5 /* Pictorious */,
+				28268A221F1A5F96008226F5 /* PictoriousTests */,
+				28268A2D1F1A5F96008226F5 /* PictoriousUITests */,
+				28268A091F1A5F96008226F5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		28268A091F1A5F96008226F5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				28268A081F1A5F96008226F5 /* Pictorious.app */,
+				28268A1F1F1A5F96008226F5 /* PictoriousTests.xctest */,
+				28268A2A1F1A5F96008226F5 /* PictoriousUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		28268A0A1F1A5F96008226F5 /* Pictorious */ = {
+			isa = PBXGroup;
+			children = (
+				28268A0B1F1A5F96008226F5 /* AppDelegate.swift */,
+				28268A0D1F1A5F96008226F5 /* ViewController.swift */,
+				28268A0F1F1A5F96008226F5 /* Main.storyboard */,
+				28268A151F1A5F96008226F5 /* Assets.xcassets */,
+				28268A171F1A5F96008226F5 /* LaunchScreen.storyboard */,
+				28268A1A1F1A5F96008226F5 /* Info.plist */,
+				28268A121F1A5F96008226F5 /* Pictorious.xcdatamodeld */,
+			);
+			path = Pictorious;
+			sourceTree = "<group>";
+		};
+		28268A221F1A5F96008226F5 /* PictoriousTests */ = {
+			isa = PBXGroup;
+			children = (
+				28268A231F1A5F96008226F5 /* PictoriousTests.swift */,
+				28268A251F1A5F96008226F5 /* Info.plist */,
+			);
+			path = PictoriousTests;
+			sourceTree = "<group>";
+		};
+		28268A2D1F1A5F96008226F5 /* PictoriousUITests */ = {
+			isa = PBXGroup;
+			children = (
+				28268A2E1F1A5F96008226F5 /* PictoriousUITests.swift */,
+				28268A301F1A5F96008226F5 /* Info.plist */,
+			);
+			path = PictoriousUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		28268A071F1A5F96008226F5 /* Pictorious */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28268A331F1A5F96008226F5 /* Build configuration list for PBXNativeTarget "Pictorious" */;
+			buildPhases = (
+				28268A041F1A5F96008226F5 /* Sources */,
+				28268A051F1A5F96008226F5 /* Frameworks */,
+				28268A061F1A5F96008226F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Pictorious;
+			productName = Pictorious;
+			productReference = 28268A081F1A5F96008226F5 /* Pictorious.app */;
+			productType = "com.apple.product-type.application";
+		};
+		28268A1E1F1A5F96008226F5 /* PictoriousTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28268A361F1A5F96008226F5 /* Build configuration list for PBXNativeTarget "PictoriousTests" */;
+			buildPhases = (
+				28268A1B1F1A5F96008226F5 /* Sources */,
+				28268A1C1F1A5F96008226F5 /* Frameworks */,
+				28268A1D1F1A5F96008226F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				28268A211F1A5F96008226F5 /* PBXTargetDependency */,
+			);
+			name = PictoriousTests;
+			productName = PictoriousTests;
+			productReference = 28268A1F1F1A5F96008226F5 /* PictoriousTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		28268A291F1A5F96008226F5 /* PictoriousUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28268A391F1A5F96008226F5 /* Build configuration list for PBXNativeTarget "PictoriousUITests" */;
+			buildPhases = (
+				28268A261F1A5F96008226F5 /* Sources */,
+				28268A271F1A5F96008226F5 /* Frameworks */,
+				28268A281F1A5F96008226F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				28268A2C1F1A5F96008226F5 /* PBXTargetDependency */,
+			);
+			name = PictoriousUITests;
+			productName = PictoriousUITests;
+			productReference = 28268A2A1F1A5F96008226F5 /* PictoriousUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		28268A001F1A5F96008226F5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Jay Balderas";
+				TargetAttributes = {
+					28268A071F1A5F96008226F5 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 5EB567WJ73;
+						ProvisioningStyle = Automatic;
+					};
+					28268A1E1F1A5F96008226F5 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 5EB567WJ73;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 28268A071F1A5F96008226F5;
+					};
+					28268A291F1A5F96008226F5 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 5EB567WJ73;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 28268A071F1A5F96008226F5;
+					};
+				};
+			};
+			buildConfigurationList = 28268A031F1A5F96008226F5 /* Build configuration list for PBXProject "Pictorious" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 282689FF1F1A5F96008226F5;
+			productRefGroup = 28268A091F1A5F96008226F5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				28268A071F1A5F96008226F5 /* Pictorious */,
+				28268A1E1F1A5F96008226F5 /* PictoriousTests */,
+				28268A291F1A5F96008226F5 /* PictoriousUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		28268A061F1A5F96008226F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28268A191F1A5F96008226F5 /* LaunchScreen.storyboard in Resources */,
+				28268A161F1A5F96008226F5 /* Assets.xcassets in Resources */,
+				28268A111F1A5F96008226F5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28268A1D1F1A5F96008226F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28268A281F1A5F96008226F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		28268A041F1A5F96008226F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28268A141F1A5F96008226F5 /* Pictorious.xcdatamodeld in Sources */,
+				28268A0E1F1A5F96008226F5 /* ViewController.swift in Sources */,
+				28268A0C1F1A5F96008226F5 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28268A1B1F1A5F96008226F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28268A241F1A5F96008226F5 /* PictoriousTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28268A261F1A5F96008226F5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28268A2F1F1A5F96008226F5 /* PictoriousUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		28268A211F1A5F96008226F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 28268A071F1A5F96008226F5 /* Pictorious */;
+			targetProxy = 28268A201F1A5F96008226F5 /* PBXContainerItemProxy */;
+		};
+		28268A2C1F1A5F96008226F5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 28268A071F1A5F96008226F5 /* Pictorious */;
+			targetProxy = 28268A2B1F1A5F96008226F5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		28268A0F1F1A5F96008226F5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				28268A101F1A5F96008226F5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		28268A171F1A5F96008226F5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				28268A181F1A5F96008226F5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		28268A311F1A5F96008226F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		28268A321F1A5F96008226F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		28268A341F1A5F96008226F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5EB567WJ73;
+				INFOPLIST_FILE = Pictorious/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Jay-Balderas.Pictorious";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		28268A351F1A5F96008226F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5EB567WJ73;
+				INFOPLIST_FILE = Pictorious/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Jay-Balderas.Pictorious";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		28268A371F1A5F96008226F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 5EB567WJ73;
+				INFOPLIST_FILE = PictoriousTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Jay-Balderas.PictoriousTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pictorious.app/Pictorious";
+			};
+			name = Debug;
+		};
+		28268A381F1A5F96008226F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 5EB567WJ73;
+				INFOPLIST_FILE = PictoriousTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Jay-Balderas.PictoriousTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pictorious.app/Pictorious";
+			};
+			name = Release;
+		};
+		28268A3A1F1A5F96008226F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 5EB567WJ73;
+				INFOPLIST_FILE = PictoriousUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Jay-Balderas.PictoriousUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Pictorious;
+			};
+			name = Debug;
+		};
+		28268A3B1F1A5F96008226F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 5EB567WJ73;
+				INFOPLIST_FILE = PictoriousUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Jay-Balderas.PictoriousUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Pictorious;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		28268A031F1A5F96008226F5 /* Build configuration list for PBXProject "Pictorious" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28268A311F1A5F96008226F5 /* Debug */,
+				28268A321F1A5F96008226F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		28268A331F1A5F96008226F5 /* Build configuration list for PBXNativeTarget "Pictorious" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28268A341F1A5F96008226F5 /* Debug */,
+				28268A351F1A5F96008226F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		28268A361F1A5F96008226F5 /* Build configuration list for PBXNativeTarget "PictoriousTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28268A371F1A5F96008226F5 /* Debug */,
+				28268A381F1A5F96008226F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		28268A391F1A5F96008226F5 /* Build configuration list for PBXNativeTarget "PictoriousUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28268A3A1F1A5F96008226F5 /* Debug */,
+				28268A3B1F1A5F96008226F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		28268A121F1A5F96008226F5 /* Pictorious.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				28268A131F1A5F96008226F5 /* Pictorious.xcdatamodel */,
+			);
+			currentVersion = 28268A131F1A5F96008226F5 /* Pictorious.xcdatamodel */;
+			path = Pictorious.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 28268A001F1A5F96008226F5 /* Project object */;
+}
