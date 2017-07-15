@@ -8,13 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		28268A0C1F1A5F96008226F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28268A0B1F1A5F96008226F5 /* AppDelegate.swift */; };
-		28268A0E1F1A5F96008226F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28268A0D1F1A5F96008226F5 /* ViewController.swift */; };
 		28268A111F1A5F96008226F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28268A0F1F1A5F96008226F5 /* Main.storyboard */; };
 		28268A141F1A5F96008226F5 /* Pictorious.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 28268A121F1A5F96008226F5 /* Pictorious.xcdatamodeld */; };
 		28268A161F1A5F96008226F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28268A151F1A5F96008226F5 /* Assets.xcassets */; };
 		28268A191F1A5F96008226F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28268A171F1A5F96008226F5 /* LaunchScreen.storyboard */; };
 		28268A241F1A5F96008226F5 /* PictoriousTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28268A231F1A5F96008226F5 /* PictoriousTests.swift */; };
 		28268A2F1F1A5F96008226F5 /* PictoriousUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28268A2E1F1A5F96008226F5 /* PictoriousUITests.swift */; };
+		28268A3D1F1A607E008226F5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28268A3C1F1A607E008226F5 /* Constants.swift */; };
+		28268A3F1F1A60EB008226F5 /* ModelBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28268A3E1F1A60EB008226F5 /* ModelBase.swift */; };
+		28268A421F1A6135008226F5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28268A411F1A6135008226F5 /* User.swift */; };
+		28268A441F1A6159008226F5 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28268A431F1A6159008226F5 /* Story.swift */; };
+		28268A461F1A6171008226F5 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28268A451F1A6171008226F5 /* Comment.swift */; };
+		28268A4A1F1A61B4008226F5 /* Like.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28268A491F1A61B4008226F5 /* Like.swift */; };
+		28268A4C1F1A61D6008226F5 /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28268A4B1F1A61D6008226F5 /* Favorite.swift */; };
+		28268A4E1F1A6203008226F5 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28268A4D1F1A6203008226F5 /* WelcomeViewController.swift */; };
+		28268A511F1A623F008226F5 /* AuthPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28268A501F1A623F008226F5 /* AuthPickerViewController.swift */; };
+		28268A531F1A6266008226F5 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28268A521F1A6266008226F5 /* FeedViewController.swift */; };
+		28268A551F1A628A008226F5 /* StoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28268A541F1A628A008226F5 /* StoryViewController.swift */; };
+		28268A571F1A62B5008226F5 /* CommentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28268A561F1A62B5008226F5 /* CommentsTableViewController.swift */; };
+		28268A591F1A62DC008226F5 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28268A581F1A62DC008226F5 /* CreateViewController.swift */; };
+		28268A5B1F1A62FC008226F5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28268A5A1F1A62FC008226F5 /* ProfileViewController.swift */; };
+		28268A5D1F1A632B008226F5 /* ProfileFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28268A5C1F1A632B008226F5 /* ProfileFeedViewController.swift */; };
+		28268A5F1F1A634B008226F5 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28268A5E1F1A634B008226F5 /* EditProfileViewController.swift */; };
+		28268A611F1A6360008226F5 /* BannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28268A601F1A6360008226F5 /* BannerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +53,6 @@
 /* Begin PBXFileReference section */
 		28268A081F1A5F96008226F5 /* Pictorious.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pictorious.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28268A0B1F1A5F96008226F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		28268A0D1F1A5F96008226F5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		28268A101F1A5F96008226F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		28268A131F1A5F96008226F5 /* Pictorious.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Pictorious.xcdatamodel; sourceTree = "<group>"; };
 		28268A151F1A5F96008226F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +64,23 @@
 		28268A2A1F1A5F96008226F5 /* PictoriousUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PictoriousUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		28268A2E1F1A5F96008226F5 /* PictoriousUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictoriousUITests.swift; sourceTree = "<group>"; };
 		28268A301F1A5F96008226F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28268A3C1F1A607E008226F5 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		28268A3E1F1A60EB008226F5 /* ModelBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModelBase.swift; path = Model/ModelBase.swift; sourceTree = "<group>"; };
+		28268A411F1A6135008226F5 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Model/User.swift; sourceTree = "<group>"; };
+		28268A431F1A6159008226F5 /* Story.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Story.swift; path = Model/Story.swift; sourceTree = "<group>"; };
+		28268A451F1A6171008226F5 /* Comment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		28268A491F1A61B4008226F5 /* Like.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Like.swift; path = Model/Like.swift; sourceTree = "<group>"; };
+		28268A4B1F1A61D6008226F5 /* Favorite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Favorite.swift; path = Model/Favorite.swift; sourceTree = "<group>"; };
+		28268A4D1F1A6203008226F5 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WelcomeViewController.swift; path = Controllers/WelcomeViewController.swift; sourceTree = "<group>"; };
+		28268A501F1A623F008226F5 /* AuthPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AuthPickerViewController.swift; path = Controllers/AuthPickerViewController.swift; sourceTree = "<group>"; };
+		28268A521F1A6266008226F5 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedViewController.swift; path = Controllers/FeedViewController.swift; sourceTree = "<group>"; };
+		28268A541F1A628A008226F5 /* StoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StoryViewController.swift; path = Controllers/StoryViewController.swift; sourceTree = "<group>"; };
+		28268A561F1A62B5008226F5 /* CommentsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommentsTableViewController.swift; path = Controllers/CommentsTableViewController.swift; sourceTree = "<group>"; };
+		28268A581F1A62DC008226F5 /* CreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CreateViewController.swift; path = Controllers/CreateViewController.swift; sourceTree = "<group>"; };
+		28268A5A1F1A62FC008226F5 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = Controllers/ProfileViewController.swift; sourceTree = "<group>"; };
+		28268A5C1F1A632B008226F5 /* ProfileFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileFeedViewController.swift; path = Controllers/ProfileFeedViewController.swift; sourceTree = "<group>"; };
+		28268A5E1F1A634B008226F5 /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EditProfileViewController.swift; path = Controllers/EditProfileViewController.swift; sourceTree = "<group>"; };
+		28268A601F1A6360008226F5 /* BannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BannerViewController.swift; path = Controllers/BannerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,8 +131,10 @@
 		28268A0A1F1A5F96008226F5 /* Pictorious */ = {
 			isa = PBXGroup;
 			children = (
+				28268A4F1F1A6209008226F5 /* Controllers */,
 				28268A0B1F1A5F96008226F5 /* AppDelegate.swift */,
-				28268A0D1F1A5F96008226F5 /* ViewController.swift */,
+				28268A401F1A6107008226F5 /* Models */,
+				28268A3C1F1A607E008226F5 /* Constants.swift */,
 				28268A0F1F1A5F96008226F5 /* Main.storyboard */,
 				28268A151F1A5F96008226F5 /* Assets.xcassets */,
 				28268A171F1A5F96008226F5 /* LaunchScreen.storyboard */,
@@ -126,6 +160,36 @@
 				28268A301F1A5F96008226F5 /* Info.plist */,
 			);
 			path = PictoriousUITests;
+			sourceTree = "<group>";
+		};
+		28268A401F1A6107008226F5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				28268A491F1A61B4008226F5 /* Like.swift */,
+				28268A4B1F1A61D6008226F5 /* Favorite.swift */,
+				28268A411F1A6135008226F5 /* User.swift */,
+				28268A431F1A6159008226F5 /* Story.swift */,
+				28268A451F1A6171008226F5 /* Comment.swift */,
+				28268A3E1F1A60EB008226F5 /* ModelBase.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		28268A4F1F1A6209008226F5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				28268A4D1F1A6203008226F5 /* WelcomeViewController.swift */,
+				28268A501F1A623F008226F5 /* AuthPickerViewController.swift */,
+				28268A521F1A6266008226F5 /* FeedViewController.swift */,
+				28268A541F1A628A008226F5 /* StoryViewController.swift */,
+				28268A561F1A62B5008226F5 /* CommentsTableViewController.swift */,
+				28268A581F1A62DC008226F5 /* CreateViewController.swift */,
+				28268A5A1F1A62FC008226F5 /* ProfileViewController.swift */,
+				28268A5C1F1A632B008226F5 /* ProfileFeedViewController.swift */,
+				28268A5E1F1A634B008226F5 /* EditProfileViewController.swift */,
+				28268A601F1A6360008226F5 /* BannerViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,8 +330,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				28268A141F1A5F96008226F5 /* Pictorious.xcdatamodeld in Sources */,
-				28268A0E1F1A5F96008226F5 /* ViewController.swift in Sources */,
+				28268A4E1F1A6203008226F5 /* WelcomeViewController.swift in Sources */,
 				28268A0C1F1A5F96008226F5 /* AppDelegate.swift in Sources */,
+				28268A611F1A6360008226F5 /* BannerViewController.swift in Sources */,
+				28268A4A1F1A61B4008226F5 /* Like.swift in Sources */,
+				28268A511F1A623F008226F5 /* AuthPickerViewController.swift in Sources */,
+				28268A591F1A62DC008226F5 /* CreateViewController.swift in Sources */,
+				28268A5B1F1A62FC008226F5 /* ProfileViewController.swift in Sources */,
+				28268A3D1F1A607E008226F5 /* Constants.swift in Sources */,
+				28268A5F1F1A634B008226F5 /* EditProfileViewController.swift in Sources */,
+				28268A461F1A6171008226F5 /* Comment.swift in Sources */,
+				28268A571F1A62B5008226F5 /* CommentsTableViewController.swift in Sources */,
+				28268A551F1A628A008226F5 /* StoryViewController.swift in Sources */,
+				28268A5D1F1A632B008226F5 /* ProfileFeedViewController.swift in Sources */,
+				28268A421F1A6135008226F5 /* User.swift in Sources */,
+				28268A4C1F1A61D6008226F5 /* Favorite.swift in Sources */,
+				28268A3F1F1A60EB008226F5 /* ModelBase.swift in Sources */,
+				28268A531F1A6266008226F5 /* FeedViewController.swift in Sources */,
+				28268A441F1A6159008226F5 /* Story.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
