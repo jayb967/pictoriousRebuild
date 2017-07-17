@@ -21,7 +21,7 @@ class CreateViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     override func viewWillAppear(_ animated: Bool) {
         
-        if !isPresented {
+        if !isPresented{
             isPresented = true
             
             self.progressView?.isHidden = true
@@ -132,10 +132,21 @@ class CreateViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        dismiss(animated: true, completion: {
-            self.tabBarController?.selectedIndex = 0 // home
-            self.isPresented = false
-        })
+        
+        self.dismiss(animated: false, completion: nil)
+        self.tabBarController?.selectedIndex = 0 // home
+        self.isPresented = false
+        
+        
+//        self.dismiss(animated: true, completion: {
+//            self.tabBarController?.selectedIndex = 0 // home
+//            self.isPresented = false
+//            EZSwipeControllerDataSource.indexOfStartingPage
+//        })
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        
+//        let cameraVC = storyboard.instantiateViewController(withIdentifier: "createVC")
+//        present(cameraVC, animated: true, completion: nil)
     }
     
 }

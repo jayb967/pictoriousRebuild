@@ -1057,7 +1057,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="K9L-qs-yBs">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="notifications" translatesAutoresizingMaskIntoConstraints="NO" id="K9L-qs-yBs">
                                 <rect key="frame" x="0.0" y="20" width="414" height="667"/>
                             </imageView>
                         </subviews>
@@ -1136,6 +1136,7 @@
         <image name="liked" width="32" height="32"/>
         <image name="logo-1" width="223" height="38"/>
         <image name="mustageIcon" width="64" height="24"/>
+        <image name="notifications" width="414" height="736"/>
         <image name="profileBackground" width="414" height="224"/>
         <image name="share" width="32" height="32"/>
         <image name="soundOff" width="26" height="26"/>
