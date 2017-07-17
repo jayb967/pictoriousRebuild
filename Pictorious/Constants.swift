@@ -24,14 +24,14 @@ let kAdMobUnitID = "ca-app-pub-3940256099942544/2934735716"
  true - is show only followed users
  false - public feed, everyone see all posts
  */
-let kPersonalFeedEnabled = true
+let kPersonalFeedEnabled = false
 
 /*
  The video is allowed in feed, but it shows a video player (if the first picture is black
  you will see black. Please use the autoplay (true) to play video on scrolling. The video will
  be streamed from server (not downloaded) so it used less network while scrolling.
  */
-let kAutoplayVideo = true
+let kAutoplayVideo = false
 /*
  Scale of video, you can choose one of these recommended:
  AVLayerVideoGravityResizeAspectFill - resize to fill the square
