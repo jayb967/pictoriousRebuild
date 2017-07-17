@@ -42,6 +42,7 @@
 		282E6EE11F1D2C270003B5DC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 282E6EE01F1D2C270003B5DC /* GoogleService-Info.plist */; };
 		285F483F1F1A691800A8575E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 285F483E1F1A691800A8575E /* Launch Screen.storyboard */; };
 		28A4E4301F1CC29100B56CB0 /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A4E42F1F1CC29100B56CB0 /* FadeTransition.swift */; };
+		28B119021F1D679C0094A9FF /* CustomCameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B119011F1D679B0094A9FF /* CustomCameraVC.swift */; };
 		28FAA0001F1CA3F9002D7E3E /* GoogleService-Info1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 28FA9FFF1F1CA3F9002D7E3E /* GoogleService-Info1.plist */; };
 		28FAA0021F1CAA90002D7E3E /* EZSwipeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FAA0011F1CAA90002D7E3E /* EZSwipeController.swift */; };
 		28FAA0041F1CAD75002D7E3E /* SwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FAA0031F1CAD75002D7E3E /* SwipeViewController.swift */; };
@@ -105,6 +106,7 @@
 		282E6EE01F1D2C270003B5DC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		285F483E1F1A691800A8575E /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Launch Screen.storyboard"; path = "Assets/Launch Screen.storyboard"; sourceTree = "<group>"; };
 		28A4E42F1F1CC29100B56CB0 /* FadeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FadeTransition.swift; path = Views/FadeTransition.swift; sourceTree = "<group>"; };
+		28B119011F1D679B0094A9FF /* CustomCameraVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomCameraVC.swift; path = Controllers/CustomCameraVC.swift; sourceTree = "<group>"; };
 		28FA9FFF1F1CA3F9002D7E3E /* GoogleService-Info1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info1.plist"; sourceTree = "<group>"; };
 		28FAA0011F1CAA90002D7E3E /* EZSwipeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EZSwipeController.swift; sourceTree = "<group>"; };
 		28FAA0031F1CAD75002D7E3E /* SwipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwipeViewController.swift; path = Controllers/SwipeViewController.swift; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 				28268A541F1A628A008226F5 /* StoryViewController.swift */,
 				28268A561F1A62B5008226F5 /* CommentsTableViewController.swift */,
 				28268A581F1A62DC008226F5 /* CreateViewController.swift */,
+				28B119011F1D679B0094A9FF /* CustomCameraVC.swift */,
 				28268A5A1F1A62FC008226F5 /* ProfileViewController.swift */,
 				28268A5C1F1A632B008226F5 /* ProfileFeedViewController.swift */,
 				28268A5E1F1A634B008226F5 /* EditProfileViewController.swift */,
@@ -576,6 +579,7 @@
 				28268A611F1A6360008226F5 /* BannerViewController.swift in Sources */,
 				28268A4A1F1A61B4008226F5 /* Like.swift in Sources */,
 				28268A511F1A623F008226F5 /* AuthPickerViewController.swift in Sources */,
+				28B119021F1D679C0094A9FF /* CustomCameraVC.swift in Sources */,
 				28268A591F1A62DC008226F5 /* CreateViewController.swift in Sources */,
 				28268A631F1A640F008226F5 /* CommentTableViewCell.swift in Sources */,
 				28A4E4301F1CC29100B56CB0 /* FadeTransition.swift in Sources */,
