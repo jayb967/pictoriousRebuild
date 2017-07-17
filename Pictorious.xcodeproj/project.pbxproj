@@ -40,7 +40,7 @@
 		28268A731F1A6557008226F5 /* AuthLogoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28268A721F1A6557008226F5 /* AuthLogoView.xib */; };
 		28268A751F1A661B008226F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28268A741F1A661B008226F5 /* Main.storyboard */; };
 		285F483F1F1A691800A8575E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 285F483E1F1A691800A8575E /* Launch Screen.storyboard */; };
-		28FA9FFE1F1C9FB4002D7E3E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 28FA9FFD1F1C9FB4002D7E3E /* GoogleService-Info.plist */; };
+		28FAA0001F1CA3F9002D7E3E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 28FA9FFF1F1CA3F9002D7E3E /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,7 +99,7 @@
 		28268A721F1A6557008226F5 /* AuthLogoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AuthLogoView.xib; path = Assets/AuthLogoView.xib; sourceTree = "<group>"; };
 		28268A741F1A661B008226F5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Assets/Main.storyboard; sourceTree = "<group>"; };
 		285F483E1F1A691800A8575E /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Launch Screen.storyboard"; path = "Assets/Launch Screen.storyboard"; sourceTree = "<group>"; };
-		28FA9FFD1F1C9FB4002D7E3E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		28FA9FFF1F1CA3F9002D7E3E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		47D63083306BC86674584F13 /* Pods-PictoriousUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PictoriousUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PictoriousUITests/Pods-PictoriousUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		48354F83D86F24C12010C9A2 /* Pods-Pictorious.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pictorious.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pictorious/Pods-Pictorious.debug.xcconfig"; sourceTree = "<group>"; };
 		49041B406A491564C83D322A /* Pods_PictoriousTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PictoriousTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -169,6 +169,7 @@
 				28268A3C1F1A607E008226F5 /* Constants.swift */,
 				28268A711F1A6548008226F5 /* Assets */,
 				28268A1A1F1A5F96008226F5 /* Info.plist */,
+				28FA9FFF1F1CA3F9002D7E3E /* GoogleService-Info.plist */,
 				28268A121F1A5F96008226F5 /* Pictorious.xcdatamodeld */,
 			);
 			path = Pictorious;
@@ -179,7 +180,6 @@
 			children = (
 				28268A231F1A5F96008226F5 /* PictoriousTests.swift */,
 				28268A251F1A5F96008226F5 /* Info.plist */,
-				28FA9FFD1F1C9FB4002D7E3E /* GoogleService-Info.plist */,
 			);
 			path = PictoriousTests;
 			sourceTree = "<group>";
@@ -390,6 +390,7 @@
 			files = (
 				28268A161F1A5F96008226F5 /* Assets.xcassets in Resources */,
 				28268A731F1A6557008226F5 /* AuthLogoView.xib in Resources */,
+				28FAA0001F1CA3F9002D7E3E /* GoogleService-Info.plist in Resources */,
 				285F483F1F1A691800A8575E /* Launch Screen.storyboard in Resources */,
 				28268A751F1A661B008226F5 /* Main.storyboard in Resources */,
 			);
@@ -399,7 +400,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				28FA9FFE1F1C9FB4002D7E3E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

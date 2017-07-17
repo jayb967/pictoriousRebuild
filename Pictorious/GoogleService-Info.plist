@@ -34,8 +34,6 @@
 	<true/>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:816372423285:ios:adc33ca41ceae91c</string>
-	<key>CFBundleIdentifier</key>
-	<string></string>
 	<key>DATABASE_URL</key>
 	<string>https://photoeditapp-34944.firebaseio.com</string>
 </dict>

@@ -76,7 +76,7 @@ let kDataFavoritesKey = "activity"
  Localized text displayed to User
  */
 
-let kDefaultUsername = NSLocalizedString("Mr. Mustage", comment: "Text used when username not set")
+let kDefaultUsername = NSLocalizedString("Pictorious Challenger", comment: "Text used when username not set")
 let kDefaultProfilePhoto = "" // url to default photo. will be stored in database
 
 let kAlertErrorTitle = NSLocalizedString("Error", comment:"")
