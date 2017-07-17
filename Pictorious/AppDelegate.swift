@@ -86,9 +86,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
         //will make side scrollview the default start page
-//        window = UIWindow(frame: UIScreen.main.bounds)
-//        window!.rootViewController = MySwipeVC()
-//        window!.makeKeyAndVisible()
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window!.rootViewController = MySwipeVC()
+        window!.makeKeyAndVisible()
         return true
     }
     

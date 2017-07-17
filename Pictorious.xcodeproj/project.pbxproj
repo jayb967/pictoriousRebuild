@@ -39,9 +39,9 @@
 		28268A701F1A6522008226F5 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28268A6F1F1A6522008226F5 /* ProfileView.swift */; };
 		28268A731F1A6557008226F5 /* AuthLogoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28268A721F1A6557008226F5 /* AuthLogoView.xib */; };
 		28268A751F1A661B008226F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28268A741F1A661B008226F5 /* Main.storyboard */; };
+		282E6EE11F1D2C270003B5DC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 282E6EE01F1D2C270003B5DC /* GoogleService-Info.plist */; };
 		285F483F1F1A691800A8575E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 285F483E1F1A691800A8575E /* Launch Screen.storyboard */; };
 		28A4E4301F1CC29100B56CB0 /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A4E42F1F1CC29100B56CB0 /* FadeTransition.swift */; };
-		28E26BB21F1D279400CC24CE /* GoogleService-Info (2).plist in Resources */ = {isa = PBXBuildFile; fileRef = 28E26BB11F1D279400CC24CE /* GoogleService-Info (2).plist */; };
 		28FAA0001F1CA3F9002D7E3E /* GoogleService-Info1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 28FA9FFF1F1CA3F9002D7E3E /* GoogleService-Info1.plist */; };
 		28FAA0021F1CAA90002D7E3E /* EZSwipeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FAA0011F1CAA90002D7E3E /* EZSwipeController.swift */; };
 		28FAA0041F1CAD75002D7E3E /* SwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FAA0031F1CAD75002D7E3E /* SwipeViewController.swift */; };
@@ -102,9 +102,9 @@
 		28268A6F1F1A6522008226F5 /* ProfileView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileView.swift; path = Views/ProfileView.swift; sourceTree = "<group>"; };
 		28268A721F1A6557008226F5 /* AuthLogoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AuthLogoView.xib; path = Assets/AuthLogoView.xib; sourceTree = "<group>"; };
 		28268A741F1A661B008226F5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Assets/Main.storyboard; sourceTree = "<group>"; };
+		282E6EE01F1D2C270003B5DC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		285F483E1F1A691800A8575E /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Launch Screen.storyboard"; path = "Assets/Launch Screen.storyboard"; sourceTree = "<group>"; };
 		28A4E42F1F1CC29100B56CB0 /* FadeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FadeTransition.swift; path = Views/FadeTransition.swift; sourceTree = "<group>"; };
-		28E26BB11F1D279400CC24CE /* GoogleService-Info (2).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info (2).plist"; path = "../../../../Downloads/GoogleService-Info (2).plist"; sourceTree = "<group>"; };
 		28FA9FFF1F1CA3F9002D7E3E /* GoogleService-Info1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info1.plist"; sourceTree = "<group>"; };
 		28FAA0011F1CAA90002D7E3E /* EZSwipeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EZSwipeController.swift; sourceTree = "<group>"; };
 		28FAA0031F1CAD75002D7E3E /* SwipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwipeViewController.swift; path = Controllers/SwipeViewController.swift; sourceTree = "<group>"; };
@@ -178,7 +178,7 @@
 				28268A711F1A6548008226F5 /* Assets */,
 				28268A1A1F1A5F96008226F5 /* Info.plist */,
 				28FA9FFF1F1CA3F9002D7E3E /* GoogleService-Info1.plist */,
-				28E26BB11F1D279400CC24CE /* GoogleService-Info (2).plist */,
+				282E6EE01F1D2C270003B5DC /* GoogleService-Info.plist */,
 				28268A121F1A5F96008226F5 /* Pictorious.xcdatamodeld */,
 			);
 			path = Pictorious;
@@ -404,7 +404,7 @@
 				28268A731F1A6557008226F5 /* AuthLogoView.xib in Resources */,
 				28FAA0001F1CA3F9002D7E3E /* GoogleService-Info1.plist in Resources */,
 				285F483F1F1A691800A8575E /* Launch Screen.storyboard in Resources */,
-				28E26BB21F1D279400CC24CE /* GoogleService-Info (2).plist in Resources */,
+				282E6EE11F1D2C270003B5DC /* GoogleService-Info.plist in Resources */,
 				28268A751F1A661B008226F5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

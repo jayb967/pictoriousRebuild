@@ -15,8 +15,8 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="imX-n9-OQo">
-                    <rect key="frame" x="117.5" y="87" width="140" height="76"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-1" translatesAutoresizingMaskIntoConstraints="NO" id="imX-n9-OQo">
+                    <rect key="frame" x="76" y="106" width="223" height="38"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -29,6 +29,6 @@
         </view>
     </objects>
     <resources>
-        <image name="logo" width="140" height="76"/>
+        <image name="logo-1" width="223" height="38"/>
     </resources>
 </document>
