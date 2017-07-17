@@ -113,8 +113,8 @@ DEPENDENCIES:
   - Firebase/Database
   - Firebase/Messaging
   - Firebase/Storage
-  - FirebaseUI/Facebook (~> 0.7)
-  - FirebaseUI/Google (~> 0.7)
+  - FirebaseUI/Facebook
+  - FirebaseUI/Google
   - GoogleSignIn
   - SDWebImage
   - TwitterKit
@@ -144,6 +144,6 @@ SPEC CHECKSUMS:
   TwitterCore: 8ce250be1eb34633a0e6acc89520d4165ec52c10
   TwitterKit: 202404be71aadd81d19f677b34579fe77d9cb67e
 
-PODFILE CHECKSUM: 71daf54f78af8d2d0e46dcd7f36a79b5ee49176a
+PODFILE CHECKSUM: 6c03f7f88337b24ff02c69fc73c2d538e2ec31e1
 
 COCOAPODS: 1.2.1

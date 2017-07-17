@@ -742,6 +742,7 @@
 			baseConfigurationReference = 48354F83D86F24C12010C9A2 /* Pods-Pictorious.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				DEVELOPMENT_TEAM = 5EB567WJ73;
 				INFOPLIST_FILE = Pictorious/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -756,6 +757,7 @@
 			baseConfigurationReference = 536C68F58879FC54A42B114B /* Pods-Pictorious.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				DEVELOPMENT_TEAM = 5EB567WJ73;
 				INFOPLIST_FILE = Pictorious/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -67,6 +67,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                         userdata.saveData()
                     }
                 })
+                //will make side scrollview the default start page (Only if user is "logged in")
+                self.window = UIWindow(frame: UIScreen.main.bounds)
+                self.window!.rootViewController = MySwipeVC()
+                self.window!.makeKeyAndVisible()
             }
             print("there was an error\(String(describing: error?.localizedDescription))")
         }
@@ -85,10 +89,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                                object: nil)
         
         
-        //will make side scrollview the default start page
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window!.rootViewController = MySwipeVC()
-        window!.makeKeyAndVisible()
+        
         return true
     }
     
