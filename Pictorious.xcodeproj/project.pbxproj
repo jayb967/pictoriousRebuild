@@ -41,6 +41,7 @@
 		28268A751F1A661B008226F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28268A741F1A661B008226F5 /* Main.storyboard */; };
 		285F483F1F1A691800A8575E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 285F483E1F1A691800A8575E /* Launch Screen.storyboard */; };
 		28FAA0001F1CA3F9002D7E3E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 28FA9FFF1F1CA3F9002D7E3E /* GoogleService-Info.plist */; };
+		28FAA0021F1CAA90002D7E3E /* EZSwipeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FAA0011F1CAA90002D7E3E /* EZSwipeController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,7 @@
 		28268A741F1A661B008226F5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Assets/Main.storyboard; sourceTree = "<group>"; };
 		285F483E1F1A691800A8575E /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Launch Screen.storyboard"; path = "Assets/Launch Screen.storyboard"; sourceTree = "<group>"; };
 		28FA9FFF1F1CA3F9002D7E3E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		28FAA0011F1CAA90002D7E3E /* EZSwipeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EZSwipeController.swift; sourceTree = "<group>"; };
 		47D63083306BC86674584F13 /* Pods-PictoriousUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PictoriousUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PictoriousUITests/Pods-PictoriousUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		48354F83D86F24C12010C9A2 /* Pods-Pictorious.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pictorious.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pictorious/Pods-Pictorious.debug.xcconfig"; sourceTree = "<group>"; };
 		49041B406A491564C83D322A /* Pods_PictoriousTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PictoriousTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -238,6 +240,7 @@
 		28268A711F1A6548008226F5 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				28FAA0011F1CAA90002D7E3E /* EZSwipeController.swift */,
 				28268A741F1A661B008226F5 /* Main.storyboard */,
 				285F483E1F1A691800A8575E /* Launch Screen.storyboard */,
 				28268A721F1A6557008226F5 /* AuthLogoView.xib */,
@@ -566,6 +569,7 @@
 				28268A591F1A62DC008226F5 /* CreateViewController.swift in Sources */,
 				28268A631F1A640F008226F5 /* CommentTableViewCell.swift in Sources */,
 				28268A5B1F1A62FC008226F5 /* ProfileViewController.swift in Sources */,
+				28FAA0021F1CAA90002D7E3E /* EZSwipeController.swift in Sources */,
 				28268A3D1F1A607E008226F5 /* Constants.swift in Sources */,
 				28268A5F1F1A634B008226F5 /* EditProfileViewController.swift in Sources */,
 				28268A461F1A6171008226F5 /* Comment.swift in Sources */,

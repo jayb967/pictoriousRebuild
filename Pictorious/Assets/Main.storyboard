@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="J4G-pP-NOX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="17A291m" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="J4G-pP-NOX">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -14,13 +14,13 @@
         <!--Banner View Controller-->
         <scene sceneID="AOw-ag-2vl">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" definesPresentationContext="YES" id="DFD-IS-djc" customClass="BannerViewController" customModule="Mustage" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" definesPresentationContext="YES" id="DFD-IS-djc" customClass="BannerViewController" customModule="Pictorious" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ss2-fo-FqP"/>
                         <viewControllerLayoutGuide type="bottom" id="Rv1-Ev-vaU"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Bg4-hU-EBw">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="623"/>
+                        <rect key="frame" x="0.0" y="64" width="414" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oaN-go-RQk">
@@ -78,7 +78,7 @@
         <!--Feed-->
         <scene sceneID="YHE-Om-fCp">
             <objects>
-                <tableViewController providesPresentationContextTransitionStyle="YES" id="ZkG-5t-PpH" userLabel="Feed" customClass="FeedViewController" customModule="Mustage" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController providesPresentationContextTransitionStyle="YES" id="ZkG-5t-PpH" userLabel="Feed" customClass="FeedViewController" customModule="Pictorious" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="490" sectionHeaderHeight="28" sectionFooterHeight="28" id="dvS-LH-ssf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -93,14 +93,14 @@
                             </connections>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Profile" rowHeight="45" id="tqh-FF-RbN" customClass="UserTableViewCell" customModule="Mustage" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Profile" rowHeight="45" id="tqh-FF-RbN" customClass="UserTableViewCell" customModule="Pictorious" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="72" width="375" height="45"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tqh-FF-RbN" id="Noh-f4-Rx2">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatarPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="0M6-Th-guK" customClass="ProfileView" customModule="Mustage" customModuleProvider="target">
+                                        <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatarPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="0M6-Th-guK" customClass="ProfileView" customModule="Pictorious" customModuleProvider="target">
                                             <rect key="frame" x="8" y="8" width="30" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="30" id="Gdq-r0-GBz"/>
@@ -139,7 +139,7 @@
                                     <outlet property="usernameView" destination="jQf-zH-zFm" id="3OP-M7-v1t"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="490" id="FFN-9s-z8p" customClass="StoryTableViewCell" customModule="Mustage" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="490" id="FFN-9s-z8p" customClass="StoryTableViewCell" customModule="Pictorious" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="117" width="375" height="490"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FFN-9s-z8p" id="GIU-cM-NVa">
@@ -240,7 +240,7 @@
                                     <outlet property="videoMute" destination="UKd-Hb-JRY" id="7Bc-bW-f1D"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="User" rowHeight="45" id="ZTb-60-xje" userLabel="User" customClass="UserTableViewCell" customModule="Mustage" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="User" rowHeight="45" id="ZTb-60-xje" userLabel="User" customClass="UserTableViewCell" customModule="Pictorious" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="607" width="375" height="45"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZTb-60-xje" id="HXo-Jw-LDQ">
@@ -261,7 +261,7 @@
                                                 <action selector="actionButtonWithSender:" destination="ZTb-60-xje" eventType="touchUpInside" id="i6U-Rq-bDw"/>
                                             </connections>
                                         </button>
-                                        <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatarPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="LUg-5w-9Ih" customClass="ProfileView" customModule="Mustage" customModuleProvider="target">
+                                        <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatarPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="LUg-5w-9Ih" customClass="ProfileView" customModule="Pictorious" customModuleProvider="target">
                                             <rect key="frame" x="8" y="8" width="30" height="30"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="30" id="3iI-9N-vem"/>
@@ -330,13 +330,13 @@
         <!--Comments-->
         <scene sceneID="sfi-8e-FdK">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="dGn-DX-dfY" customClass="CommentsTableViewController" customModule="Mustage" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="dGn-DX-dfY" customClass="CommentsTableViewController" customModule="Pictorious" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FwW-jq-sT7"/>
                         <viewControllerLayoutGuide type="bottom" id="Wkw-Wp-8i3"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="9wb-ae-u4o">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" verticalCompressionResistancePriority="1000" layoutMarginsFollowReadableWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qit-gF-4pn">
@@ -377,14 +377,14 @@
                                 <rect key="frame" x="0.0" y="20" width="414" height="666"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="100" id="GFq-CM-HwZ" customClass="CommentTableViewCell" customModule="Mustage" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="100" id="GFq-CM-HwZ" customClass="CommentTableViewCell" customModule="Pictorious" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GFq-CM-HwZ" id="o9M-0U-I3c">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatarPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="5Ti-Pu-mbD" customClass="ProfileView" customModule="Mustage" customModuleProvider="target">
+                                                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatarPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="5Ti-Pu-mbD" customClass="ProfileView" customModule="Pictorious" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="8" width="44" height="44"/>
                                                     <gestureRecognizers/>
                                                     <constraints>
@@ -464,7 +464,7 @@
         <!--Welcome View Controller-->
         <scene sceneID="72w-Cb-iA1">
             <objects>
-                <viewController id="pe5-Aa-iYh" customClass="WelcomeViewController" customModule="Mustage" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="pe5-Aa-iYh" customClass="WelcomeViewController" customModule="Pictorious" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MnV-ov-49w"/>
                         <viewControllerLayoutGuide type="bottom" id="MXz-2u-sjl"/>
@@ -540,9 +540,9 @@
         <!--Profile-->
         <scene sceneID="d3y-Qa-rFK">
             <objects>
-                <collectionViewController id="Ll2-iT-cTR" customClass="ProfileViewController" customModule="Mustage" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="KgR-VB-shd">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                <collectionViewController id="Ll2-iT-cTR" customClass="ProfileViewController" customModule="Pictorious" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="KgR-VB-shd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="1" id="e1k-2x-XP6">
@@ -552,7 +552,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="Mrt-8v-B7S" customClass="ThumbnailCollectionViewCell" customModule="Mustage" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="Mrt-8v-B7S" customClass="ThumbnailCollectionViewCell" customModule="Pictorious" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="80" width="133" height="133"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -587,7 +587,7 @@
                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatarPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="DZx-zw-a4k" customClass="ProfileView" customModule="Mustage" customModuleProvider="target">
+                                <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatarPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="DZx-zw-a4k" customClass="ProfileView" customModule="Pictorious" customModuleProvider="target">
                                     <rect key="frame" x="8" y="8" width="40" height="40"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="6aP-aL-axK"/>
@@ -640,20 +640,20 @@
         <!--Edit Profile-->
         <scene sceneID="Byc-Cr-hDT">
             <objects>
-                <tableViewController id="yiu-IW-O4I" customClass="EditProfileViewController" customModule="Mustage" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="yiu-IW-O4I" customClass="EditProfileViewController" customModule="Pictorious" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="nTn-n5-aao">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="SNR-td-bry">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="126"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="avatarPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="PlQ-Tr-pFV" customClass="ProfileView" customModule="Mustage" customModuleProvider="target">
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatarPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="PlQ-Tr-pFV" customClass="ProfileView" customModule="Pictorious" customModuleProvider="target">
                                     <rect key="frame" x="171" y="14" width="70" height="70"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 </imageView>
-                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yfo-Ye-u1E">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yfo-Ye-u1E">
                                     <rect key="frame" x="8" y="8" width="398" height="110"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <state key="normal" title="Change profile photo"/>
@@ -661,7 +661,7 @@
                                         <action selector="changePhoto:" destination="yiu-IW-O4I" eventType="touchUpInside" id="UKS-e7-jRS"/>
                                     </connections>
                                 </button>
-                                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="6V3-4r-2Bf">
+                                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="6V3-4r-2Bf">
                                     <rect key="frame" x="196" y="39" width="20" height="20"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 </activityIndicatorView>
@@ -678,7 +678,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Profile Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="93C-Ee-bdb">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Profile Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="93C-Ee-bdb">
                                                     <rect key="frame" x="8" y="0.0" width="398" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                                     <nil key="textColor"/>
@@ -709,17 +709,17 @@
         <!--Story-->
         <scene sceneID="mDV-8I-DnG">
             <objects>
-                <viewController title="Story" id="lFr-Rc-1eJ" customClass="StoryViewController" customModule="Mustage" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Story" id="lFr-Rc-1eJ" customClass="StoryViewController" customModule="Pictorious" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Sgy-gZ-03z"/>
                         <viewControllerLayoutGuide type="bottom" id="X6w-3N-4QS"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3Fc-2n-9DU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="623"/>
+                        <rect key="frame" x="0.0" y="64" width="414" height="628"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4gn-ys-iyT">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="623"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4gn-ys-iyT">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="628"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <connections>
                                     <segue destination="ZkG-5t-PpH" kind="embed" id="qhA-pv-6ml"/>
@@ -737,16 +737,16 @@
         <!--Profile Feed View Controller-->
         <scene sceneID="giE-FK-Y0i">
             <objects>
-                <viewController id="feY-0K-NGZ" customClass="ProfileFeedViewController" customModule="Mustage" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="feY-0K-NGZ" customClass="ProfileFeedViewController" customModule="Pictorious" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2ax-ai-Je8"/>
                         <viewControllerLayoutGuide type="bottom" id="lVr-sz-oje"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="IRy-rF-Rax">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="900"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatarPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="FVg-ka-MfJ" customClass="ProfileView" customModule="Mustage" customModuleProvider="target">
+                            <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatarPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="FVg-ka-MfJ" customClass="ProfileView" customModule="Pictorious" customModuleProvider="target">
                                 <rect key="frame" x="8" y="28" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="qSw-AC-nZB"/>
@@ -827,7 +827,7 @@
         <!--Create View Controller-->
         <scene sceneID="5vm-bS-TKX">
             <objects>
-                <viewController id="S4c-Rh-gSZ" customClass="CreateViewController" customModule="Mustage" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="S4c-Rh-gSZ" customClass="CreateViewController" customModule="Pictorious" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Stu-qr-dVa"/>
                         <viewControllerLayoutGuide type="bottom" id="yrA-QD-a0z"/>
@@ -876,7 +876,7 @@
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" id="RPb-lh-qaj"/>
                     <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" itemPositioning="fill" id="W28-zg-YXA" customClass="CustomUITabBar" customModule="Mustage" customModuleProvider="target">
+                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" itemPositioning="fill" id="W28-zg-YXA" customClass="CustomUITabBar" customModule="Pictorious" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
