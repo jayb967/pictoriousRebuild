@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>816372423285-r5a9tk7aovsu3sqpg77dmbt9t4g2hrq4.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.816372423285-r5a9tk7aovsu3sqpg77dmbt9t4g2hrq4</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAMmIJ9wyq100A_73xcBy8Jnao7HMsPfUk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>816372423285</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.jaw1.boom</string>
+	<key>PROJECT_ID</key>
+	<string>photoeditapp-34944</string>
+	<key>STORAGE_BUCKET</key>
+	<string>photoeditapp-34944.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:816372423285:ios:adc33ca41ceae91c</string>
+	<key>DATABASE_URL</key>
+	<string>https://photoeditapp-34944.firebaseio.com</string>
+</dict>
+</plist>
