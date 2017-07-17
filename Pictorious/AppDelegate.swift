@@ -51,8 +51,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //TODO: Currently signs in user as anonymous.
         Auth.auth().signInAnonymously() { (user, error) in
-            let isAnonymous = user!.isAnonymous  // true
-            let uid = user!.uid
+//            let isAnonymous = user!.isAnonymous  // true
+//            let uid = user!.uid
             
             if let currentUser = Auth.auth().currentUser {
                 UserProfile.collection.child(user!.uid).queryOrderedByKey().observeSingleEvent(of: .value, with: { (snapshot) in

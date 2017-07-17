@@ -20,19 +20,17 @@ extension MySwipeVC: EZSwipeControllerDataSource {
         
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
-        let redVC = UIViewController()
-        redVC.view.backgroundColor = UIColor.red
+        let cameraVC = storyboard.instantiateViewController(withIdentifier: "CameraVC")
         
         let mainFeed = storyboard.instantiateViewController(withIdentifier: "mainTab")
         
         
-        let blueVC = UIViewController()
-        blueVC.view.backgroundColor = UIColor.blue
-        
-        
         let profileFeed = storyboard.instantiateViewController(withIdentifier: "profileFeed")
         
-        return [redVC, mainFeed, blueVC, profileFeed]
+        
+        let storeVC = storyboard.instantiateViewController(withIdentifier: "StoreVC")
+        
+        return [cameraVC, mainFeed, storeVC, profileFeed]
     }
     //set view controller to center
     func indexOfStartingPage() -> Int {
