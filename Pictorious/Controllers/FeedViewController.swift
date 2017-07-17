@@ -131,7 +131,7 @@ UINavigationControllerDelegate, StoryTableViewCellDelegate, UISearchResultsUpdat
     
     // MARK: - Data
     func searchbarEnabled() -> Bool {
-        return kPersonalFeedEnabled && singleStoryId == nil && !searchbarHidden
+        return kPersonalFeedEnabled && singleStoryId == nil && searchbarHidden
     }
     
     func observeNewItems(_ firstKey:DataSnapshot?) {

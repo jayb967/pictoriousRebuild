@@ -49,6 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         SDWebImageManager.shared().imageDownloader?.maxConcurrentDownloads = kMaxConcurrentImageDownloads
         Database.database().isPersistenceEnabled = true
         
+        //TODO: Currently signs in user as anonymous.
         Auth.auth().signInAnonymously() { (user, error) in
             let isAnonymous = user!.isAnonymous  // true
             let uid = user!.uid
@@ -83,6 +84,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                                name: NSNotification.Name.InstanceIDTokenRefresh,
                                                object: nil)
         
+        
+        //will make side scrollview the default start page
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window!.rootViewController = MySwipeVC()
+        window!.makeKeyAndVisible()
         return true
     }
     

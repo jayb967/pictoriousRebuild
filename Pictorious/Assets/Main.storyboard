@@ -519,7 +519,7 @@
         <!--Feed-->
         <scene sceneID="562-YG-SOE">
             <objects>
-                <navigationController id="cmZ-NB-i2A" userLabel="Feed" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="mainFeed" id="cmZ-NB-i2A" userLabel="Feed" sceneMemberID="viewController">
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <tabBarItem key="tabBarItem" image="tabHome" selectedImage="tabHomeSelected" id="eru-Ow-HC8">
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
@@ -916,7 +916,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="ruV-fg-0vb"/>
+        <segue reference="N0C-ym-30j"/>
         <segue reference="d9Q-FC-S0v"/>
-        <segue reference="TXf-tv-W4N"/>
     </inferredMetricsTieBreakers>
 </document>
