@@ -1,0 +1,6 @@
+framework module Pods_PictoriousUITests {
+  umbrella header "Pods-PictoriousUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

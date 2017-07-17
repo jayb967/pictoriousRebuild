@@ -6,6 +6,10 @@
 //  Copyright © 2017 Jay Balderas. All rights reserved.
 //
 
+import UIKit
+import Firebase
+import FirebaseAuth
+
 class Story : ModelBase {
     
     static var recents:DatabaseReference {
