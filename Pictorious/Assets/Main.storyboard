@@ -568,6 +568,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UFF-V4-55O">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jaq-hg-hkq">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -589,8 +592,12 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Mty-fI-tt9" secondAttribute="trailing" id="2yG-cl-jj5"/>
                             <constraint firstItem="Jaq-hg-hkq" firstAttribute="top" secondItem="ymf-Gf-MFw" secondAttribute="top" id="3ve-Zs-DeP"/>
+                            <constraint firstAttribute="trailing" secondItem="UFF-V4-55O" secondAttribute="trailing" id="7FN-VV-Yv3"/>
+                            <constraint firstItem="UFF-V4-55O" firstAttribute="leading" secondItem="ymf-Gf-MFw" secondAttribute="leading" id="BU1-Ff-K2O"/>
                             <constraint firstItem="v2b-B7-E2w" firstAttribute="top" secondItem="Mty-fI-tt9" secondAttribute="bottom" id="C2F-dz-ggz"/>
+                            <constraint firstItem="UFF-V4-55O" firstAttribute="top" secondItem="ymf-Gf-MFw" secondAttribute="top" id="K0P-Rh-1YV"/>
                             <constraint firstAttribute="trailing" secondItem="Jaq-hg-hkq" secondAttribute="trailing" id="NU9-kR-Qvx"/>
+                            <constraint firstItem="v2b-B7-E2w" firstAttribute="top" secondItem="UFF-V4-55O" secondAttribute="bottom" id="g4e-hb-3z8"/>
                             <constraint firstItem="Jaq-hg-hkq" firstAttribute="leading" secondItem="ymf-Gf-MFw" secondAttribute="leading" id="pBC-2X-xFO"/>
                             <constraint firstItem="Mty-fI-tt9" firstAttribute="leading" secondItem="ymf-Gf-MFw" secondAttribute="leading" id="xXb-Qr-Y8l"/>
                         </constraints>
@@ -598,6 +605,7 @@
                     <connections>
                         <outlet property="cameraButton" destination="Mty-fI-tt9" id="rc0-RS-08F"/>
                         <outlet property="cameraView" destination="Jaq-hg-hkq" id="WFJ-DL-hP3"/>
+                        <outlet property="imgOverlay" destination="UFF-V4-55O" id="t52-oe-8fP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ig8-n3-sEM" userLabel="First Responder" sceneMemberID="firstResponder"/>
