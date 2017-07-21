@@ -604,7 +604,7 @@
                     </view>
                     <connections>
                         <outlet property="cameraButton" destination="Mty-fI-tt9" id="rc0-RS-08F"/>
-                        <outlet property="cameraView" destination="Jaq-hg-hkq" id="WFJ-DL-hP3"/>
+                        <outlet property="cameraView" destination="Jaq-hg-hkq" id="GIV-XL-KkZ"/>
                         <outlet property="imgOverlay" destination="UFF-V4-55O" id="t52-oe-8fP"/>
                     </connections>
                 </viewController>
