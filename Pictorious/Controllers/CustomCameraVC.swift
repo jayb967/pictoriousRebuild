@@ -25,10 +25,14 @@ class CustomCameraVC: UIViewController, AVCapturePhotoCaptureDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         // Setup your camera here...
-//        previewLayer!.frame = cameraView.bounds
+
     }
     
-
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        previewLayer!.frame = cameraView.bounds
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -83,16 +87,6 @@ class CustomCameraVC: UIViewController, AVCapturePhotoCaptureDelegate {
     
     func beginSession() {
         
-        //configure the output
-        let settings = AVCapturePhotoSettings()
-        let previewPixelType = settings.availablePreviewPhotoPixelFormatTypes.first!
-        let previewFormat = [kCVPixelBufferPixelFormatTypeKey as String: previewPixelType,
-                             kCVPixelBufferWidthKey as String: 160,
-                             kCVPixelBufferHeightKey as String: 160,
-                             ]
-        settings.previewPhotoFormat = previewFormat
-        self.cameraOutput.capturePhoto(with: settings, delegate: self)
-
         guard let previewLayer = AVCaptureVideoPreviewLayer(session: session) else {
             print("no preview layer")
             return
@@ -108,18 +102,15 @@ class CustomCameraVC: UIViewController, AVCapturePhotoCaptureDelegate {
     
     func saveToCamera() {
         
-//        if let videoConnection = stillImageOutput.connection(withMediaType: AVMediaTypeVideo) {
-//
-//            stillImageOutput.captureStillImageAsynchronously(from: videoConnection, completionHandler: { (CMSampleBuffer, Error) in
-//                if let imageData = AVCapturePhotoOutput.jpegStillImageNSDataRepresentation(CMSampleBuffer) {
-//
-//                    if let cameraImage = UIImage(data: imageData) {
-//
-//                        UIImageWriteToSavedPhotosAlbum(cameraImage, nil, nil, nil)
-//                    }
-//                }
-//            })
-//        }
+        //configure the output
+        let settings = AVCapturePhotoSettings()
+        let previewPixelType = settings.availablePreviewPhotoPixelFormatTypes.first!
+        let previewFormat = [kCVPixelBufferPixelFormatTypeKey as String: previewPixelType,
+                             kCVPixelBufferWidthKey as String: 160,
+                             kCVPixelBufferHeightKey as String: 160,
+                             ]
+        settings.previewPhotoFormat = previewFormat
+        self.cameraOutput.capturePhoto(with: settings, delegate: self)
     }
   
 
@@ -131,6 +122,5 @@ class CustomCameraVC: UIViewController, AVCapturePhotoCaptureDelegate {
 //        let cameraVC = storyboard.instantiateViewController(withIdentifier: "createVC")
 //        present(cameraVC, animated: true, completion: nil)
     }
-
 
 }
