@@ -4,6 +4,8 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
+	<key>NSCameraUsageDescription</key>
+	<string> </string>
 	<key>CFBundleDisplayName</key>
 	<string>Rebuilding</string>
 	<key>CFBundleExecutable</key>
