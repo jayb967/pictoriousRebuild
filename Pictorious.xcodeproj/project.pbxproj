@@ -43,6 +43,7 @@
 		285F483F1F1A691800A8575E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 285F483E1F1A691800A8575E /* Launch Screen.storyboard */; };
 		28A4E4301F1CC29100B56CB0 /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A4E42F1F1CC29100B56CB0 /* FadeTransition.swift */; };
 		28B119021F1D679C0094A9FF /* CustomCameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B119011F1D679B0094A9FF /* CustomCameraVC.swift */; };
+		28D72B4C1F253DB2006B212F /* ChallengeCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D72B4B1F253DB2006B212F /* ChallengeCreateViewController.swift */; };
 		28FAA0001F1CA3F9002D7E3E /* GoogleService-Info1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 28FA9FFF1F1CA3F9002D7E3E /* GoogleService-Info1.plist */; };
 		28FAA0021F1CAA90002D7E3E /* EZSwipeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FAA0011F1CAA90002D7E3E /* EZSwipeController.swift */; };
 		28FAA0041F1CAD75002D7E3E /* SwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FAA0031F1CAD75002D7E3E /* SwipeViewController.swift */; };
@@ -107,6 +108,7 @@
 		285F483E1F1A691800A8575E /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Launch Screen.storyboard"; path = "Assets/Launch Screen.storyboard"; sourceTree = "<group>"; };
 		28A4E42F1F1CC29100B56CB0 /* FadeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FadeTransition.swift; path = Views/FadeTransition.swift; sourceTree = "<group>"; };
 		28B119011F1D679B0094A9FF /* CustomCameraVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomCameraVC.swift; path = Controllers/CustomCameraVC.swift; sourceTree = "<group>"; };
+		28D72B4B1F253DB2006B212F /* ChallengeCreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChallengeCreateViewController.swift; path = Controllers/ChallengeCreateViewController.swift; sourceTree = "<group>"; };
 		28FA9FFF1F1CA3F9002D7E3E /* GoogleService-Info1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info1.plist"; sourceTree = "<group>"; };
 		28FAA0011F1CAA90002D7E3E /* EZSwipeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EZSwipeController.swift; sourceTree = "<group>"; };
 		28FAA0031F1CAD75002D7E3E /* SwipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwipeViewController.swift; path = Controllers/SwipeViewController.swift; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 		28268A4F1F1A6209008226F5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				28D72B4B1F253DB2006B212F /* ChallengeCreateViewController.swift */,
 				28FAA0031F1CAD75002D7E3E /* SwipeViewController.swift */,
 				28268A4D1F1A6203008226F5 /* WelcomeViewController.swift */,
 				28268A501F1A623F008226F5 /* AuthPickerViewController.swift */,
@@ -584,6 +587,7 @@
 				28268A631F1A640F008226F5 /* CommentTableViewCell.swift in Sources */,
 				28A4E4301F1CC29100B56CB0 /* FadeTransition.swift in Sources */,
 				28268A5B1F1A62FC008226F5 /* ProfileViewController.swift in Sources */,
+				28D72B4C1F253DB2006B212F /* ChallengeCreateViewController.swift in Sources */,
 				28FAA0021F1CAA90002D7E3E /* EZSwipeController.swift in Sources */,
 				28268A3D1F1A607E008226F5 /* Constants.swift in Sources */,
 				28268A5F1F1A634B008226F5 /* EditProfileViewController.swift in Sources */,
