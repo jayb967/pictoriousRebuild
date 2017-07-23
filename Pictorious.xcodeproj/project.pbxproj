@@ -44,6 +44,7 @@
 		28A4E4301F1CC29100B56CB0 /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A4E42F1F1CC29100B56CB0 /* FadeTransition.swift */; };
 		28B119021F1D679C0094A9FF /* CustomCameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B119011F1D679B0094A9FF /* CustomCameraVC.swift */; };
 		28D72B4C1F253DB2006B212F /* ChallengeCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D72B4B1F253DB2006B212F /* ChallengeCreateViewController.swift */; };
+		28D72B4F1F254C25006B212F /* ChallengeCreate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28D72B4E1F254C25006B212F /* ChallengeCreate.storyboard */; };
 		28FAA0001F1CA3F9002D7E3E /* GoogleService-Info1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 28FA9FFF1F1CA3F9002D7E3E /* GoogleService-Info1.plist */; };
 		28FAA0021F1CAA90002D7E3E /* EZSwipeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FAA0011F1CAA90002D7E3E /* EZSwipeController.swift */; };
 		28FAA0041F1CAD75002D7E3E /* SwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FAA0031F1CAD75002D7E3E /* SwipeViewController.swift */; };
@@ -109,6 +110,7 @@
 		28A4E42F1F1CC29100B56CB0 /* FadeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FadeTransition.swift; path = Views/FadeTransition.swift; sourceTree = "<group>"; };
 		28B119011F1D679B0094A9FF /* CustomCameraVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomCameraVC.swift; path = Controllers/CustomCameraVC.swift; sourceTree = "<group>"; };
 		28D72B4B1F253DB2006B212F /* ChallengeCreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChallengeCreateViewController.swift; path = Controllers/ChallengeCreateViewController.swift; sourceTree = "<group>"; };
+		28D72B4E1F254C25006B212F /* ChallengeCreate.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ChallengeCreate.storyboard; path = Assets/ChallengeCreate.storyboard; sourceTree = "<group>"; };
 		28FA9FFF1F1CA3F9002D7E3E /* GoogleService-Info1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info1.plist"; sourceTree = "<group>"; };
 		28FAA0011F1CAA90002D7E3E /* EZSwipeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EZSwipeController.swift; sourceTree = "<group>"; };
 		28FAA0031F1CAD75002D7E3E /* SwipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwipeViewController.swift; path = Controllers/SwipeViewController.swift; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 		28268A641F1A6418008226F5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				28D72B4D1F254BE4006B212F /* Storyboards */,
 				28A4E42F1F1CC29100B56CB0 /* FadeTransition.swift */,
 				28268A6B1F1A64E8008226F5 /* UserTableViewCell.swift */,
 				28268A6D1F1A6503008226F5 /* ViewHelper.swift */,
@@ -256,12 +259,20 @@
 			isa = PBXGroup;
 			children = (
 				28FAA0011F1CAA90002D7E3E /* EZSwipeController.swift */,
-				28268A741F1A661B008226F5 /* Main.storyboard */,
-				285F483E1F1A691800A8575E /* Launch Screen.storyboard */,
-				28268A721F1A6557008226F5 /* AuthLogoView.xib */,
 				28268A151F1A5F96008226F5 /* Assets.xcassets */,
 			);
 			name = Assets;
+			sourceTree = "<group>";
+		};
+		28D72B4D1F254BE4006B212F /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				28D72B4E1F254C25006B212F /* ChallengeCreate.storyboard */,
+				28268A741F1A661B008226F5 /* Main.storyboard */,
+				285F483E1F1A691800A8575E /* Launch Screen.storyboard */,
+				28268A721F1A6557008226F5 /* AuthLogoView.xib */,
+			);
+			name = Storyboards;
 			sourceTree = "<group>";
 		};
 		666A25A088CCB5D50A722BE5 /* Pods */ = {
@@ -411,6 +422,7 @@
 				28FAA0001F1CA3F9002D7E3E /* GoogleService-Info1.plist in Resources */,
 				285F483F1F1A691800A8575E /* Launch Screen.storyboard in Resources */,
 				282E6EE11F1D2C270003B5DC /* GoogleService-Info.plist in Resources */,
+				28D72B4F1F254C25006B212F /* ChallengeCreate.storyboard in Resources */,
 				28268A751F1A661B008226F5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

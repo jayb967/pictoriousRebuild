@@ -56,6 +56,7 @@ UINavigationControllerDelegate, StoryTableViewCellDelegate, UISearchResultsUpdat
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
+    @IBOutlet weak var postSection: UIView!
     
     // MARK: - View cycle
     
@@ -457,5 +458,9 @@ extension FeedViewController : UserTableViewCellDelegate {
     func didSelected(userRef: DatabaseReference) {
         self.performSegue(withIdentifier: "show.profile", sender: userRef)
     }
+}
+
+extension FeedViewController{
+    
 }
 
