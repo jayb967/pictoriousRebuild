@@ -18,14 +18,30 @@
                         <viewControllerLayoutGuide type="bottom" id="a6x-7Q-maT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="QIV-OE-KOA">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1108"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ChallengeCreate" translatesAutoresizingMaskIntoConstraints="NO" id="VQw-GH-4b8">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1108"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VQw-GH-4b8" firstAttribute="top" secondItem="QGH-cX-oYI" secondAttribute="bottom" constant="-20" id="XXd-6L-2d5"/>
+                            <constraint firstItem="VQw-GH-4b8" firstAttribute="leading" secondItem="QIV-OE-KOA" secondAttribute="leading" id="fer-xN-HrF"/>
+                            <constraint firstItem="a6x-7Q-maT" firstAttribute="top" secondItem="VQw-GH-4b8" secondAttribute="bottom" id="mXV-5f-pTk"/>
+                            <constraint firstAttribute="trailing" secondItem="VQw-GH-4b8" secondAttribute="trailing" id="x7b-8K-COr"/>
+                        </constraints>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="1108"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lZg-fh-xM0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3143" y="-1249"/>
+            <point key="canvasLocation" x="3141.5999999999999" y="-1249.4752623688157"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ChallengeCreate" width="375" height="1097"/>
+    </resources>
 </document>
