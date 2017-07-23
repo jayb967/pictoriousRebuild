@@ -137,7 +137,6 @@ class CreateViewController: UIViewController, UIImagePickerControllerDelegate, U
         self.tabBarController?.selectedIndex = 0 // home
         self.isPresented = false
         
-        
 //        self.dismiss(animated: true, completion: {
 //            self.tabBarController?.selectedIndex = 0 // home
 //            self.isPresented = false
