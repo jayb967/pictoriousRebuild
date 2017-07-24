@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="J4G-pP-NOX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="J4G-pP-NOX">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -19,7 +19,7 @@
                         <viewControllerLayoutGuide type="top" id="Ss2-fo-FqP"/>
                         <viewControllerLayoutGuide type="bottom" id="Rv1-Ev-vaU"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" misplaced="YES" id="Bg4-hU-EBw">
+                    <view key="view" contentMode="scaleToFill" id="Bg4-hU-EBw">
                         <rect key="frame" x="0.0" y="64" width="414" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -593,44 +593,63 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UFF-V4-55O">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                            </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jaq-hg-hkq">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="673"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="75" id="snZ-Yq-Kmr"/>
+                                    <constraint firstAttribute="height" constant="673" id="snZ-Yq-Kmr"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mty-fI-tt9">
-                                <rect key="frame" x="0.0" y="606" width="414" height="130"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mty-fI-tt9">
+                                <rect key="frame" x="126" y="670" width="171" height="66"/>
+                                <color key="backgroundColor" red="0.30980392156862746" green="0.82352941176470584" blue="0.68235294117647061" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="130" id="qaR-Zi-M5A"/>
+                                    <constraint firstAttribute="height" constant="66" id="qaR-Zi-M5A"/>
                                 </constraints>
+                                <state key="normal" image="camIcon"/>
                                 <connections>
                                     <action selector="didPressCameraButton:" destination="bcQ-kN-OWf" eventType="touchUpInside" id="TSu-th-xQc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xHd-LF-Qvp" userLabel="Flash Button">
+                                <rect key="frame" x="297" y="670" width="117" height="67"/>
+                                <color key="backgroundColor" red="0.30980392159999998" green="0.82352941180000006" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="flashIcon"/>
+                                <connections>
+                                    <action selector="didPressFlashIcon:" destination="bcQ-kN-OWf" eventType="touchUpInside" id="5Io-g5-gJ8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vlN-tZ-dxB" userLabel="Flip Button">
+                                <rect key="frame" x="0.0" y="670" width="129" height="66"/>
+                                <color key="backgroundColor" red="0.30980392159999998" green="0.82352941180000006" blue="0.68235294120000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" image="flipIcon"/>
+                                <connections>
+                                    <action selector="didPressFlipIcon:" destination="bcQ-kN-OWf" eventType="touchUpInside" id="8I2-nu-y35"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Mty-fI-tt9" secondAttribute="trailing" id="2yG-cl-jj5"/>
+                            <constraint firstAttribute="trailing" secondItem="Mty-fI-tt9" secondAttribute="trailing" constant="117" id="2yG-cl-jj5"/>
                             <constraint firstItem="Jaq-hg-hkq" firstAttribute="top" secondItem="ymf-Gf-MFw" secondAttribute="top" id="3ve-Zs-DeP"/>
-                            <constraint firstAttribute="trailing" secondItem="UFF-V4-55O" secondAttribute="trailing" id="7FN-VV-Yv3"/>
-                            <constraint firstItem="UFF-V4-55O" firstAttribute="leading" secondItem="ymf-Gf-MFw" secondAttribute="leading" id="BU1-Ff-K2O"/>
+                            <constraint firstAttribute="trailing" secondItem="xHd-LF-Qvp" secondAttribute="trailing" id="AvC-CQ-Ucl"/>
                             <constraint firstItem="v2b-B7-E2w" firstAttribute="top" secondItem="Mty-fI-tt9" secondAttribute="bottom" id="C2F-dz-ggz"/>
-                            <constraint firstItem="UFF-V4-55O" firstAttribute="top" secondItem="ymf-Gf-MFw" secondAttribute="top" id="K0P-Rh-1YV"/>
+                            <constraint firstItem="vlN-tZ-dxB" firstAttribute="leading" secondItem="ymf-Gf-MFw" secondAttribute="leading" id="H55-b9-YoL"/>
                             <constraint firstAttribute="trailing" secondItem="Jaq-hg-hkq" secondAttribute="trailing" id="NU9-kR-Qvx"/>
-                            <constraint firstItem="v2b-B7-E2w" firstAttribute="top" secondItem="UFF-V4-55O" secondAttribute="bottom" id="g4e-hb-3z8"/>
+                            <constraint firstAttribute="bottom" secondItem="xHd-LF-Qvp" secondAttribute="bottom" constant="-1" id="a7p-4g-fz0"/>
+                            <constraint firstItem="xHd-LF-Qvp" firstAttribute="top" secondItem="Mty-fI-tt9" secondAttribute="bottom" constant="-66" id="dVo-Cn-NNy"/>
+                            <constraint firstItem="xHd-LF-Qvp" firstAttribute="top" secondItem="Jaq-hg-hkq" secondAttribute="bottom" constant="-3" id="do9-SU-VAf"/>
+                            <constraint firstItem="v2b-B7-E2w" firstAttribute="top" secondItem="vlN-tZ-dxB" secondAttribute="bottom" id="hhe-6r-8su"/>
                             <constraint firstItem="Jaq-hg-hkq" firstAttribute="leading" secondItem="ymf-Gf-MFw" secondAttribute="leading" id="pBC-2X-xFO"/>
-                            <constraint firstItem="Mty-fI-tt9" firstAttribute="leading" secondItem="ymf-Gf-MFw" secondAttribute="leading" id="xXb-Qr-Y8l"/>
+                            <constraint firstItem="xHd-LF-Qvp" firstAttribute="leading" secondItem="Mty-fI-tt9" secondAttribute="trailing" id="qlh-5Z-eVw"/>
+                            <constraint firstItem="Mty-fI-tt9" firstAttribute="leading" secondItem="vlN-tZ-dxB" secondAttribute="trailing" constant="-3" id="sJU-qn-8my"/>
+                            <constraint firstItem="vlN-tZ-dxB" firstAttribute="top" secondItem="Mty-fI-tt9" secondAttribute="top" id="tGs-i6-VBM"/>
+                            <constraint firstItem="Mty-fI-tt9" firstAttribute="leading" secondItem="ymf-Gf-MFw" secondAttribute="leading" constant="126" id="xXb-Qr-Y8l"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="cameraButton" destination="Mty-fI-tt9" id="rc0-RS-08F"/>
                         <outlet property="cameraView" destination="Jaq-hg-hkq" id="GIV-XL-KkZ"/>
-                        <outlet property="imgOverlay" destination="UFF-V4-55O" id="t52-oe-8fP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ig8-n3-sEM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -805,11 +824,11 @@
                                         <rect key="frame" x="0.0" y="126" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="U09-O4-lgx" id="5LL-fE-Xl9">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Profile Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="93C-Ee-bdb">
-                                                    <rect key="frame" x="8" y="0.0" width="398" height="43"/>
+                                                    <rect key="frame" x="8" y="0.0" width="397" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -844,7 +863,7 @@
                         <viewControllerLayoutGuide type="top" id="Sgy-gZ-03z"/>
                         <viewControllerLayoutGuide type="bottom" id="X6w-3N-4QS"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" misplaced="YES" id="3Fc-2n-9DU">
+                    <view key="view" contentMode="scaleToFill" id="3Fc-2n-9DU">
                         <rect key="frame" x="0.0" y="64" width="414" height="628"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -1162,7 +1181,10 @@
         <image name="IMG_2854" width="414" height="736"/>
         <image name="avatarPlaceholder" width="45" height="45"/>
         <image name="brandChallenges" width="414" height="736"/>
+        <image name="camIcon" width="23" height="23"/>
         <image name="comment" width="32" height="32"/>
+        <image name="flashIcon" width="9" height="11"/>
+        <image name="flipIcon" width="10" height="10"/>
         <image name="heart" width="110" height="100"/>
         <image name="homeIcon" width="39" height="37"/>
         <image name="like" width="32" height="32"/>
