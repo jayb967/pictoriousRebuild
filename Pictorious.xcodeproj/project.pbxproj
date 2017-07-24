@@ -45,6 +45,7 @@
 		28B119021F1D679C0094A9FF /* CustomCameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B119011F1D679B0094A9FF /* CustomCameraVC.swift */; };
 		28D72B4C1F253DB2006B212F /* ChallengeCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D72B4B1F253DB2006B212F /* ChallengeCreateViewController.swift */; };
 		28D72B4F1F254C25006B212F /* ChallengeCreate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28D72B4E1F254C25006B212F /* ChallengeCreate.storyboard */; };
+		28D72B521F256D2C006B212F /* FoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D72B511F256D2C006B212F /* FoundationExtensions.swift */; };
 		28FAA0001F1CA3F9002D7E3E /* GoogleService-Info1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 28FA9FFF1F1CA3F9002D7E3E /* GoogleService-Info1.plist */; };
 		28FAA0021F1CAA90002D7E3E /* EZSwipeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FAA0011F1CAA90002D7E3E /* EZSwipeController.swift */; };
 		28FAA0041F1CAD75002D7E3E /* SwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FAA0031F1CAD75002D7E3E /* SwipeViewController.swift */; };
@@ -111,6 +112,7 @@
 		28B119011F1D679B0094A9FF /* CustomCameraVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomCameraVC.swift; path = Controllers/CustomCameraVC.swift; sourceTree = "<group>"; };
 		28D72B4B1F253DB2006B212F /* ChallengeCreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChallengeCreateViewController.swift; path = Controllers/ChallengeCreateViewController.swift; sourceTree = "<group>"; };
 		28D72B4E1F254C25006B212F /* ChallengeCreate.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ChallengeCreate.storyboard; path = Assets/ChallengeCreate.storyboard; sourceTree = "<group>"; };
+		28D72B511F256D2C006B212F /* FoundationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoundationExtensions.swift; path = Extensions/FoundationExtensions.swift; sourceTree = "<group>"; };
 		28FA9FFF1F1CA3F9002D7E3E /* GoogleService-Info1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info1.plist"; sourceTree = "<group>"; };
 		28FAA0011F1CAA90002D7E3E /* EZSwipeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EZSwipeController.swift; sourceTree = "<group>"; };
 		28FAA0031F1CAD75002D7E3E /* SwipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwipeViewController.swift; path = Controllers/SwipeViewController.swift; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				28268A4F1F1A6209008226F5 /* Controllers */,
 				28268A0B1F1A5F96008226F5 /* AppDelegate.swift */,
 				28268A3C1F1A607E008226F5 /* Constants.swift */,
+				28D72B501F256CD9006B212F /* Extensions */,
 				28268A711F1A6548008226F5 /* Assets */,
 				28268A1A1F1A5F96008226F5 /* Info.plist */,
 				28FA9FFF1F1CA3F9002D7E3E /* GoogleService-Info1.plist */,
@@ -273,6 +276,14 @@
 				28268A721F1A6557008226F5 /* AuthLogoView.xib */,
 			);
 			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		28D72B501F256CD9006B212F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				28D72B511F256D2C006B212F /* FoundationExtensions.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		666A25A088CCB5D50A722BE5 /* Pods */ = {
@@ -612,6 +623,7 @@
 				28268A4C1F1A61D6008226F5 /* Favorite.swift in Sources */,
 				28268A3F1F1A60EB008226F5 /* ModelBase.swift in Sources */,
 				28268A531F1A6266008226F5 /* FeedViewController.swift in Sources */,
+				28D72B521F256D2C006B212F /* FoundationExtensions.swift in Sources */,
 				28FAA0041F1CAD75002D7E3E /* SwipeViewController.swift in Sources */,
 				28268A441F1A6159008226F5 /* Story.swift in Sources */,
 				28268A661F1A646A008226F5 /* StoryTableViewCell.swift in Sources */,

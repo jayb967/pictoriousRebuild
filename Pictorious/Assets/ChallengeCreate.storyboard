@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,14 +19,169 @@
                         <viewControllerLayoutGuide type="bottom" id="a6x-7Q-maT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="QIV-OE-KOA">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1108"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TopBar" translatesAutoresizingMaskIntoConstraints="NO" id="Bj3-3A-2dy">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="XeY-lJ-uRH"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Challenge&amp;ProposeButtonsTop" translatesAutoresizingMaskIntoConstraints="NO" id="Chd-EM-Pxc">
+                                <rect key="frame" x="0.0" y="53" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="IkZ-M7-ML4"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EmptyCameraPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="wRq-9F-Bk1">
+                                <rect key="frame" x="0.0" y="97" width="375" height="287"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="287" id="U8i-D9-PEB"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="hMu-aD-wZh" appends="YES" id="N19-w7-XEO"/>
+                                </connections>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Write your hashtag here..." textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XAj-sy-4ud">
+                                <rect key="frame" x="84" y="403" width="271" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="271" id="zXG-3t-VRP"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="F4d-WX-JSX">
+                                <rect key="frame" x="0.0" y="442" width="375" height="115"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="115" id="tZF-07-vnI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Write a caption for  your challenge..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfa-mr-f8t">
+                                <rect key="frame" x="16" y="442" width="248" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aep-B3-OHL">
+                                <rect key="frame" x="0.0" y="0.0" width="76" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="76" id="2Q9-pM-deG"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="euO-vG-dYk" eventType="touchUpInside" id="Ola-Nd-5AT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="av5-sU-aWO">
+                                <rect key="frame" x="187" y="53" width="188" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="188" id="hSV-yK-TBZ"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="ProposeButtonPressed:" destination="euO-vG-dYk" eventType="touchUpInside" id="Y7u-Op-Rxb"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ufm-Eo-Yj7">
+                                <rect key="frame" x="16" y="401" width="42" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="42" id="QD9-xt-ab0"/>
+                                    <constraint firstAttribute="height" constant="22" id="bSZ-v0-cWP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <color key="textColor" red="0.30980392156862746" green="0.82352941176470584" blue="0.68235294117647061" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LowerOptions" translatesAutoresizingMaskIntoConstraints="NO" id="9SX-wg-cLd">
+                                <rect key="frame" x="0.0" y="557" width="375" height="466"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="466" id="c2x-4r-rxi"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="InF-WY-8D9" appends="YES" id="jIM-D3-U5n"/>
+                                </connections>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w11-Hq-61i">
+                                <rect key="frame" x="16" y="1043" width="343" height="43"/>
+                                <color key="backgroundColor" red="0.30980392156862746" green="0.82352941176470584" blue="0.68235294117647061" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="jIq-mB-wgc"/>
+                                </constraints>
+                                <state key="normal" title="Post Challenge">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="postChallengeButtonPressed:" destination="euO-vG-dYk" eventType="touchUpInside" id="EV5-Mo-vsB"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ufm-Eo-Yj7" firstAttribute="top" secondItem="wRq-9F-Bk1" secondAttribute="bottom" constant="17" id="1wM-Qp-wxr"/>
+                            <constraint firstItem="aep-B3-OHL" firstAttribute="top" secondItem="QIV-OE-KOA" secondAttribute="top" id="4Ub-6U-Caa"/>
+                            <constraint firstItem="Chd-EM-Pxc" firstAttribute="leading" secondItem="QIV-OE-KOA" secondAttribute="leading" id="6Hd-au-BfG"/>
+                            <constraint firstItem="wRq-9F-Bk1" firstAttribute="top" secondItem="Chd-EM-Pxc" secondAttribute="bottom" id="6XV-Ed-Rev"/>
+                            <constraint firstAttribute="trailing" secondItem="F4d-WX-JSX" secondAttribute="trailing" id="9Zm-MS-5Mm"/>
+                            <constraint firstItem="9SX-wg-cLd" firstAttribute="top" secondItem="F4d-WX-JSX" secondAttribute="bottom" id="AjE-Xp-HMd"/>
+                            <constraint firstItem="Bj3-3A-2dy" firstAttribute="leading" secondItem="QIV-OE-KOA" secondAttribute="leading" id="Azo-EE-43h"/>
+                            <constraint firstItem="av5-sU-aWO" firstAttribute="top" secondItem="Bj3-3A-2dy" secondAttribute="bottom" id="EuY-78-uaa"/>
+                            <constraint firstItem="wRq-9F-Bk1" firstAttribute="top" secondItem="av5-sU-aWO" secondAttribute="bottom" id="IPa-7l-THA"/>
+                            <constraint firstAttribute="trailing" secondItem="Chd-EM-Pxc" secondAttribute="trailing" id="PoF-ao-hQk"/>
+                            <constraint firstItem="w11-Hq-61i" firstAttribute="top" secondItem="9SX-wg-cLd" secondAttribute="bottom" constant="20" id="QR4-Pg-KSq"/>
+                            <constraint firstItem="XAj-sy-4ud" firstAttribute="top" secondItem="wRq-9F-Bk1" secondAttribute="bottom" constant="19" id="SXe-8q-nFF"/>
+                            <constraint firstItem="vfa-mr-f8t" firstAttribute="leading" secondItem="QIV-OE-KOA" secondAttribute="leading" constant="16" id="WP6-O9-1Jb"/>
+                            <constraint firstItem="Chd-EM-Pxc" firstAttribute="top" secondItem="aep-B3-OHL" secondAttribute="bottom" id="YWW-Oj-NSH"/>
+                            <constraint firstAttribute="trailing" secondItem="XAj-sy-4ud" secondAttribute="trailing" constant="20" id="ZSd-bv-osP"/>
+                            <constraint firstItem="aep-B3-OHL" firstAttribute="leading" secondItem="QIV-OE-KOA" secondAttribute="leading" id="bfz-xa-b9v"/>
+                            <constraint firstAttribute="trailing" secondItem="Bj3-3A-2dy" secondAttribute="trailing" id="fjP-UA-N5E"/>
+                            <constraint firstAttribute="trailing" secondItem="9SX-wg-cLd" secondAttribute="trailing" id="frU-Rd-CUA"/>
+                            <constraint firstItem="w11-Hq-61i" firstAttribute="leading" secondItem="QIV-OE-KOA" secondAttribute="leading" constant="16" id="gt5-2h-ccO"/>
+                            <constraint firstItem="9SX-wg-cLd" firstAttribute="leading" secondItem="QIV-OE-KOA" secondAttribute="leading" id="ieJ-Mu-POm"/>
+                            <constraint firstItem="Chd-EM-Pxc" firstAttribute="top" secondItem="Bj3-3A-2dy" secondAttribute="bottom" id="ifW-jL-Hqg"/>
+                            <constraint firstItem="Bj3-3A-2dy" firstAttribute="top" secondItem="QGH-cX-oYI" secondAttribute="bottom" constant="-20" id="kL1-mf-1vK"/>
+                            <constraint firstItem="F4d-WX-JSX" firstAttribute="top" secondItem="Ufm-Eo-Yj7" secondAttribute="bottom" constant="19" id="keW-yJ-E5d"/>
+                            <constraint firstItem="F4d-WX-JSX" firstAttribute="leading" secondItem="QIV-OE-KOA" secondAttribute="leading" id="kxK-SR-j6l"/>
+                            <constraint firstAttribute="trailing" secondItem="w11-Hq-61i" secondAttribute="trailing" constant="16" id="ngx-kK-hv6"/>
+                            <constraint firstItem="vfa-mr-f8t" firstAttribute="top" secondItem="Ufm-Eo-Yj7" secondAttribute="bottom" constant="19" id="oOb-ZY-E0c"/>
+                            <constraint firstItem="wRq-9F-Bk1" firstAttribute="leading" secondItem="QIV-OE-KOA" secondAttribute="leading" id="p5s-AF-y5a"/>
+                            <constraint firstAttribute="trailing" secondItem="av5-sU-aWO" secondAttribute="trailing" id="v4M-o4-6hZ"/>
+                            <constraint firstItem="Ufm-Eo-Yj7" firstAttribute="leading" secondItem="QIV-OE-KOA" secondAttribute="leadingMargin" id="ve6-jn-ecm"/>
+                            <constraint firstAttribute="trailing" secondItem="wRq-9F-Bk1" secondAttribute="trailing" id="yhD-jB-M71"/>
+                        </constraints>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="1108"/>
+                    <connections>
+                        <outlet property="hashtagTextField" destination="XAj-sy-4ud" id="IIS-sh-fwL"/>
+                        <outlet property="photoPreview" destination="wRq-9F-Bk1" id="Bt4-9E-1xK"/>
+                        <outlet property="placeholderTextLabel" destination="vfa-mr-f8t" id="lV2-oQ-zLp"/>
+                        <outlet property="postChallengeButton" destination="w11-Hq-61i" id="no4-Zu-wCm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lZg-fh-xM0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="hMu-aD-wZh">
+                    <connections>
+                        <action selector="EmptyPhotoPressed:" destination="euO-vG-dYk" id="UfS-LF-hBc"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="InF-WY-8D9">
+                    <connections>
+                        <action selector="settingsSectionPressed:" destination="euO-vG-dYk" id="zrT-Fa-TlD"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3143" y="-1249"/>
+            <point key="canvasLocation" x="3141.5999999999999" y="-1249.4752623688157"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Challenge&amp;ProposeButtonsTop" width="187" height="22"/>
+        <image name="EmptyCameraPhoto" width="187" height="143"/>
+        <image name="LowerOptions" width="187" height="234"/>
+        <image name="TopBar" width="187" height="28"/>
+    </resources>
 </document>
