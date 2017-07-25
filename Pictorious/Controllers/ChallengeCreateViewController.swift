@@ -12,39 +12,7 @@ class ChallengeCreateViewController: UIViewController {
     @IBOutlet weak var photoPreview: UIImageView!
     let imagePicker = UIImagePickerController()
 
-<<<<<<< HEAD
-=======
-    @IBAction func backButtonPressed(_ sender: UIButton) {
-        print("backbutton pressed on Challengecreate VC")
-    }
-    @IBAction func ProposeButtonPressed(_ sender: UIButton) {
-        createAlert(title: "Option Not yet Avilable.", message: "Coming Soon!")
-    }
-    @IBAction func EmptyPhotoPressed(_ sender: UITapGestureRecognizer) {
-        //        self.postChallengeButton.setTitleColor(UIColor.white, for: .normal)
-        self.postChallengeButton.isUserInteractionEnabled = true
-        
-        let alert = UIAlertController(title: "Choose Image", message: nil, preferredStyle: .actionSheet)
-        alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: { _ in
-            self.openCamera()
-        }))
-        
-        alert.addAction(UIAlertAction(title: "Gallery", style: .default, handler: { _ in
-            self.openGallary()
-        }))
-        
-        alert.addAction(UIAlertAction.init(title: "Cancel", style: .cancel, handler: nil))
-        
-        self.present(alert, animated: true, completion: nil)
 
-    }
-    @IBAction func postChallengeButtonPressed(_ sender: UIButton) {
-    }
-    
-    @IBAction func settingsSectionPressed(_ sender: UITapGestureRecognizer) {
-        createAlert(title: "Option Not yet Avilable.", message: "Coming Soon!")
-    }
->>>>>>> dd54f41f727d1db674a65898b4898e7c9bc80d7d
     @IBOutlet weak var hashtagTextField: UITextField!
     @IBOutlet weak var placeholderTextLabel: UILabel!
     
