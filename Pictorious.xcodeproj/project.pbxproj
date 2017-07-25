@@ -46,6 +46,12 @@
 		28D72B4C1F253DB2006B212F /* ChallengeCreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D72B4B1F253DB2006B212F /* ChallengeCreateViewController.swift */; };
 		28D72B4F1F254C25006B212F /* ChallengeCreate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28D72B4E1F254C25006B212F /* ChallengeCreate.storyboard */; };
 		28D72B521F256D2C006B212F /* FoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D72B511F256D2C006B212F /* FoundationExtensions.swift */; };
+		28F7C46A1F26B95300D39A37 /* PhotoSectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F7C4691F26B95300D39A37 /* PhotoSectionViewController.swift */; };
+		28F7C46C1F26BEDD00D39A37 /* ImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F7C46B1F26BEDD00D39A37 /* ImageFetcher.swift */; };
+		28F7C46E1F26BF3500D39A37 /* PhotoLIbraryAuthorizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F7C46D1F26BF3500D39A37 /* PhotoLIbraryAuthorizer.swift */; };
+		28F7C4701F26CF8D00D39A37 /* PermissionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F7C46F1F26CF8D00D39A37 /* PermissionsView.swift */; };
+		28F7C4721F26D3B800D39A37 /* UIButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F7C4711F26D3B800D39A37 /* UIButtonExtensions.swift */; };
+		28F7C4741F26D40500D39A37 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F7C4731F26D40500D39A37 /* ImageCell.swift */; };
 		28FAA0001F1CA3F9002D7E3E /* GoogleService-Info1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 28FA9FFF1F1CA3F9002D7E3E /* GoogleService-Info1.plist */; };
 		28FAA0021F1CAA90002D7E3E /* EZSwipeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FAA0011F1CAA90002D7E3E /* EZSwipeController.swift */; };
 		28FAA0041F1CAD75002D7E3E /* SwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FAA0031F1CAD75002D7E3E /* SwipeViewController.swift */; };
@@ -113,6 +119,12 @@
 		28D72B4B1F253DB2006B212F /* ChallengeCreateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChallengeCreateViewController.swift; path = Controllers/ChallengeCreateViewController.swift; sourceTree = "<group>"; };
 		28D72B4E1F254C25006B212F /* ChallengeCreate.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ChallengeCreate.storyboard; path = Assets/ChallengeCreate.storyboard; sourceTree = "<group>"; };
 		28D72B511F256D2C006B212F /* FoundationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoundationExtensions.swift; path = Extensions/FoundationExtensions.swift; sourceTree = "<group>"; };
+		28F7C4691F26B95300D39A37 /* PhotoSectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoSectionViewController.swift; path = Controllers/PhotoSectionViewController.swift; sourceTree = "<group>"; };
+		28F7C46B1F26BEDD00D39A37 /* ImageFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageFetcher.swift; path = Assets/ImageFetcher.swift; sourceTree = "<group>"; };
+		28F7C46D1F26BF3500D39A37 /* PhotoLIbraryAuthorizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoLIbraryAuthorizer.swift; path = Assets/PhotoLIbraryAuthorizer.swift; sourceTree = "<group>"; };
+		28F7C46F1F26CF8D00D39A37 /* PermissionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PermissionsView.swift; path = Assets/PermissionsView.swift; sourceTree = "<group>"; };
+		28F7C4711F26D3B800D39A37 /* UIButtonExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIButtonExtensions.swift; path = Assets/UIButtonExtensions.swift; sourceTree = "<group>"; };
+		28F7C4731F26D40500D39A37 /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageCell.swift; path = Views/ImageCell.swift; sourceTree = "<group>"; };
 		28FA9FFF1F1CA3F9002D7E3E /* GoogleService-Info1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info1.plist"; sourceTree = "<group>"; };
 		28FAA0011F1CAA90002D7E3E /* EZSwipeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EZSwipeController.swift; sourceTree = "<group>"; };
 		28FAA0031F1CAD75002D7E3E /* SwipeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwipeViewController.swift; path = Controllers/SwipeViewController.swift; sourceTree = "<group>"; };
@@ -227,6 +239,7 @@
 		28268A4F1F1A6209008226F5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				28F7C4691F26B95300D39A37 /* PhotoSectionViewController.swift */,
 				28D72B4B1F253DB2006B212F /* ChallengeCreateViewController.swift */,
 				28FAA0031F1CAD75002D7E3E /* SwipeViewController.swift */,
 				28268A4D1F1A6203008226F5 /* WelcomeViewController.swift */,
@@ -247,6 +260,7 @@
 		28268A641F1A6418008226F5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				28F7C4731F26D40500D39A37 /* ImageCell.swift */,
 				28D72B4D1F254BE4006B212F /* Storyboards */,
 				28A4E42F1F1CC29100B56CB0 /* FadeTransition.swift */,
 				28268A6B1F1A64E8008226F5 /* UserTableViewCell.swift */,
@@ -261,6 +275,10 @@
 		28268A711F1A6548008226F5 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				28F7C46F1F26CF8D00D39A37 /* PermissionsView.swift */,
+				28F7C4711F26D3B800D39A37 /* UIButtonExtensions.swift */,
+				28F7C46B1F26BEDD00D39A37 /* ImageFetcher.swift */,
+				28F7C46D1F26BF3500D39A37 /* PhotoLIbraryAuthorizer.swift */,
 				28FAA0011F1CAA90002D7E3E /* EZSwipeController.swift */,
 				28268A151F1A5F96008226F5 /* Assets.xcassets */,
 			);
@@ -606,21 +624,27 @@
 				28268A4A1F1A61B4008226F5 /* Like.swift in Sources */,
 				28268A511F1A623F008226F5 /* AuthPickerViewController.swift in Sources */,
 				28B119021F1D679C0094A9FF /* CustomCameraVC.swift in Sources */,
+				28F7C4701F26CF8D00D39A37 /* PermissionsView.swift in Sources */,
 				28268A591F1A62DC008226F5 /* CreateViewController.swift in Sources */,
+				28F7C46A1F26B95300D39A37 /* PhotoSectionViewController.swift in Sources */,
 				28268A631F1A640F008226F5 /* CommentTableViewCell.swift in Sources */,
 				28A4E4301F1CC29100B56CB0 /* FadeTransition.swift in Sources */,
 				28268A5B1F1A62FC008226F5 /* ProfileViewController.swift in Sources */,
 				28D72B4C1F253DB2006B212F /* ChallengeCreateViewController.swift in Sources */,
 				28FAA0021F1CAA90002D7E3E /* EZSwipeController.swift in Sources */,
 				28268A3D1F1A607E008226F5 /* Constants.swift in Sources */,
+				28F7C46C1F26BEDD00D39A37 /* ImageFetcher.swift in Sources */,
 				28268A5F1F1A634B008226F5 /* EditProfileViewController.swift in Sources */,
+				28F7C4721F26D3B800D39A37 /* UIButtonExtensions.swift in Sources */,
 				28268A461F1A6171008226F5 /* Comment.swift in Sources */,
 				28268A571F1A62B5008226F5 /* CommentsTableViewController.swift in Sources */,
 				28268A551F1A628A008226F5 /* StoryViewController.swift in Sources */,
 				28268A701F1A6522008226F5 /* ProfileView.swift in Sources */,
 				28268A5D1F1A632B008226F5 /* ProfileFeedViewController.swift in Sources */,
+				28F7C46E1F26BF3500D39A37 /* PhotoLIbraryAuthorizer.swift in Sources */,
 				28268A421F1A6135008226F5 /* User.swift in Sources */,
 				28268A4C1F1A61D6008226F5 /* Favorite.swift in Sources */,
+				28F7C4741F26D40500D39A37 /* ImageCell.swift in Sources */,
 				28268A3F1F1A60EB008226F5 /* ModelBase.swift in Sources */,
 				28268A531F1A6266008226F5 /* FeedViewController.swift in Sources */,
 				28D72B521F256D2C006B212F /* FoundationExtensions.swift in Sources */,
@@ -774,7 +798,6 @@
 			baseConfigurationReference = 48354F83D86F24C12010C9A2 /* Pods-Pictorious.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				DEVELOPMENT_TEAM = 5EB567WJ73;
 				INFOPLIST_FILE = Pictorious/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
@@ -791,7 +814,6 @@
 			baseConfigurationReference = 536C68F58879FC54A42B114B /* Pods-Pictorious.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "LaunchImage-2";
 				DEVELOPMENT_TEAM = 5EB567WJ73;
 				INFOPLIST_FILE = Pictorious/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;

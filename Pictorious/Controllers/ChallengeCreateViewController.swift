@@ -12,6 +12,8 @@ class ChallengeCreateViewController: UIViewController {
     @IBOutlet weak var photoPreview: UIImageView!
     let imagePicker = UIImagePickerController()
 
+<<<<<<< HEAD
+=======
     @IBAction func backButtonPressed(_ sender: UIButton) {
         print("backbutton pressed on Challengecreate VC")
     }
@@ -42,6 +44,7 @@ class ChallengeCreateViewController: UIViewController {
     @IBAction func settingsSectionPressed(_ sender: UITapGestureRecognizer) {
         createAlert(title: "Option Not yet Avilable.", message: "Coming Soon!")
     }
+>>>>>>> dd54f41f727d1db674a65898b4898e7c9bc80d7d
     @IBOutlet weak var hashtagTextField: UITextField!
     @IBOutlet weak var placeholderTextLabel: UILabel!
     
@@ -100,4 +103,23 @@ extension ChallengeCreateViewController: UIImagePickerControllerDelegate, UINavi
     }
     
     
+}
+
+extension ChallengeCreateViewController{
+    @IBAction func backButtonPressed(_ sender: UIButton) {
+        print("backbutton pressed on Challengecreate VC")
+    }
+    @IBAction func ProposeButtonPressed(_ sender: UIButton) {
+        createAlert(title: "Option Not yet Available.", message: "Coming Soon!")
+    }
+    @IBAction func EmptyPhotoPressed(_ sender: UITapGestureRecognizer) {
+        
+    }
+    @IBAction func postChallengeButtonPressed(_ sender: UIButton) {
+    }
+    
+    @IBAction func settingsSectionPressed(_ sender: UITapGestureRecognizer) {
+        createAlert(title: "Option Not yet Available.", message: "Coming Soon!")
+    }
+
 }
