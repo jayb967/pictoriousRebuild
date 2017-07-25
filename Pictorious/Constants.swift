@@ -86,3 +86,29 @@ let kMessageUploadingDone = NSLocalizedString("Done!", comment:"")
 // example: Uploading: 12% (percentage will be added)
 let kMessageUploadingProcess = NSLocalizedString("Uploading", comment:"")
 
+//Photo gallery constants
+internal let kitemSpacing: CGFloat = 1 //Sets spacing between "boxes"
+internal let kcolumns: CGFloat = 4 //Sets column size
+internal let kthumbnailDimension = (UIScreen.main.bounds.width - ((kcolumns * kitemSpacing) - kitemSpacing))/kcolumns //Sets the size of the thumbnails
+public var kstringsTable = "PhotoView"
+public var kbundle = Bundle(for: FeedViewController.self)
+public var kphotoLibraryThumbnailSize = CGSize(width: kthumbnailDimension, height: kthumbnailDimension)
+
+internal func localizedString(_ key: String) -> String {
+    var bundle: Bundle {
+        if Bundle.main.path(forResource: kstringsTable, ofType: "strings") != nil {
+            return Bundle.main
+        }
+        return kbundle
+    }
+    
+    return NSLocalizedString(key, tableName: kstringsTable, bundle: bundle, comment: key)
+}
+
+internal func errorWithKey(_ key: String, domain: String) -> NSError {
+    let errorString = localizedString(key)
+    let errorInfo = [NSLocalizedDescriptionKey: errorString]
+    let error = NSError(domain: domain, code: 0, userInfo: errorInfo)
+    return error
+}
+

@@ -19,7 +19,7 @@
                         <viewControllerLayoutGuide type="top" id="Ss2-fo-FqP"/>
                         <viewControllerLayoutGuide type="bottom" id="Rv1-Ev-vaU"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Bg4-hU-EBw">
+                    <view key="view" contentMode="scaleToFill" misplaced="YES" id="Bg4-hU-EBw">
                         <rect key="frame" x="0.0" y="64" width="414" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -540,7 +540,7 @@
         <scene sceneID="jjF-aX-Bzv">
             <objects>
                 <navigationController navigationBarHidden="YES" id="J4G-pP-NOX" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TZJ-sP-FrC">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="TZJ-sP-FrC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -664,7 +664,7 @@
                     <tabBarItem key="tabBarItem" image="homeIcon" selectedImage="homeIcon" id="eru-Ow-HC8">
                         <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="Vna-Xd-dze">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" translucent="NO" id="Vna-Xd-dze">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.93259751796722412" green="0.93259751796722412" blue="0.93259751796722412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -681,7 +681,7 @@
         <scene sceneID="d3y-Qa-rFK">
             <objects>
                 <collectionViewController id="Ll2-iT-cTR" customClass="ProfileViewController" customModule="Pictorious" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="KgR-VB-shd">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="KgR-VB-shd">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -828,7 +828,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Profile Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="93C-Ee-bdb">
-                                                    <rect key="frame" x="7" y="0.0" width="397" height="43"/>
+                                                    <rect key="frame" x="4" y="0.0" width="396" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -863,7 +863,7 @@
                         <viewControllerLayoutGuide type="top" id="Sgy-gZ-03z"/>
                         <viewControllerLayoutGuide type="bottom" id="X6w-3N-4QS"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="3Fc-2n-9DU">
+                    <view key="view" contentMode="scaleToFill" misplaced="YES" id="3Fc-2n-9DU">
                         <rect key="frame" x="0.0" y="64" width="414" height="628"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -961,7 +961,7 @@
                     <tabBarItem key="tabBarItem" title="" image="tabProfile" selectedImage="tabProfileSelected" id="s1X-Al-6Ks">
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hre-9f-bqd">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="hre-9f-bqd">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
