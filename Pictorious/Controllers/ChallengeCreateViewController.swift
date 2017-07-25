@@ -31,8 +31,7 @@ class ChallengeCreateViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func openCamera()
-    {
+    func openCamera() {
         if(UIImagePickerController .isSourceTypeAvailable(UIImagePickerControllerSourceType.camera))
         {
             imagePicker.sourceType = UIImagePickerControllerSourceType.camera
@@ -47,8 +46,7 @@ class ChallengeCreateViewController: UIViewController {
         }
     }
     
-    func openGallary()
-    {
+    func openGallary() {
         imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary
         imagePicker.allowsEditing = true
         self.present(imagePicker, animated: true, completion: nil)
@@ -81,6 +79,18 @@ extension ChallengeCreateViewController{
         createAlert(title: "Option Not yet Available.", message: "Coming Soon!")
     }
     @IBAction func EmptyPhotoPressed(_ sender: UITapGestureRecognizer) {
+        let alert = UIAlertController(title: "Choose Image", message: nil, preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: { _ in
+            self.openCamera()
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Gallery", style: .default, handler: { _ in
+            self.openGallary()
+        }))
+        
+        alert.addAction(UIAlertAction.init(title: "Cancel", style: .cancel, handler: nil))
+        
+        self.present(alert, animated: true, completion: nil)
         
     }
     @IBAction func postChallengeButtonPressed(_ sender: UIButton) {
