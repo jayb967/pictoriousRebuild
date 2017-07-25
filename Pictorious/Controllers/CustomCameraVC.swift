@@ -21,17 +21,7 @@ class CustomCameraVC: UIViewController, AVCapturePhotoCaptureDelegate {
     
     @IBOutlet weak var cameraButton: UIButton!
     @IBOutlet weak var cameraView: UIView!
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        // Setup your camera here...
 
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-//        previewLayer!.frame = cameraView.bounds
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -170,7 +160,7 @@ extension CustomCameraVC : AVCaptureMetadataOutputObjectsDelegate {
         // Check if the metadataObjects array is not nil and it contains at least one object.
         if metadataObjects == nil || metadataObjects.count == 0 {
             frameView?.frame = CGRect.zero
-//            messageLabel.isHidden = true
+
             return
         }
         
@@ -183,8 +173,6 @@ extension CustomCameraVC : AVCaptureMetadataOutputObjectsDelegate {
             frameView?.frame = barCodeObject!.bounds
             
             if metadataObj.stringValue != nil {
-//                messageLabel.isHidden = false
-//                messageLabel.text = metadataObj.stringValue
                 debugPrint(metadataObj.stringValue)
             }
         }
