@@ -125,6 +125,7 @@ playground.xcworkspace
 Packages
 .build
 xcuserdata
+/xcuserdata
 *.xcodeproj
 /UserInterfaceState.xcuserstate
 
