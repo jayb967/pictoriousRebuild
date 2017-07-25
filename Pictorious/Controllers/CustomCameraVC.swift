@@ -29,7 +29,7 @@ class CustomCameraVC: UIViewController, AVCapturePhotoCaptureDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        previewLayer!.frame = cameraView.bounds
+//        previewLayer!.frame = cameraView.bounds
     }
     
     override func viewDidLoad() {

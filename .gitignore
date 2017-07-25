@@ -126,6 +126,7 @@ Packages
 .build
 xcuserdata
 *.xcodeproj
+/UserInterfaceState.xcuserstate
 
 ### Xcode ###
 # Xcode
