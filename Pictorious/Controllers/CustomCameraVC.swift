@@ -13,6 +13,7 @@ class CustomCameraVC: UIViewController, AVCapturePhotoCaptureDelegate {
     var session: AVCaptureSession?
     var previewLayer : AVCaptureVideoPreviewLayer?
     var cameraOutput = AVCapturePhotoOutput()
+    var frameView: UIView?
     var cameraPosition = "back"
     
     // storage for found device at initialization
@@ -20,17 +21,7 @@ class CustomCameraVC: UIViewController, AVCapturePhotoCaptureDelegate {
     
     @IBOutlet weak var cameraButton: UIButton!
     @IBOutlet weak var cameraView: UIView!
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        // Setup your camera here...
 
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-//        previewLayer!.frame = cameraView.bounds
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -85,6 +76,111 @@ class CustomCameraVC: UIViewController, AVCapturePhotoCaptureDelegate {
             
     }
     
+    func capture(_ captureOutput: AVCapturePhotoOutput,
+                 didFinishProcessingPhotoSampleBuffer photoSampleBuffer: CMSampleBuffer?,
+                 previewPhotoSampleBuffer: CMSampleBuffer?,
+                 resolvedSettings: AVCaptureResolvedPhotoSettings,
+                 bracketSettings: AVCaptureBracketedStillImageSettings?,
+                 error: Error?) {
+        // Make sure we get some photo sample buffer
+        guard error == nil,
+            let photoSampleBuffer = photoSampleBuffer else {
+                print("Error capturing photo: \(String(describing: error))")
+                return
+        }
+        
+        // Convert photo same buffer to a jpeg image data by using AVCapturePhotoOutput
+        guard let imageData = AVCapturePhotoOutput.jpegPhotoDataRepresentation(forJPEGSampleBuffer: photoSampleBuffer, previewPhotoSampleBuffer: previewPhotoSampleBuffer) else {
+            return
+        }
+        
+        // Initialise an UIImage with our image data
+        let capturedImage = UIImage.init(data: imageData , scale: 1.0)
+        if let image = capturedImage {
+            // Save our captured image to photos album
+            UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+        }
+    }
+    
+    
+    func saveToCamera() {
+        
+        //configure the output
+        let settings = AVCapturePhotoSettings()
+        let previewPixelType = settings.availablePreviewPhotoPixelFormatTypes.first!
+        let previewFormat = [kCVPixelBufferPixelFormatTypeKey as String: previewPixelType,
+                             kCVPixelBufferWidthKey as String: 160,
+                             kCVPixelBufferHeightKey as String: 160,
+                             ]
+        settings.previewPhotoFormat = previewFormat
+        settings.isAutoStillImageStabilizationEnabled = true
+        settings.flashMode = .auto
+        self.cameraOutput.capturePhoto(with: settings, delegate: self)
+    }
+  
+
+    @IBAction func didPressCameraButton(_ sender: UIButton) {
+        print("Camera button pressed")
+        saveToCamera()
+
+    }
+    
+  
+    @IBAction func didPressFlipIcon(_ sender: UIButton) {
+        print("Flip camera button pressed")
+        
+        if cameraPosition == "back" {
+            cameraPosition = "front"
+            loadCamera()
+        } else if cameraPosition == "front" {
+            cameraPosition = "back"
+            loadCamera()
+        }
+       
+    }
+    
+
+    @IBAction func didPressFlashIcon(_ sender: UIButton) {
+        print("Flash button pressed")
+        
+        if cameraPosition == "back" {
+            toggleFlash()
+        } else {
+            print("no")
+        }
+       
+    }
+    
+}
+
+extension CustomCameraVC : AVCaptureMetadataOutputObjectsDelegate {
+    func captureOutput(_ captureOutput: AVCaptureOutput!,
+                       didOutputMetadataObjects metadataObjects: [Any]!,
+                       from connection: AVCaptureConnection!) {
+        // Check if the metadataObjects array is not nil and it contains at least one object.
+        if metadataObjects == nil || metadataObjects.count == 0 {
+            frameView?.frame = CGRect.zero
+
+            return
+        }
+        
+        // Get the metadata object.
+        let metadataObj = metadataObjects[0] as! AVMetadataMachineReadableCodeObject
+        
+        if metadataObj.type == AVMetadataObjectTypeQRCode {
+            // If the found metadata is equal to the QR code metadata then update the status label's text and set the bounds
+            let barCodeObject = previewLayer?.transformedMetadataObject(for: metadataObj)
+            frameView?.frame = barCodeObject!.bounds
+            
+            if metadataObj.stringValue != nil {
+                debugPrint(metadataObj.stringValue)
+            }
+        }
+    }
+}
+
+
+extension CustomCameraVC {
     private func flashOn(device:AVCaptureDevice)
     {
         do{
@@ -144,78 +240,5 @@ class CustomCameraVC: UIViewController, AVCapturePhotoCaptureDelegate {
                 self.session!.commitConfiguration()
             }
         }
-    }
-    
-//    func beginSession() {
-//        
-//        guard let previewLayer = AVCaptureVideoPreviewLayer(session: session) else {
-//            print("no preview layer")
-//            return
-//        }
-//
-//        self.view.layer.addSublayer(previewLayer)
-//        previewLayer.frame = self.view.layer.frame
-//        session!.startRunning()
-//
-//        self.view.addSubview(cameraButton)
-//    }
-    
-    func saveToCamera() {
-        
-        //configure the output
-        let settings = AVCapturePhotoSettings()
-        let previewPixelType = settings.availablePreviewPhotoPixelFormatTypes.first!
-        let previewFormat = [kCVPixelBufferPixelFormatTypeKey as String: previewPixelType,
-                             kCVPixelBufferWidthKey as String: 160,
-                             kCVPixelBufferHeightKey as String: 160,
-                             ]
-        settings.previewPhotoFormat = previewFormat
-        self.cameraOutput.capturePhoto(with: settings, delegate: self)
-    }
-  
-
-    @IBAction func didPressCameraButton(_ sender: UIButton) {
-        print("Camera button pressed")
-        saveToCamera()
-
-    }
-    
-  
-    @IBAction func didPressFlipIcon(_ sender: UIButton) {
-        print("Flip camera button pressed")
-        
-        if cameraPosition == "back" {
-            cameraPosition = "front"
-            loadCamera()
-        } else if cameraPosition == "front" {
-            cameraPosition = "back"
-            loadCamera()
-        }
-        
-//        switch cameraPosition {
-//        case "front":
-//            frontCamera = AVCaptureDevice.defaultDevice(withDeviceType: .builtInWideAngleCamera, mediaType: AVMediaTypeVideo, position: .front)
-//        default:
-//            backCamera = AVCaptureDevice.defaultDevice(withDeviceType: .builtInWideAngleCamera, mediaType: AVMediaTypeVideo, position: .back)
-//        }
-//        
-//        if cameraPosition == "back" {
-//            backCamera = AVCaptureDevice.defaultDevice(withDeviceType: .builtInWideAngleCamera, mediaType: AVMediaTypeVideo, position: .back)
-//        } else if cameraPosition == "front" {
-//            frontCamera = AVCaptureDevice.defaultDevice(withDeviceType: .builtInWideAngleCamera, mediaType: AVMediaTypeVideo, position: .front)
-//        }
-       
-    }
-    
-
-    @IBAction func didPressFlashIcon(_ sender: UIButton) {
-        print("Flash button pressed")
-        
-        if cameraPosition == "back" {
-            toggleFlash()
-        } else {
-            print("no")
-        }
-       
     }
 }
