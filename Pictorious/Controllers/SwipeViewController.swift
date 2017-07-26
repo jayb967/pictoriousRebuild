@@ -13,6 +13,21 @@ class MySwipeVC: EZSwipeController {
         datasource = self
         navigationBarShouldNotExist = true
     }
+    override func viewDidLoad() {
+        super .viewDidLoad()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.moveToProfileNon), name: Notification.Name("kNavProfileNon"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.moveToHome), name: Notification.Name("kNavHome"), object: nil)
+    }
+    
+    func moveToProfileNon() {
+        
+        moveToPage(2, animated: true)
+    }
+    func moveToHome() {
+        
+        moveToPage(1, animated: true)
+    }
 }
 
 extension MySwipeVC: EZSwipeControllerDataSource {
@@ -28,9 +43,9 @@ extension MySwipeVC: EZSwipeControllerDataSource {
         let profileFeed = storyboard.instantiateViewController(withIdentifier: "profileFeed")
         
         
-        let storeVC = storyboard.instantiateViewController(withIdentifier: "StoreVC")
+//        let storeVC = storyboard.instantiateViewController(withIdentifier: "StoreVC")
         
-        return [cameraVC, mainFeed, storeVC, profileFeed]
+        return [cameraVC, mainFeed, profileFeed]
     }
     //set view controller to center
     func indexOfStartingPage() -> Int {
