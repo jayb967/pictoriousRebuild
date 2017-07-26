@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ChallengeCreateViewController: UITableViewController {
+class ChallengeCreateViewController: UITableViewController, UIGestureRecognizerDelegate {
     let imagePicker = UIImagePickerController()
     
     @IBAction func backButtonPressed(_ sender: Any) {
@@ -54,6 +54,10 @@ class ChallengeCreateViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.photoPreviewPressed(_:)))
+        tap.delegate = self
+        photoPreview.addGestureRecognizer(tap)
         
         self.hideKeyboardWhenTappedAround()
         
