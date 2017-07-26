@@ -11,16 +11,10 @@ import UIKit
 class ChallengeCreateViewController: UITableViewController, UIGestureRecognizerDelegate {
     let imagePicker = UIImagePickerController()
     
-    @IBAction func backButtonPressed(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
-    
-    @IBAction func proposeButtonPressed(_ sender: UIButton) {
-        createAlert(title: "Not yet Available!", message: "")
-    }
     @IBOutlet weak var photoPreview: UIImageView!
-    
     @IBOutlet weak var postChallengeButton: UIButton!
+    @IBOutlet weak var hashtagTextField: UITextField!
+    @IBOutlet weak var captionTextField: UITextView!
     
     @IBAction func photoPreviewPressed(_ sender: UITapGestureRecognizer) {
         let alert = UIAlertController(title: "Choose Image", message: nil, preferredStyle: .actionSheet)
@@ -37,8 +31,13 @@ class ChallengeCreateViewController: UITableViewController, UIGestureRecognizerD
         self.present(alert, animated: true, completion: nil)
     }
     
-    @IBOutlet weak var hashtagTextField: UITextField!
-    @IBOutlet weak var captionTextField: UITextView!
+    @IBAction func backButtonPressed(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func proposeButtonPressed(_ sender: UIButton) {
+        createAlert(title: "Not yet Available!", message: "")
+    }
     
     @IBAction func firstSwitchMoved(_ sender: UISwitch) {
         createAlert(title: "Feature Not yet Available!", message: "")
@@ -55,23 +54,16 @@ class ChallengeCreateViewController: UITableViewController, UIGestureRecognizerD
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        imagePicker.delegate = self
+        
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.photoPreviewPressed(_:)))
         tap.delegate = self
         photoPreview.addGestureRecognizer(tap)
         
         self.hideKeyboardWhenTappedAround()
-        
         postChallengeButton.layer.cornerRadius = 7
-        imagePicker.delegate = self
-
-        // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     func openCamera() {
         if(UIImagePickerController .isSourceTypeAvailable(UIImagePickerControllerSourceType.camera))
         {
@@ -92,15 +84,13 @@ class ChallengeCreateViewController: UITableViewController, UIGestureRecognizerD
         imagePicker.allowsEditing = true
         self.present(imagePicker, animated: true, completion: nil)
     }
-
-
 }
 
 extension ChallengeCreateViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         let chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage
-        // use the image
+        //use choseImage
         
         dismiss(animated: true, completion: nil)
     }
