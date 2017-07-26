@@ -28,9 +28,9 @@ extension MySwipeVC: EZSwipeControllerDataSource {
         let profileFeed = storyboard.instantiateViewController(withIdentifier: "profileFeed")
         
         
-        let storeVC = storyboard.instantiateViewController(withIdentifier: "StoreVC")
+//        let storeVC = storyboard.instantiateViewController(withIdentifier: "StoreVC")
         
-        return [cameraVC, mainFeed, storeVC, profileFeed]
+        return [cameraVC, mainFeed, profileFeed]
     }
     //set view controller to center
     func indexOfStartingPage() -> Int {

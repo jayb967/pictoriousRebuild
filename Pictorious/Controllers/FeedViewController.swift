@@ -300,6 +300,7 @@ UINavigationControllerDelegate, StoryTableViewCellDelegate, UISearchResultsUpdat
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         if tableView == self.tableView {
             return 1
         } else {
@@ -308,30 +309,40 @@ UINavigationControllerDelegate, StoryTableViewCellDelegate, UISearchResultsUpdat
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        if tableView == self.tableView {
-            let view = tableView.dequeueReusableCell(withIdentifier: "Profile") as? UserTableViewCell
-            let snap = self.posts[section]
-            
-            if let key = snap.value as? String {
-                view?.userRef = UserProfile(key).ref
+        
+        if section == 0{
+            let postSectionIdentifier = "PostSection"
+            let postSection = tableView.dequeueReusableCell(withIdentifier: postSectionIdentifier) as! PostCell
+            return postSection
+        } else
+            if tableView == self.tableView {
+                let view = tableView.dequeueReusableCell(withIdentifier: "Profile") as? UserTableViewCell
+                let snap = self.posts[section]
+                
+                if let key = snap.value as? String {
+                    view?.userRef = UserProfile(key).ref
+                } else {
+                    // compatibility with version 1.4 and less
+                    let story = Story(snap.key)
+                    story.fetchInBackground(completed: { (model, success) in
+                        if success {
+                            view?.userRef = story.userRef
+                        }
+                    })
+                }
+                
+                view?.delegate = self
+                return view
             } else {
-                // compatibility with version 1.4 and less
-                let story = Story(snap.key)
-                story.fetchInBackground(completed: { (model, success) in
-                    if success {
-                        view?.userRef = story.userRef
-                    }
-                })
-            }
-            
-            view?.delegate = self
-            return view
-        } else {
-            return nil
+                return nil
         }
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        
+        if section == 0 {
+            return 119
+        } else
         if tableView == self.tableView {
             return 45
         } else {
@@ -358,6 +369,7 @@ UINavigationControllerDelegate, StoryTableViewCellDelegate, UISearchResultsUpdat
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         if tableView == self.tableView {
             let identifier = "Cell"
             let cell = tableView.dequeueReusableCell(withIdentifier: identifier) as! StoryTableViewCell
@@ -397,6 +409,7 @@ UINavigationControllerDelegate, StoryTableViewCellDelegate, UISearchResultsUpdat
             }
         }
     }
+    
     
     // MARK: - Cell delegate
     
