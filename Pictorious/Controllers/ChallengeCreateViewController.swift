@@ -9,21 +9,55 @@
 import UIKit
 
 class ChallengeCreateViewController: UITableViewController {
-    @IBOutlet weak var photoPreview: UIImageView!
     let imagePicker = UIImagePickerController()
-
-
-    @IBOutlet weak var hashtagTextField: UITextField!
-    @IBOutlet weak var placeholderTextLabel: UILabel!
+    
+    @IBAction func backButtonPressed(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func proposeButtonPressed(_ sender: UIButton) {
+        createAlert(title: "Not yet Available!", message: "")
+    }
+    @IBOutlet weak var photoPreview: UIImageView!
     
     @IBOutlet weak var postChallengeButton: UIButton!
+    
+    @IBAction func photoPreviewPressed(_ sender: UITapGestureRecognizer) {
+        let alert = UIAlertController(title: "Choose Image", message: nil, preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: { _ in
+            self.openCamera()
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Gallery", style: .default, handler: { _ in
+            self.openGallary()
+        }))
+        
+        alert.addAction(UIAlertAction.init(title: "Cancel", style: .cancel, handler: nil))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    @IBOutlet weak var hashtagTextField: UITextField!
+    @IBOutlet weak var captionTextField: UITextView!
+    
+    @IBAction func firstSwitchMoved(_ sender: UISwitch) {
+        createAlert(title: "Feature Not yet Available!", message: "")
+    }
+    @IBAction func secondSwitchMoved(_ sender: UISwitch) {
+        createAlert(title: "Feature Not yet Available!", message: "")
+    }
+    
+    @IBAction func postChallegeButtonPressed(_ sender: UIButton) {
+        print("post Challenge pressed")
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.hideKeyboardWhenTappedAround()
         
-        postChallengeButton.layer.cornerRadius = 5
+        postChallengeButton.layer.cornerRadius = 7
         imagePicker.delegate = self
 
         // Do any additional setup after loading the view.
@@ -74,33 +108,3 @@ extension ChallengeCreateViewController: UIImagePickerControllerDelegate, UINavi
     
 }
 
-extension ChallengeCreateViewController{
-    @IBAction func backButtonPressed(_ sender: UIButton) {
-        print("backbutton pressed on Challengecreate VC")
-    }
-    @IBAction func ProposeButtonPressed(_ sender: UIButton) {
-        createAlert(title: "Option Not yet Available.", message: "Coming Soon!")
-    }
-    @IBAction func EmptyPhotoPressed(_ sender: UITapGestureRecognizer) {
-        let alert = UIAlertController(title: "Choose Image", message: nil, preferredStyle: .actionSheet)
-        alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: { _ in
-            self.openCamera()
-        }))
-        
-        alert.addAction(UIAlertAction(title: "Gallery", style: .default, handler: { _ in
-            self.openGallary()
-        }))
-        
-        alert.addAction(UIAlertAction.init(title: "Cancel", style: .cancel, handler: nil))
-        
-        self.present(alert, animated: true, completion: nil)
-        
-    }
-    @IBAction func postChallengeButtonPressed(_ sender: UIButton) {
-    }
-    
-    @IBAction func settingsSectionPressed(_ sender: UITapGestureRecognizer) {
-        createAlert(title: "Option Not yet Available.", message: "Coming Soon!")
-    }
-
-}
