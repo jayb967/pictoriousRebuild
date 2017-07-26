@@ -51,3 +51,16 @@ extension UIViewController {
         self.present(prompt, animated: true, completion: { _ in })
     }
 }
+
+//Dismisses keyboard when touched anywhere on screen
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
+}

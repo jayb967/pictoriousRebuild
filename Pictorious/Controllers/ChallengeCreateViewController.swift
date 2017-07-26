@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ChallengeCreateViewController: UIViewController {
+class ChallengeCreateViewController: UITableViewController {
     @IBOutlet weak var photoPreview: UIImageView!
     let imagePicker = UIImagePickerController()
 
@@ -20,6 +20,9 @@ class ChallengeCreateViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.hideKeyboardWhenTappedAround()
+        
         postChallengeButton.layer.cornerRadius = 5
         imagePicker.delegate = self
 

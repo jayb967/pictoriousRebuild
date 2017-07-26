@@ -34,7 +34,7 @@ class CustomUITabBar: UITabBar, UITabBarControllerDelegate {
 }
 
 class FeedViewController: UITableViewController, UIImagePickerControllerDelegate,
-UINavigationControllerDelegate, StoryTableViewCellDelegate, UISearchResultsUpdating {
+UINavigationControllerDelegate, StoryTableViewCellDelegate, UISearchResultsUpdating{
     
     var searchController:UISearchController!
     let searchResultsController = UITableViewController()
@@ -95,6 +95,11 @@ UINavigationControllerDelegate, StoryTableViewCellDelegate, UISearchResultsUpdat
         if searchbarEnabled() {
             self.tableView.contentOffset = CGPoint(x:0,y:self.searchController.searchBar.frame.size.height)
         }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -465,6 +470,17 @@ UINavigationControllerDelegate, StoryTableViewCellDelegate, UISearchResultsUpdat
     func storyDidComment(_ data: DatabaseReference?) {
         self.performSegue(withIdentifier: "feed.comments", sender: data)
     }
+//MARK: Post Buttons FeedVC
+    @IBAction func createChallengeButtonPressed(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "ChallengeCreate", bundle: nil)
+        
+        let createChallengeVC = storyboard.instantiateViewController(withIdentifier: "ChallengeCreate") as! ChallengeCreateViewController
+        present(createChallengeVC, animated: true, completion: nil)
+        
+    }
+    @IBAction func postPhotoButtonPressed(_ sender: UIButton) {
+        
+    }
     
 }
 
@@ -474,7 +490,6 @@ extension FeedViewController : UserTableViewCellDelegate {
     }
 }
 
-extension FeedViewController{
-    
-}
+
+
 
