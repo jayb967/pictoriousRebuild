@@ -22,10 +22,11 @@ class CustomCameraVC: UIViewController, AVCapturePhotoCaptureDelegate {
     @IBOutlet weak var cameraButton: UIButton!
     @IBOutlet weak var cameraView: UIView!
 
-    @IBAction func topBarPressed(_ sender: UIButton) {
+    @IBAction func backButtonPressed(_ sender: UIButton) {
         let notificationName = Notification.Name("kNavHome")
         NotificationCenter.default.post(name: notificationName, object: nil)
     }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
