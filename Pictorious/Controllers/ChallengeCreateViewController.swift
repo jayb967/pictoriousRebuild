@@ -16,21 +16,6 @@ class ChallengeCreateViewController: UITableViewController, UIGestureRecognizerD
     @IBOutlet weak var hashtagTextField: UITextField!
     @IBOutlet weak var captionTextField: UITextView!
     
-    @IBAction func photoPreviewPressed(_ sender: UITapGestureRecognizer) {
-        let alert = UIAlertController(title: "Choose Image", message: nil, preferredStyle: .actionSheet)
-        alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: { _ in
-            self.openCamera()
-        }))
-        
-        alert.addAction(UIAlertAction(title: "Gallery", style: .default, handler: { _ in
-            self.openGallary()
-        }))
-        
-        alert.addAction(UIAlertAction.init(title: "Cancel", style: .cancel, handler: nil))
-        
-        self.present(alert, animated: true, completion: nil)
-    }
-    
     @IBAction func backButtonPressed(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }
@@ -62,6 +47,21 @@ class ChallengeCreateViewController: UITableViewController, UIGestureRecognizerD
         
         self.hideKeyboardWhenTappedAround()
         postChallengeButton.layer.cornerRadius = 7
+    }
+    
+    func photoPreviewPressed(_ sender: UITapGestureRecognizer) {
+        let alert = UIAlertController(title: "Choose Image", message: nil, preferredStyle: .actionSheet)
+        alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: { _ in
+            self.openCamera()
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Gallery", style: .default, handler: { _ in
+            self.openGallary()
+        }))
+        
+        alert.addAction(UIAlertAction.init(title: "Cancel", style: .cancel, handler: nil))
+        
+        self.present(alert, animated: true, completion: nil)
     }
 
     func openCamera() {
