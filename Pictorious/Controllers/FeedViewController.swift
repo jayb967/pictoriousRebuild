@@ -316,7 +316,7 @@ UINavigationControllerDelegate, StoryTableViewCellDelegate, UISearchResultsUpdat
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
-        if section == 0{
+        if section == 0 {
             let postSectionIdentifier = "PostSection"
             let postSection = tableView.dequeueReusableCell(withIdentifier: postSectionIdentifier) as! PostCell
             return postSection
