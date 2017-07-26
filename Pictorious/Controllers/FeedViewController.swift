@@ -61,6 +61,7 @@ UINavigationControllerDelegate, StoryTableViewCellDelegate, UISearchResultsUpdat
     // MARK: - View cycle
     
     override func viewDidLoad() {
+        
         self.tableView.estimatedRowHeight = 350
         self.tableView.rowHeight = UITableViewAutomaticDimension
         
@@ -342,7 +343,7 @@ UINavigationControllerDelegate, StoryTableViewCellDelegate, UISearchResultsUpdat
         
         if section == 0 {
             return 119
-        } else
+        }
         if tableView == self.tableView {
             return 45
         } else {

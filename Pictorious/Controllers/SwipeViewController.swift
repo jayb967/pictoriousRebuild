@@ -13,6 +13,17 @@ class MySwipeVC: EZSwipeController {
         datasource = self
         navigationBarShouldNotExist = true
     }
+    override func viewDidLoad() {
+        super .viewDidLoad()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.moveToProfileNon), name: Notification.Name("kNavProfileNon"), object: nil)
+    }
+    
+    func moveToProfileNon() {
+        
+        moveToPage(2, animated: true)
+        
+    }
 }
 
 extension MySwipeVC: EZSwipeControllerDataSource {

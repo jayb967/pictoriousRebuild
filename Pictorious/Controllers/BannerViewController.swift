@@ -14,7 +14,18 @@ class BannerViewController: UIViewController, GADBannerViewDelegate {
     @IBOutlet weak var bannerView:GADBannerView?
     @IBOutlet weak var bannerHeightConstraints: NSLayoutConstraint!
     
+    @IBAction func hamburgerPressedButton(_ sender: UIButton) {
+        createAlert(title: "Feature coming soon!", message: "")
+    }
+    @IBAction func profileButtonPressed(_ sender: UIButton) {
+        let notificationName = Notification.Name("kNavProfileNon")
+        NotificationCenter.default.post(name: notificationName, object: nil)
+    }
+    
+    
     override func viewDidLoad() {
+        
+        navigationController?.navigationBar.barTintColor = UIColor.white
         
         if kAdMobEnabled {
             print("Google Mobile Ads SDK version: " + GADRequest.sdkVersion())
