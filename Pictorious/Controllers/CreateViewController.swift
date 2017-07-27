@@ -11,72 +11,26 @@ import Firebase
 import AVFoundation
 import MobileCoreServices
 
-class CreateViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class CreateViewController: UIViewController {
     
     @IBOutlet weak var progressView:UIProgressView?
     @IBOutlet weak var progressLabel:UILabel?
     
-    var isPresented:Bool = false
-    var previousTab:Int = 0
+    let upload = UploadMedia.shared
     
-    override func viewWillAppear(_ animated: Bool) {
-        
-        if !isPresented{
-            isPresented = true
-            
-            self.progressView?.isHidden = true
-            self.progressLabel?.isHidden = true
-            
-            let picker:UIImagePickerController = UIImagePickerController()
-            picker.sourceType = .photoLibrary
-            picker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
-            
-            picker.delegate = self
-            self.present(picker, animated: true, completion: nil)
-        }
+    override func viewDidLoad() {
+        super .viewDidLoad()
+        uploadingMedia()
     }
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+    func uploadingMedia() {
         
-        var thumbnail:NSData?
-        var media:NSData?
-        var type:String = ".jpg"
-        
-        if "public.movie".compare(info[UIImagePickerControllerMediaType] as! String).rawValue == 0 {
-            // for movie
-            let video = info[UIImagePickerControllerMediaURL] as! URL
-            let videoReference = info[UIImagePickerControllerReferenceURL] as! URL
-            
-            media = NSData(contentsOf: video)!
-            type = ".mov"
-            
-            // generate thumbnail
-            let asset = AVAsset(url: videoReference)
-            let imageGenerator = AVAssetImageGenerator(asset: asset)
-            imageGenerator.appliesPreferredTrackTransform = true
-            
-            var time = asset.duration
-            //If possible - take not the first frame (it could be completely black or white on camara's videos)
-            time.value = min(time.value, 2)
-            
-            if let imageRef = try? imageGenerator.copyCGImage(at: time, actualTime: nil) {
-                let image = UIImage(cgImage: imageRef)
-                thumbnail = UIImageJPEGRepresentation(image, kJPEGImageQuality) as NSData?
-            }
-        } else {
-            let image = info[UIImagePickerControllerOriginalImage] as! UIImage
-            thumbnail = UIImageJPEGRepresentation(image, kJPEGImageQuality) as NSData?
-        }
-        
-        if let data = thumbnail {
+        if let data = upload.thumbnail {
             self.progressView?.isHidden = false
             self.progressLabel?.isHidden = false
             
             // Data in memory
             let storage = Storage.storage().reference()
-            
-            // hide picker and show uploading process
-            picker.dismiss(animated: true, completion: {})
             
             if let user = Auth.auth().currentUser {
                 let imgref = storage.child("\(user.uid)-\(NSDate().timeIntervalSince1970).jpg")
@@ -90,30 +44,27 @@ class CreateViewController: UIViewController, UIImagePickerControllerDelegate, U
                         let alert = UIAlertController(title: kAlertErrorTitle, message: "Can't upload now. Please try later", preferredStyle: .alert)
                         alert.addAction(UIAlertAction(title: kAlertErrorDefaultButton, style: .default) { (action) in })
                         self.present(alert, animated: true) {}
-                        self.tabBarController?.selectedIndex = 0 // home
-                        self.isPresented = false
                     } else {
                         
                         // Metadata contains file metadata such as size, content-type, and download URL.
                         let url = metadata!.downloadURL()!.absoluteString
                         
-                        if let video = media {
-                            let videoref = storage.child("\(user.uid)-\(NSDate().timeIntervalSince1970)\(type)")
+                        if let video = self.upload.media {
+                            let videoref = storage.child("\(user.uid)-\(NSDate().timeIntervalSince1970)\(self.upload.type)")
                             let videoMeta = StorageMetadata(dictionary: [ "contentType" : "video/quicktime"])
                             videoref.putData(video as Data, metadata: videoMeta) { metadata, error in
                                 let videourl = metadata!.downloadURL()!.absoluteString
-                                Story.createStory(user, url: url, video:videourl)
+                                Story.createStory(user, url: url, video:videourl, caption: self.upload.caption, hashtag: self.upload.hashtag)
                             }
                         } else {
-                            Story.createStory(user, url: url, video:"")
+                            Story.createStory(user, url: url, video:"", caption: self.upload.caption, hashtag: self.upload.hashtag)
                         }
                         
                         self.progressView?.isHidden = true
                         self.progressLabel?.text = kMessageUploadingDone
                         
                         self.dismiss(animated: false, completion: nil)
-                        self.tabBarController?.selectedIndex = 0 // home
-                        self.isPresented = false
+
                     }
                 }
                 
@@ -129,23 +80,6 @@ class CreateViewController: UIViewController, UIImagePickerControllerDelegate, U
             }
             
         }
-    }
-    
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        
-        self.dismiss(animated: false, completion: nil)
-        self.tabBarController?.selectedIndex = 0 // home
-        self.isPresented = false
-        
-//        self.dismiss(animated: true, completion: {
-//            self.tabBarController?.selectedIndex = 0 // home
-//            self.isPresented = false
-//            EZSwipeControllerDataSource.indexOfStartingPage
-//        })
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        
-//        let cameraVC = storyboard.instantiateViewController(withIdentifier: "createVC")
-//        present(cameraVC, animated: true, completion: nil)
     }
     
 }

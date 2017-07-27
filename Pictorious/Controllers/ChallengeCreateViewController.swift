@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import AVFoundation
+import MobileCoreServices
 
 class ChallengeCreateViewController: UITableViewController, UIGestureRecognizerDelegate, UITextFieldDelegate  {
     let imagePicker = UIImagePickerController()
+    let upload = UploadMedia.shared
     
     @IBOutlet weak var photoPreview: UIImageView!
     @IBOutlet weak var postChallengeButton: UIButton!
@@ -109,6 +112,40 @@ class ChallengeCreateViewController: UITableViewController, UIGestureRecognizerD
 extension ChallengeCreateViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        var media = upload.media!
+        var type = upload.type
+        var thumbnail = upload.thumbnail
+        var caption = upload.caption
+        var hashtag = upload.hashtag
+        
+        if "public.movie".compare(info[UIImagePickerControllerMediaType] as! String).rawValue == 0 {
+            // for movie
+            let video = info[UIImagePickerControllerMediaURL] as! URL
+            let videoReference = info[UIImagePickerControllerReferenceURL] as! URL
+            
+            media = NSData(contentsOf: video)!
+            type = ".mov"
+            
+            // generate thumbnail
+            let asset = AVAsset(url: videoReference)
+            let imageGenerator = AVAssetImageGenerator(asset: asset)
+            imageGenerator.appliesPreferredTrackTransform = true
+            
+            var time = asset.duration
+            //If possible - take not the first frame (it could be completely black or white on camara's videos)
+            time.value = min(time.value, 2)
+            
+            if let imageRef = try? imageGenerator.copyCGImage(at: time, actualTime: nil) {
+                let image = UIImage(cgImage: imageRef)
+                thumbnail = UIImageJPEGRepresentation(image, kJPEGImageQuality) as NSData?
+            }
+        } else {
+            let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+            thumbnail = UIImageJPEGRepresentation(image, kJPEGImageQuality) as NSData?
+        }
+        
+        
         let chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage
         //use choseImage
         self.photoPreview.image = chosenImage
