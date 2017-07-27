@@ -77,21 +77,24 @@ class PostViewController: UIViewController, UINavigationControllerDelegate, UIIm
         
         kStoryPostEnabled = true
         
-        let notificationName = Notification.Name("kNavCamera")
-        NotificationCenter.default.post(name: notificationName, object: nil)
+        self.dismiss(animated: false) { 
+            let notificationName = Notification.Name("kNavCamera")
+            NotificationCenter.default.post(name: notificationName, object: nil)
+        }
         
-        if(UIImagePickerController .isSourceTypeAvailable(UIImagePickerControllerSourceType.camera))
-        {
-            imagePicker.sourceType = UIImagePickerControllerSourceType.camera
-            imagePicker.allowsEditing = true
-            self.present(imagePicker, animated: true, completion: nil)
-        }
-        else
-        {
-            let alert  = UIAlertController(title: "Warning", message: "You don't have camera", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-        }
+        
+//        if(UIImagePickerController .isSourceTypeAvailable(UIImagePickerControllerSourceType.camera))
+//        {
+//            imagePicker.sourceType = UIImagePickerControllerSourceType.camera
+//            imagePicker.allowsEditing = true
+//            self.present(imagePicker, animated: true, completion: nil)
+//        }
+//        else
+//        {
+//            let alert  = UIAlertController(title: "Warning", message: "You don't have camera", preferredStyle: .alert)
+//            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+//            self.present(alert, animated: true, completion: nil)
+//        }
     }
     
     func openGallary() {

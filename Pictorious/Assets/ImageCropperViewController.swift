@@ -9,17 +9,17 @@ import UIKit
 
 class ImageCropperViewController: UIViewController, UIScrollViewDelegate {
     
-    @IBOutlet var scrollView: UIScrollView!{
+    @IBOutlet weak var scrollView: UIScrollView!{
         didSet{
             scrollView.delegate = self
             scrollView.minimumZoomScale = 1.0
             scrollView.maximumZoomScale = 10.0
         }
     }
+    @IBOutlet weak var imageView: UIImageView!
     
-    @IBOutlet var imageView: UIImageView!
     
-    @IBOutlet var cropAreaView: CropAreaView!
+    @IBOutlet weak var cropAreaView: CropAreaView!
     
     var cropArea:CGRect{
         get{
@@ -36,6 +36,9 @@ class ImageCropperViewController: UIViewController, UIScrollViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let image = UploadMedia.shared.image{
+            imageView.image = image
+        }
     }
     
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
@@ -49,8 +52,14 @@ class ImageCropperViewController: UIViewController, UIScrollViewDelegate {
         let croppedImage = UIImage(cgImage: croppedCGImage!)
         imageView.image = croppedImage
         scrollView.zoomScale = 1
+        
+        if kStoryPostEnabled{
+        let vc = PostViewController()
+            vc.imageView.image = croppedImage
+            present(vc, animated: false, completion: nil)
+        }
+        
     }
-    
 }
 
 extension UIImageView{
@@ -77,7 +86,7 @@ extension UIImageView{
 class CropAreaView: UIView {
     
     override func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
-        return false
+        return true
     }
     
 }

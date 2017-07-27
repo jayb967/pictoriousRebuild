@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class UploadMedia {
     
@@ -15,6 +16,8 @@ class UploadMedia {
     var type:String = ".jpg"
     var caption:String = ""
     var hashtag:String = ""
+    
+    var image:UIImage?
 
     static let shared = UploadMedia()
     

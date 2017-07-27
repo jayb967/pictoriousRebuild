@@ -26,11 +26,11 @@
                   moduleName = "Pictorious"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/rio/Documents/wd-projects/pictoriousRebuild/Pictorious/Controllers/CreateViewController.swift"
-                  timestampString = "522868406.387108"
+                  timestampString = "522876566.852634"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "71"
-                  endingLineNumber = "71"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
                   offsetFromSymbolStart = "1732">
                </Location>
                <Location
@@ -41,11 +41,11 @@
                   moduleName = "Pictorious"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/rio/Documents/wd-projects/pictoriousRebuild/Pictorious/Controllers/CreateViewController.swift"
-                  timestampString = "522868406.390616"
+                  timestampString = "522876566.856118"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "73"
-                  endingLineNumber = "73"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
                   offsetFromSymbolStart = "32">
                </Location>
             </Locations>
@@ -57,13 +57,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Pictorious/Views/StoryTableViewCell.swift"
-            timestampString = "522868752.646211"
+            filePath = "Pictorious/Assets/ImageCropperViewController.swift"
+            timestampString = "522876146.536798"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "157"
-            endingLineNumber = "157"
-            landmarkName = "displayMessage(_:)"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "crop(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
