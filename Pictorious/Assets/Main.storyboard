@@ -719,7 +719,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ikh-Fn-8EX">
-                                <rect key="frame" x="8" y="20" width="25" height="25"/>
+                                <rect key="frame" x="8" y="0.0" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="XuJ-T0-yrg"/>
                                     <constraint firstAttribute="width" constant="25" id="h5P-jz-F8c"/>
@@ -747,6 +747,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ig8-n3-sEM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5071" y="-319"/>
+        </scene>
+        <!--Post View Controller-->
+        <scene sceneID="7Tz-Mm-Yrv">
+            <objects>
+                <viewController id="ySJ-BK-DsR" customClass="PostViewController" customModule="Pictorious" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PHZ-6I-lfj"/>
+                        <viewControllerLayoutGuide type="bottom" id="LV7-k9-Xhx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="al8-7t-CRQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pH3-LJ-zBl">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pH3-LJ-zBl" firstAttribute="top" secondItem="al8-7t-CRQ" secondAttribute="top" id="7eG-EC-MhM"/>
+                            <constraint firstItem="pH3-LJ-zBl" firstAttribute="leading" secondItem="al8-7t-CRQ" secondAttribute="leading" id="GZ1-Ml-5QR"/>
+                            <constraint firstItem="LV7-k9-Xhx" firstAttribute="top" secondItem="pH3-LJ-zBl" secondAttribute="bottom" id="J8W-Ht-ZcK"/>
+                            <constraint firstAttribute="trailing" secondItem="pH3-LJ-zBl" secondAttribute="trailing" id="Vuj-ny-rCE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="pH3-LJ-zBl" id="3vD-QR-ktK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ope-mr-TEj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5784.057971014493" y="-465.48913043478262"/>
         </scene>
         <!--Feed-->
         <scene sceneID="562-YG-SOE">
