@@ -780,6 +780,7 @@
                                 </constraints>
                                 <state key="normal" backgroundImage="backButtonIcon"/>
                                 <connections>
+                                    <action selector="backButtonPressed:" destination="ySJ-BK-DsR" eventType="touchUpInside" id="lX2-XN-rML"/>
                                     <segue destination="ZkG-5t-PpH" kind="show" id="VH3-D7-eDj"/>
                                 </connections>
                             </button>
@@ -1073,7 +1074,7 @@
                                         <rect key="frame" x="0.0" y="126" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="U09-O4-lgx" id="5LL-fE-Xl9">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Profile Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="93C-Ee-bdb">

@@ -21,9 +21,19 @@ class PostViewController: UIViewController, UINavigationControllerDelegate, UIIm
     @IBOutlet weak var postCaptionTextField: UITextField!
     
     @IBOutlet weak var shareButton: UIButton!
+    @IBAction func backButtonPressed(_ sender: UIButton) {
+        //clearing all media info out for future posts
+        self.upload.caption = ""
+        self.upload.hashtag = ""
+        self.upload.media = nil
+        self.upload.thumbnail = nil
+        self.upload.type = ""
+        self.upload.croppedImage = nil
+        self.upload.image = nil
+    }
     @IBAction func shareButtonPressed(_ sender: UIButton) {
         if upload.thumbnail != nil {
-                
+            
                 //set textfieldsvar singleton
                 if let caption = postCaptionTextField.text {
                     upload.caption = caption
