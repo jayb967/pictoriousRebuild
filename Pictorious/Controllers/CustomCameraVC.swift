@@ -106,6 +106,9 @@ class CustomCameraVC: UIViewController, AVCapturePhotoCaptureDelegate {
             UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
             UploadMedia.shared.image = image
             
+            let notificationName = Notification.Name("kNavHome")
+            NotificationCenter.default.post(name: notificationName, object: nil)
+            
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let cropVC = storyboard.instantiateViewController(withIdentifier: "imageCropper") as! ImageCropperViewController
             present(cropVC, animated: true, completion:nil)
