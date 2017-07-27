@@ -29,7 +29,7 @@ let kPersonalFeedEnabled = false
 /*Will determine if a story post is either a challenge or post from 
  the user that posts it, will add hashtag portion and define cell it 
  sits in.*/
-let kStoryPostEnabled = true
+var kStoryPostEnabled = true
 
 /*
  The video is allowed in feed, but it shows a video player (if the first picture is black

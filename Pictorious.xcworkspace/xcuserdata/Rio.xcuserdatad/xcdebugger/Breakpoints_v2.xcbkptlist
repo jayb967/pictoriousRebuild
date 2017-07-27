@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Pictorious/Controllers/CreateViewController.swift"
-            timestampString = "522853593.832582"
+            timestampString = "522871880.087464"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
             landmarkName = "uploadingMedia()"
             landmarkType = "7">
             <Locations>

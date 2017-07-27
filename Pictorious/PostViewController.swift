@@ -7,17 +7,52 @@
 //
 
 import UIKit
+import Firebase
+import AVFoundation
+import MobileCoreServices
 
 class PostViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
     let imagePicker = UIImagePickerController()
+    let upload = UploadMedia.shared
+    
     @IBOutlet weak var imageView: UIImageView!
+    
+    @IBOutlet weak var postCaptionTextField: UITextField!
+    
+    @IBOutlet weak var shareButton: UIButton!
+    @IBAction func shareButtonPressed(_ sender: UIButton) {
+        if upload.thumbnail != nil {
+            if postCaptionTextField.text != "" {
+                
+                //set textfieldsvar singleton
+             
+                if let caption = postCaptionTextField.text {
+                    upload.caption = caption
+                }
+                
+                //Instantiate uploading View Controller
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let createVC = storyboard.instantiateViewController(withIdentifier: "createVC") as! CreateViewController
+                present(createVC, animated: true, completion: nil)
+                
+            } else {
+                createAlert(title: "You need to add a Challenge hashtag!", message: "")
+            }
+            
+        } else{
+            createAlert(title: "You need to add a photo!", message: "")
+        }
+        
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
-
-       
+        
+        shareButton.layer.cornerRadius = 7
+        kStoryPostEnabled = true
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -39,6 +74,12 @@ class PostViewController: UIViewController, UINavigationControllerDelegate, UIIm
     
     
     func openCamera() {
+        
+        kStoryPostEnabled = true
+        
+        let notificationName = Notification.Name("kNavCamera")
+        NotificationCenter.default.post(name: notificationName, object: nil)
+        
         if(UIImagePickerController .isSourceTypeAvailable(UIImagePickerControllerSourceType.camera))
         {
             imagePicker.sourceType = UIImagePickerControllerSourceType.camera
@@ -61,10 +102,33 @@ class PostViewController: UIViewController, UINavigationControllerDelegate, UIIm
     
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            imageView.image = image
+        
+        if "public.movie".compare(info[UIImagePickerControllerMediaType] as! String).rawValue == 0 {
+            // for movie
+            let video = info[UIImagePickerControllerMediaURL] as! URL
+            let videoReference = info[UIImagePickerControllerReferenceURL] as! URL
+            
+            upload.media = NSData(contentsOf: video)!
+            upload.type = ".mov"
+            
+            // generate thumbnail
+            let asset = AVAsset(url: videoReference)
+            let imageGenerator = AVAssetImageGenerator(asset: asset)
+            imageGenerator.appliesPreferredTrackTransform = true
+            
+            var time = asset.duration
+            //If possible - take not the first frame (it could be completely black or white on camara's videos)
+            time.value = min(time.value, 2)
+            
+            if let imageRef = try? imageGenerator.copyCGImage(at: time, actualTime: nil) {
+                let image = UIImage(cgImage: imageRef)
+                imageView.image = image
+                upload.thumbnail = UIImageJPEGRepresentation(image, kJPEGImageQuality) as NSData?
+            }
         } else {
-            print("Error message")
+            let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+            imageView.image = image
+            upload.thumbnail = UIImageJPEGRepresentation(image, kJPEGImageQuality) as NSData?
         }
         
         self.dismiss(animated: true, completion: nil)

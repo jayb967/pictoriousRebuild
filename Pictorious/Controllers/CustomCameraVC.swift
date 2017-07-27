@@ -15,6 +15,7 @@ class CustomCameraVC: UIViewController, AVCapturePhotoCaptureDelegate {
     var cameraOutput = AVCapturePhotoOutput()
     var frameView: UIView?
     var cameraPosition = "back"
+    var savedImage: UIImage?
     
     // storage for found device at initialization
     var captureDevice : AVCaptureDevice?
@@ -103,7 +104,10 @@ class CustomCameraVC: UIViewController, AVCapturePhotoCaptureDelegate {
         let capturedImage = UIImage.init(data: imageData , scale: 1.0)
         if let image = capturedImage {
             // Save our captured image to photos album
+            savedImage = image
             UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+            
+            
         }
     }
     
