@@ -48,6 +48,7 @@ UINavigationControllerDelegate, StoryTableViewCellDelegate, UISearchResultsUpdat
     var newRef:DatabaseQuery?
     var oldRef:DatabaseQuery?
     
+ 
     // used to show only one story
     var singleStoryId:String?
     var searchbarHidden:Bool = false
@@ -57,6 +58,7 @@ UINavigationControllerDelegate, StoryTableViewCellDelegate, UISearchResultsUpdat
         super.init(coder: aDecoder)
     }
     @IBOutlet weak var postSection: UIView!
+    @IBOutlet weak var imageView: UIImageView!
     
     // MARK: - View cycle
     
@@ -388,7 +390,6 @@ UINavigationControllerDelegate, StoryTableViewCellDelegate, UISearchResultsUpdat
             return cell
         } else {
             let cell = self.tableView.dequeueReusableCell(withIdentifier: "User") as! UserTableViewCell
-            
             if let userInfo = self.searchResults[indexPath.row] as? UserProfile {
                 cell.userRef = userInfo.ref
             }
@@ -479,7 +480,9 @@ UINavigationControllerDelegate, StoryTableViewCellDelegate, UISearchResultsUpdat
         
     }
     @IBAction func postPhotoButtonPressed(_ sender: UIButton) {
+   
         
+    
     }
     
     
