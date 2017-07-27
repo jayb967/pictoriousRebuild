@@ -38,11 +38,33 @@ class ChallengeCreateViewController: UITableViewController, UIGestureRecognizerD
     }
     
     @IBAction func postChallegeButtonPressed(_ sender: UIButton) {
-        if photoPreview != nil {
+        if upload.thumbnail != nil {
+            if hashtagTextField.text != "" {
+                if captionTextField.text == "Write a caption for your challenge..."{
+                    captionTextField.text = ""
+                }
+                //set textfields to singletons
+                if let hashtag = hashtagTextField.text{
+                    upload.hashtag = hashtag
+                }
+                
+                if let caption = captionTextField.text {
+                    upload.caption = caption
+                }
+                
+                //Instantiate uploading View Controller
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let createVC = storyboard.instantiateViewController(withIdentifier: "createVC") as! CreateViewController
+                present(createVC, animated: true, completion: nil)
+                
+            } else {
+                createAlert(title: "You need to add a Challenge hashtag!", message: "")
+            }
             
         } else{
             createAlert(title: "You need to add a photo!", message: "")
         }
+        
     }
     
 
@@ -113,19 +135,13 @@ extension ChallengeCreateViewController: UIImagePickerControllerDelegate, UINavi
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
-        var media = upload.media!
-        var type = upload.type
-        var thumbnail = upload.thumbnail
-        var caption = upload.caption
-        var hashtag = upload.hashtag
-        
         if "public.movie".compare(info[UIImagePickerControllerMediaType] as! String).rawValue == 0 {
             // for movie
             let video = info[UIImagePickerControllerMediaURL] as! URL
             let videoReference = info[UIImagePickerControllerReferenceURL] as! URL
             
-            media = NSData(contentsOf: video)!
-            type = ".mov"
+            upload.media = NSData(contentsOf: video)!
+            upload.type = ".mov"
             
             // generate thumbnail
             let asset = AVAsset(url: videoReference)
@@ -138,17 +154,14 @@ extension ChallengeCreateViewController: UIImagePickerControllerDelegate, UINavi
             
             if let imageRef = try? imageGenerator.copyCGImage(at: time, actualTime: nil) {
                 let image = UIImage(cgImage: imageRef)
-                thumbnail = UIImageJPEGRepresentation(image, kJPEGImageQuality) as NSData?
+                self.photoPreview.image = image
+                upload.thumbnail = UIImageJPEGRepresentation(image, kJPEGImageQuality) as NSData?
             }
         } else {
             let image = info[UIImagePickerControllerOriginalImage] as! UIImage
-            thumbnail = UIImageJPEGRepresentation(image, kJPEGImageQuality) as NSData?
+            self.photoPreview.image = image
+            upload.thumbnail = UIImageJPEGRepresentation(image, kJPEGImageQuality) as NSData?
         }
-        
-        
-        let chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage
-        //use choseImage
-        self.photoPreview.image = chosenImage
         
         dismiss(animated: true, completion: nil)
     }

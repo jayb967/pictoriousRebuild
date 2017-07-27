@@ -63,7 +63,7 @@ class CreateViewController: UIViewController {
                         self.progressView?.isHidden = true
                         self.progressLabel?.text = kMessageUploadingDone
                         
-                        self.dismiss(animated: false, completion: nil)
+                        self.performSegue(withIdentifier: "afterUpload", sender: self)
 
                     }
                 }

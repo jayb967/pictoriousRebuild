@@ -24,6 +24,11 @@ class StoryTableViewCell: UITableViewCell {
     
     @IBOutlet var storyImage: UIImageView?
     @IBOutlet weak var descriptionView: UITextView!
+    
+    @IBOutlet weak var challengeHashtag: UILabel!
+    
+    @IBOutlet weak var captionLabel: UILabel!
+    
     @IBOutlet weak var likeButton: UIButton?
     @IBOutlet weak var likeView: UIView?
     @IBOutlet weak var playerIconView: UIImageView!
@@ -127,6 +132,8 @@ class StoryTableViewCell: UITableViewCell {
     
     func displayMessage(_ story:DataSnapshot) {
         let comment = NSMutableAttributedString()
+        var hashtagTemp:String?
+        var captionTemp:String?
         
         if let value = story.value as? [String:Any] {
             if let profile = value["profile_name"] as? String {
@@ -138,10 +145,19 @@ class StoryTableViewCell: UITableViewCell {
                 let attrs = [NSFontAttributeName : UIFont.systemFont(ofSize: kCommentFontSize)]
                 comment.append(NSAttributedString(string:message, attributes: attrs))
             }
+            
+            if let hashtag = value["hashtag"] as? String{
+                hashtagTemp = hashtag
+            }
+            if let caption = value["caption"] as? String{
+                captionTemp = caption
+            }
         }
         
         DispatchQueue.main.async(execute: {
             self.descriptionView.attributedText = comment
+            self.challengeHashtag.text = hashtagTemp
+            self.captionLabel.text = captionTemp
             self.updateConstraints()
         })
     }
