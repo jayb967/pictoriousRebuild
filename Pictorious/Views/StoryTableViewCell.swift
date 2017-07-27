@@ -77,7 +77,9 @@ class StoryTableViewCell: UITableViewCell {
             if let story = storyRef {
                 // bind message
                 descriptionHandle = Comment.collection.child(story.key).observe(.childAdded) { (snapshot) in
+                    
                     self.displayMessage(snapshot)
+                    
                 }
                 
                 // bind likes
@@ -105,6 +107,12 @@ class StoryTableViewCell: UITableViewCell {
     
     private func setupCell(_ story:Story) {
         let mediaUrl = URL(string:story.media)
+        if story.hashtag != ""{
+            self.challengeHashtag.text = "#\(story.hashtag)"
+        } else {
+            self.challengeHashtag.text = nil
+        }
+        self.captionLabel.text = story.caption
         
         self.storyImage?.sd_cancelCurrentImageLoad()
         self.storyImage?.sd_setImage(with: mediaUrl, completed: { (image, error, type, url) in
@@ -146,18 +154,18 @@ class StoryTableViewCell: UITableViewCell {
                 comment.append(NSAttributedString(string:message, attributes: attrs))
             }
             
-            if let hashtag = value["hashtag"] as? String{
-                hashtagTemp = hashtag
-            }
-            if let caption = value["caption"] as? String{
-                captionTemp = caption
-            }
+//            if let hashtag = value["hashtag"] as? String{
+//                hashtagTemp = hashtag
+//            }
+//            if let caption = value["caption"] as? String{
+//                captionTemp = caption
+//            }
         }
         
         DispatchQueue.main.async(execute: {
             self.descriptionView.attributedText = comment
-            self.challengeHashtag.text = hashtagTemp
-            self.captionLabel.text = captionTemp
+//            self.challengeHashtag.text = hashtagTemp
+//            self.captionLabel.text = captionTemp
             self.updateConstraints()
         })
     }
