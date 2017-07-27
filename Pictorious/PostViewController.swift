@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PostViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class PostViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIGestureRecognizerDelegate {
 
     let imagePicker = UIImagePickerController()
     @IBOutlet weak var imageView: UIImageView!
@@ -17,6 +17,14 @@ class PostViewController: UIViewController, UINavigationControllerDelegate, UIIm
         super.viewDidLoad()
         imagePicker.delegate = self
 
+        let tap = UITapGestureRecognizer(target: self, action: #selector(self.photoPreviewPressed(_:)))
+        tap.delegate = self
+        imageView.isUserInteractionEnabled = true
+        imageView.addGestureRecognizer(tap)
+       
+    }
+    
+    func photoPreviewPressed(_ sender: UITapGestureRecognizer) {
         let alert = UIAlertController(title: "Choose Image", message: nil, preferredStyle: .actionSheet)
         alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: { _ in
             self.openCamera()
@@ -29,7 +37,6 @@ class PostViewController: UIViewController, UINavigationControllerDelegate, UIIm
         alert.addAction(UIAlertAction.init(title: "Cancel", style: .cancel, handler: nil))
         
         self.present(alert, animated: true, completion: nil)
-       
     }
     
     func openCamera() {
