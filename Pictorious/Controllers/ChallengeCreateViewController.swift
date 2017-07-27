@@ -23,6 +23,7 @@ class ChallengeCreateViewController: UITableViewController, UIGestureRecognizerD
     @IBOutlet weak var captionTextField: UITextView!
     
     @IBAction func backButtonPressed(_ sender: Any) {
+        kStoryPostEnabled = true
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -87,6 +88,8 @@ class ChallengeCreateViewController: UITableViewController, UIGestureRecognizerD
     
     override func viewDidAppear(_ animated: Bool) {
         super .viewDidAppear(animated)
+        
+        
         if let image = UploadMedia.shared.croppedImage{
             photoPreview.image = image
             upload.thumbnail = UIImageJPEGRepresentation(image, kJPEGImageQuality) as NSData?

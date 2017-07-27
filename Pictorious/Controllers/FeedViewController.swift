@@ -107,7 +107,6 @@ UINavigationControllerDelegate, StoryTableViewCellDelegate, UISearchResultsUpdat
     override func viewDidAppear(_ animated: Bool) {
         NotificationCenter.default.addObserver(self, selector: #selector(scrollToTop),
                                                name: CustomUITabBar.scrollToTopNotification, object: nil)
-        kStoryPostEnabled = true
     }
     
     override func viewWillDisappear(_ animated: Bool) {

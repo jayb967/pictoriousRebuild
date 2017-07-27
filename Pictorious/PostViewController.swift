@@ -46,8 +46,14 @@ class PostViewController: UIViewController, UINavigationControllerDelegate, UIIm
         super.viewDidLoad()
         imagePicker.delegate = self
         
+        self.hideKeyboardWhenTappedAround()
         shareButton.layer.cornerRadius = 7
         kStoryPostEnabled = true
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
     
     override func viewDidAppear(_ animated: Bool) {

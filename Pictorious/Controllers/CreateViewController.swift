@@ -72,6 +72,8 @@ class CreateViewController: UIViewController {
                         self.upload.croppedImage = nil
                         self.upload.image = nil
                         
+                        kStoryPostEnabled = true
+                        
                         self.performSegue(withIdentifier: "afterUpload", sender: self)
 
                     }
