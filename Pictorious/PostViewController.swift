@@ -22,6 +22,9 @@ class PostViewController: UIViewController, UINavigationControllerDelegate, UIIm
     
     @IBOutlet weak var shareButton: UIButton!
     @IBAction func backButtonPressed(_ sender: UIButton) {
+        
+        self.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+        
         //clearing all media info out for future posts
         self.upload.caption = ""
         self.upload.hashtag = ""
