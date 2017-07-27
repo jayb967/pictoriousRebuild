@@ -130,7 +130,7 @@
                                             </state>
                                             <connections>
                                                 <action selector="postPhotoButtonPressed:" destination="ZkG-5t-PpH" eventType="touchUpInside" id="kKE-bU-nRR"/>
-                                                <segue destination="bcQ-kN-OWf" kind="showDetail" id="0Tz-ne-7ZX"/>
+                                                <segue destination="ySJ-BK-DsR" kind="presentation" id="k6h-iO-Mdr"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SoB-vU-uIK">
@@ -746,7 +746,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ig8-n3-sEM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5071" y="-319"/>
+            <point key="canvasLocation" x="3039" y="-465"/>
         </scene>
         <!--Post View Controller-->
         <scene sceneID="7Tz-Mm-Yrv">
@@ -778,7 +778,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ope-mr-TEj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5784.057971014493" y="-465.48913043478262"/>
+            <point key="canvasLocation" x="5157" y="-413"/>
         </scene>
         <!--Feed-->
         <scene sceneID="562-YG-SOE">
