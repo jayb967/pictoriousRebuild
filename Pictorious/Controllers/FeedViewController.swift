@@ -48,6 +48,7 @@ UINavigationControllerDelegate, StoryTableViewCellDelegate, UISearchResultsUpdat
     var newRef:DatabaseQuery?
     var oldRef:DatabaseQuery?
     
+ 
     // used to show only one story
     var singleStoryId:String?
     var searchbarHidden:Bool = false
@@ -57,6 +58,7 @@ UINavigationControllerDelegate, StoryTableViewCellDelegate, UISearchResultsUpdat
         super.init(coder: aDecoder)
     }
     @IBOutlet weak var postSection: UIView!
+    @IBOutlet weak var imageView: UIImageView!
     
     // MARK: - View cycle
     
@@ -479,6 +481,24 @@ UINavigationControllerDelegate, StoryTableViewCellDelegate, UISearchResultsUpdat
         
     }
     @IBAction func postPhotoButtonPressed(_ sender: UIButton) {
+        let image = UIImagePickerController()
+        image.delegate = self
+        image.sourceType = UIImagePickerControllerSourceType.photoLibrary
+        image.allowsEditing = false
+        self.present(image, animated: true, completion: nil)
+        
+        
+        
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            imageView.image = image
+        } else {
+            print("Error message")
+        }
+        
+        self.dismiss(animated: true, completion: nil)
         
     }
     

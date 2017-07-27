@@ -25,7 +25,7 @@
 	<key>NSCameraUsageDescription</key>
 	<string> </string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Pictorious would like to access your photos to upload?</string>
+	<string>Pictorious would like to access your photos to upload</string>
 	<key>UILaunchStoryboardName</key>
 	<string>Launch Screen</string>
 	<key>UIMainStoryboardFile</key>
