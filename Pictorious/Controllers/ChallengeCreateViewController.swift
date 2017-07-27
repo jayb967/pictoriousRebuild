@@ -43,6 +43,7 @@ class ChallengeCreateViewController: UITableViewController, UIGestureRecognizerD
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.photoPreviewPressed(_:)))
         tap.delegate = self
+        photoPreview.isUserInteractionEnabled = true
         photoPreview.addGestureRecognizer(tap)
         
         self.hideKeyboardWhenTappedAround()
@@ -91,6 +92,7 @@ extension ChallengeCreateViewController: UIImagePickerControllerDelegate, UINavi
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         let chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage
         //use choseImage
+        self.photoPreview.image = chosenImage
         
         dismiss(animated: true, completion: nil)
     }
