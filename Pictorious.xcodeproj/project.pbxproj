@@ -58,6 +58,7 @@
 		28FAA0001F1CA3F9002D7E3E /* GoogleService-Info1.plist in Resources */ = {isa = PBXBuildFile; fileRef = 28FA9FFF1F1CA3F9002D7E3E /* GoogleService-Info1.plist */; };
 		28FAA0021F1CAA90002D7E3E /* EZSwipeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FAA0011F1CAA90002D7E3E /* EZSwipeController.swift */; };
 		28FAA0041F1CAD75002D7E3E /* SwipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FAA0031F1CAD75002D7E3E /* SwipeViewController.swift */; };
+		C0AC662E1F2A50950067EE75 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0AC662D1F2A50950067EE75 /* PostViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,6 +141,7 @@
 		536C68F58879FC54A42B114B /* Pods-Pictorious.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pictorious.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pictorious/Pods-Pictorious.release.xcconfig"; sourceTree = "<group>"; };
 		62DDFA14606381E4A5571F6A /* Pods-PictoriousTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PictoriousTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PictoriousTests/Pods-PictoriousTests.release.xcconfig"; sourceTree = "<group>"; };
 		7AEA015308A6B228D89CBE77 /* Pods_PictoriousUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PictoriousUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0AC662D1F2A50950067EE75 /* PostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		F985B94DCEE13F4D7413B503 /* Pods-PictoriousTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PictoriousTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PictoriousTests/Pods-PictoriousTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -246,6 +248,7 @@
 		28268A4F1F1A6209008226F5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C0AC662D1F2A50950067EE75 /* PostViewController.swift */,
 				28F7C4691F26B95300D39A37 /* PhotoSectionViewController.swift */,
 				28D72B4B1F253DB2006B212F /* ChallengeCreateViewController.swift */,
 				28FAA0031F1CAD75002D7E3E /* SwipeViewController.swift */,
@@ -648,6 +651,7 @@
 				28F7C4721F26D3B800D39A37 /* UIButtonExtensions.swift in Sources */,
 				28268A461F1A6171008226F5 /* Comment.swift in Sources */,
 				28268A571F1A62B5008226F5 /* CommentsTableViewController.swift in Sources */,
+				C0AC662E1F2A50950067EE75 /* PostViewController.swift in Sources */,
 				28F28A5D1F28B7DF00B90F3F /* PostCell.swift in Sources */,
 				28268A551F1A628A008226F5 /* StoryViewController.swift in Sources */,
 				28268A701F1A6522008226F5 /* ProfileView.swift in Sources */,

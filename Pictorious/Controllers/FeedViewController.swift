@@ -390,7 +390,6 @@ UINavigationControllerDelegate, StoryTableViewCellDelegate, UISearchResultsUpdat
             return cell
         } else {
             let cell = self.tableView.dequeueReusableCell(withIdentifier: "User") as! UserTableViewCell
-            
             if let userInfo = self.searchResults[indexPath.row] as? UserProfile {
                 cell.userRef = userInfo.ref
             }
@@ -481,25 +480,9 @@ UINavigationControllerDelegate, StoryTableViewCellDelegate, UISearchResultsUpdat
         
     }
     @IBAction func postPhotoButtonPressed(_ sender: UIButton) {
-        let image = UIImagePickerController()
-        image.delegate = self
-        image.sourceType = UIImagePickerControllerSourceType.photoLibrary
-        image.allowsEditing = false
-        self.present(image, animated: true, completion: nil)
+   
         
-        
-        
-    }
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            imageView.image = image
-        } else {
-            print("Error message")
-        }
-        
-        self.dismiss(animated: true, completion: nil)
-        
     }
     
     
