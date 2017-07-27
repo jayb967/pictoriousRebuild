@@ -13,14 +13,16 @@ class ImageCropperViewController: UIViewController, UIScrollViewDelegate {
         didSet{
             scrollView.delegate = self
             scrollView.minimumZoomScale = 1.0
-            scrollView.maximumZoomScale = 10.0
+            scrollView.maximumZoomScale = 5.0
         }
     }
+    
     @IBOutlet weak var imageView: UIImageView!
+    
+    @IBOutlet weak var cropButton: UIButton!
     
     
     @IBOutlet weak var cropAreaView: CropAreaView!
-    
     var cropArea:CGRect{
         get{
             let factor = imageView.image!.size.width/view.frame.width
@@ -39,6 +41,7 @@ class ImageCropperViewController: UIViewController, UIScrollViewDelegate {
         if let image = UploadMedia.shared.image{
             imageView.image = image
         }
+        cropButton.layer.cornerRadius = 7
     }
     
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
@@ -54,11 +57,25 @@ class ImageCropperViewController: UIViewController, UIScrollViewDelegate {
         scrollView.zoomScale = 1
         
         if kStoryPostEnabled{
-        let vc = PostViewController()
-            vc.imageView.image = croppedImage
-            present(vc, animated: false, completion: nil)
+            let image = UploadMedia.shared
+            image.croppedImage = croppedImage
+                //Instantiate uploading View Controller
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let postVC = storyboard.instantiateViewController(withIdentifier: "postVC") as! PostViewController
+                self.present(postVC, animated: true, completion: nil)
+            
+            
+        } else {
+            let image = UploadMedia.shared
+            image.croppedImage = croppedImage
+            
+            
+                //Instantiate uploading View Controller
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let ChallengeCreate = storyboard.instantiateViewController(withIdentifier: "ChallengeCreate") as! ChallengeCreateViewController
+                self.present(ChallengeCreate, animated: true, completion: nil)
+           
         }
-        
     }
 }
 
@@ -86,7 +103,7 @@ extension UIImageView{
 class CropAreaView: UIView {
     
     override func point(inside point: CGPoint, with event: UIEvent?) -> Bool {
-        return true
+        return false
     }
     
 }

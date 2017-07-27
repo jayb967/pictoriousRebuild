@@ -23,10 +23,8 @@ class PostViewController: UIViewController, UINavigationControllerDelegate, UIIm
     @IBOutlet weak var shareButton: UIButton!
     @IBAction func shareButtonPressed(_ sender: UIButton) {
         if upload.thumbnail != nil {
-            if postCaptionTextField.text != "" {
                 
                 //set textfieldsvar singleton
-             
                 if let caption = postCaptionTextField.text {
                     upload.caption = caption
                 }
@@ -36,9 +34,6 @@ class PostViewController: UIViewController, UINavigationControllerDelegate, UIIm
                 let createVC = storyboard.instantiateViewController(withIdentifier: "createVC") as! CreateViewController
                 present(createVC, animated: true, completion: nil)
                 
-            } else {
-                createAlert(title: "You need to add a Challenge hashtag!", message: "")
-            }
             
         } else{
             createAlert(title: "You need to add a photo!", message: "")
@@ -57,19 +52,24 @@ class PostViewController: UIViewController, UINavigationControllerDelegate, UIIm
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        let alert = UIAlertController(title: "Choose Image", message: nil, preferredStyle: .actionSheet)
-        alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: { _ in
-            self.openCamera()
-        }))
         
-        alert.addAction(UIAlertAction(title: "Gallery", style: .default, handler: { _ in
-            self.openGallary()
-        }))
-        
-        alert.addAction(UIAlertAction.init(title: "Cancel", style: .cancel, handler: nil))
-        
-        self.present(alert, animated: true, completion: nil)
-        
+        if let image = UploadMedia.shared.croppedImage{
+            imageView.image = image
+            upload.thumbnail = UIImageJPEGRepresentation(image, kJPEGImageQuality) as NSData?
+        } else {
+            let alert = UIAlertController(title: "Choose Image", message: nil, preferredStyle: .actionSheet)
+            alert.addAction(UIAlertAction(title: "Camera", style: .default, handler: { _ in
+                self.openCamera()
+            }))
+            
+            alert.addAction(UIAlertAction(title: "Gallery", style: .default, handler: { _ in
+                self.openGallary()
+            }))
+            
+            alert.addAction(UIAlertAction.init(title: "Cancel", style: .cancel, handler: nil))
+            
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
     
@@ -81,20 +81,7 @@ class PostViewController: UIViewController, UINavigationControllerDelegate, UIIm
             let notificationName = Notification.Name("kNavCamera")
             NotificationCenter.default.post(name: notificationName, object: nil)
         }
-        
-        
-//        if(UIImagePickerController .isSourceTypeAvailable(UIImagePickerControllerSourceType.camera))
-//        {
-//            imagePicker.sourceType = UIImagePickerControllerSourceType.camera
-//            imagePicker.allowsEditing = true
-//            self.present(imagePicker, animated: true, completion: nil)
-//        }
-//        else
-//        {
-//            let alert  = UIAlertController(title: "Warning", message: "You don't have camera", preferredStyle: .alert)
-//            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-//            self.present(alert, animated: true, completion: nil)
-//        }
+
     }
     
     func openGallary() {

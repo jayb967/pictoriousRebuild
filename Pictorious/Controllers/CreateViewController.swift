@@ -69,6 +69,8 @@ class CreateViewController: UIViewController {
                         self.upload.media = nil
                         self.upload.thumbnail = nil
                         self.upload.type = ""
+                        self.upload.croppedImage = nil
+                        self.upload.image = nil
                         
                         self.performSegue(withIdentifier: "afterUpload", sender: self)
 

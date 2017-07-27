@@ -757,7 +757,7 @@
         <!--Post View Controller-->
         <scene sceneID="7Tz-Mm-Yrv">
             <objects>
-                <viewController id="ySJ-BK-DsR" customClass="PostViewController" customModule="Pictorious" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="postVC" id="ySJ-BK-DsR" customClass="PostViewController" customModule="Pictorious" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PHZ-6I-lfj"/>
                         <viewControllerLayoutGuide type="bottom" id="LV7-k9-Xhx"/>
@@ -855,7 +855,7 @@
                                     <constraint firstItem="VmB-cV-gPq" firstAttribute="leading" secondItem="7Ou-gz-aT3" secondAttribute="leading" id="gqT-GO-auI"/>
                                 </constraints>
                             </scrollView>
-                            <view alpha="0.14999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Yv-vG-ADh">
+                            <view alpha="0.14999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Yv-vG-ADh" customClass="CropAreaView" customModule="Pictorious" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="161" width="414" height="414"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -863,8 +863,11 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eZG-Ys-c9N">
-                                <rect key="frame" x="36" y="683" width="342" height="33"/>
+                                <rect key="frame" x="36" y="670" width="342" height="46"/>
                                 <color key="backgroundColor" red="0.41157928110000003" green="0.84735763070000003" blue="0.73749059439999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="grq-qd-EGf"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
                                 <state key="normal" title="Crop">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -892,6 +895,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cropAreaView" destination="4Yv-vG-ADh" id="87y-cG-Ks1"/>
+                        <outlet property="cropButton" destination="eZG-Ys-c9N" id="dlV-M4-Jx0"/>
+                        <outlet property="imageView" destination="VmB-cV-gPq" id="lDF-ty-VW0"/>
                         <outlet property="scrollView" destination="7Ou-gz-aT3" id="Djs-Td-u0q"/>
                     </connections>
                 </viewController>

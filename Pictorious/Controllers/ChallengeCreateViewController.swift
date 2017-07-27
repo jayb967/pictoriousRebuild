@@ -80,8 +80,17 @@ class ChallengeCreateViewController: UITableViewController, UIGestureRecognizerD
         photoPreview.isUserInteractionEnabled = true
         photoPreview.addGestureRecognizer(tap)
         
+        
         self.hideKeyboardWhenTappedAround()
         postChallengeButton.layer.cornerRadius = 7
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super .viewDidAppear(animated)
+        if let image = UploadMedia.shared.croppedImage{
+            photoPreview.image = image
+            upload.thumbnail = UIImageJPEGRepresentation(image, kJPEGImageQuality) as NSData?
+        }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -110,17 +119,11 @@ class ChallengeCreateViewController: UITableViewController, UIGestureRecognizerD
     }
 
     func openCamera() {
-        if(UIImagePickerController .isSourceTypeAvailable(UIImagePickerControllerSourceType.camera))
-        {
-            imagePicker.sourceType = UIImagePickerControllerSourceType.camera
-            imagePicker.allowsEditing = true
-            self.present(imagePicker, animated: true, completion: nil)
-        }
-        else
-        {
-            let alert  = UIAlertController(title: "Warning", message: "You don't have camera", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
+        kStoryPostEnabled = false
+        
+        self.dismiss(animated: false) {
+            let notificationName = Notification.Name("kNavCamera")
+            NotificationCenter.default.post(name: notificationName, object: nil)
         }
     }
     

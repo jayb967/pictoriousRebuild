@@ -18,6 +18,7 @@ class UploadMedia {
     var hashtag:String = ""
     
     var image:UIImage?
+    var croppedImage:UIImage?
 
     static let shared = UploadMedia()
     
