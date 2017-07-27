@@ -37,7 +37,8 @@ class Story : ModelBase {
                         "time" : now,
                         "image": url,
                         "video": video,
-                        "message":""]
+                        "message":"",
+                        "hashtag": ""]
             
             // add to post collection
             var ref = Story.collection

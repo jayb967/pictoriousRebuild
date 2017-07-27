@@ -8,12 +8,15 @@
 
 import UIKit
 
-class ChallengeCreateViewController: UITableViewController, UIGestureRecognizerDelegate {
+class ChallengeCreateViewController: UITableViewController, UIGestureRecognizerDelegate, UITextFieldDelegate  {
     let imagePicker = UIImagePickerController()
     
     @IBOutlet weak var photoPreview: UIImageView!
     @IBOutlet weak var postChallengeButton: UIButton!
+
     @IBOutlet weak var hashtagTextField: UITextField!
+    @IBOutlet weak var hastagLabel: UILabel!
+   
     @IBOutlet weak var captionTextField: UITextView!
     
     @IBAction func backButtonPressed(_ sender: Any) {
@@ -32,7 +35,11 @@ class ChallengeCreateViewController: UITableViewController, UIGestureRecognizerD
     }
     
     @IBAction func postChallegeButtonPressed(_ sender: UIButton) {
-        print("post Challenge pressed")
+        if photoPreview != nil {
+            
+        } else{
+            createAlert(title: "You need to add a photo!", message: "")
+        }
     }
     
 
@@ -40,6 +47,8 @@ class ChallengeCreateViewController: UITableViewController, UIGestureRecognizerD
         super.viewDidLoad()
         
         imagePicker.delegate = self
+        hashtagTextField.delegate = self
+        captionTextField.delegate = self as? UITextViewDelegate
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.photoPreviewPressed(_:)))
         tap.delegate = self
@@ -49,6 +58,16 @@ class ChallengeCreateViewController: UITableViewController, UIGestureRecognizerD
         self.hideKeyboardWhenTappedAround()
         postChallengeButton.layer.cornerRadius = 7
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+         hastagLabel.text = String("#\(hashtagTextField.text!)")
+    }
+  
     
     func photoPreviewPressed(_ sender: UITapGestureRecognizer) {
         let alert = UIAlertController(title: "Choose Image", message: nil, preferredStyle: .actionSheet)

@@ -179,8 +179,16 @@
                                     <outlet property="postTextField" destination="FFI-Fw-Wwy" id="wmj-eB-4iB"/>
                                 </connections>
                             </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="xlM-Uh-RKf">
+                                <rect key="frame" x="0.0" y="147" width="375" height="490"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xlM-Uh-RKf" id="URb-xa-4Uf">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="490"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Profile" rowHeight="45" id="tqh-FF-RbN" customClass="UserTableViewCell" customModule="Pictorious" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="147" width="375" height="45"/>
+                                <rect key="frame" x="0.0" y="637" width="375" height="45"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tqh-FF-RbN" id="Noh-f4-Rx2">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
@@ -226,7 +234,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="490" id="FFN-9s-z8p" customClass="StoryTableViewCell" customModule="Pictorious" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="192" width="375" height="490"/>
+                                <rect key="frame" x="0.0" y="682" width="375" height="490"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FFN-9s-z8p" id="GIU-cM-NVa">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="490"/>
@@ -327,7 +335,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="User" rowHeight="45" id="ZTb-60-xje" userLabel="User" customClass="UserTableViewCell" customModule="Pictorious" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="682" width="375" height="45"/>
+                                <rect key="frame" x="0.0" y="1172" width="375" height="45"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZTb-60-xje" id="HXo-Jw-LDQ">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="45"/>
@@ -901,7 +909,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Profile Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="93C-Ee-bdb">
-                                                    <rect key="frame" x="3" y="0.0" width="397" height="43"/>
+                                                    <rect key="frame" x="3" y="0.0" width="396" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
