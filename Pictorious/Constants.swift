@@ -26,6 +26,11 @@ let kAdMobUnitID = "ca-app-pub-3940256099942544/2934735716"
  */
 let kPersonalFeedEnabled = false
 
+/*Will determine if a story post is either a challenge or post from 
+ the user that posts it, will add hashtag portion and define cell it 
+ sits in.*/
+let kStoryPostEnabled = true
+
 /*
  The video is allowed in feed, but it shows a video player (if the first picture is black
  you will see black. Please use the autoplay (true) to play video on scrolling. The video will
@@ -70,13 +75,14 @@ let kDataPostKey = "posts"
 let kDataCommentKey = "comments"
 let kDataLikeKey = "likes"
 let kDataFavoritesKey = "activity"
+let kDataChallengeKey = "Challenges"
 
 // MARK: Strings
 /*
  Localized text displayed to User
  */
 
-let kDefaultUsername = NSLocalizedString("Pictorious Challenger", comment: "Text used when username not set")
+let kDefaultUsername = NSLocalizedString("Pictorious User", comment: "Text used when username not set")
 let kDefaultProfilePhoto = "" // url to default photo. will be stored in database
 
 let kAlertErrorTitle = NSLocalizedString("Error", comment:"")

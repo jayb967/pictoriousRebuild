@@ -2,4 +2,54 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pictorious/Controllers/CreateViewController.swift"
+            timestampString = "522853593.832582"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "uploadingMedia()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pictorious.CreateViewController.uploadingMedia () -&gt; ()"
+                  moduleName = "Pictorious"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rio/Documents/wd-projects/pictoriousRebuild/Pictorious/Controllers/CreateViewController.swift"
+                  timestampString = "522857901.826979"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "1732">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Pictorious.CreateViewController.(uploadingMedia () -&gt; ()).(closure #2)"
+                  moduleName = "Pictorious"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rio/Documents/wd-projects/pictoriousRebuild/Pictorious/Controllers/CreateViewController.swift"
+                  timestampString = "522857901.829246"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

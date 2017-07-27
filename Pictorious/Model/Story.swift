@@ -24,7 +24,7 @@ class Story : ModelBase {
         }
     }
     
-    static func createStory(_ user:User, url:String, video:String) {
+    static func createStory(_ user:User, url:String, video:String, caption:String?, hashtag:String?) {
         
         // Create a reference to the file you want to upload
         let uid = user.uid
@@ -37,7 +37,9 @@ class Story : ModelBase {
                         "time" : now,
                         "image": url,
                         "video": video,
-                        "message":""]
+                        "message":"",
+                        "caption": caption,
+                        "hashtag": hashtag]
             
             // add to post collection
             var ref = Story.collection
@@ -70,6 +72,8 @@ class Story : ModelBase {
     var media:String = ""
     var userId:String = ""
     var videoUrl:URL! = nil
+    var caption:String = ""
+    var hashtag:String = ""
     
     var userName:String = kDefaultUsername
     var userPhoto:String = kDefaultProfilePhoto
@@ -84,6 +88,12 @@ class Story : ModelBase {
             self.media = value["image"] as! String
             self.userId = value["user"] as! String
             
+            if let caption = value["caption"] as? String {
+                self.caption = caption
+            }
+            if let hashtag = value["hashtag"] as? String{
+                self.hashtag = hashtag
+            }
             if let timeString = value["time"] as? String {
                 self.time = Date(dateString: timeString, format: kDateFormat)
             }

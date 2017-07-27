@@ -7,13 +7,19 @@
 //
 
 import UIKit
+import AVFoundation
+import MobileCoreServices
 
-class ChallengeCreateViewController: UITableViewController, UIGestureRecognizerDelegate {
+class ChallengeCreateViewController: UITableViewController, UIGestureRecognizerDelegate, UITextFieldDelegate  {
     let imagePicker = UIImagePickerController()
+    let upload = UploadMedia.shared
     
     @IBOutlet weak var photoPreview: UIImageView!
     @IBOutlet weak var postChallengeButton: UIButton!
+
     @IBOutlet weak var hashtagTextField: UITextField!
+    @IBOutlet weak var hastagLabel: UILabel!
+   
     @IBOutlet weak var captionTextField: UITextView!
     
     @IBAction func backButtonPressed(_ sender: Any) {
@@ -32,7 +38,33 @@ class ChallengeCreateViewController: UITableViewController, UIGestureRecognizerD
     }
     
     @IBAction func postChallegeButtonPressed(_ sender: UIButton) {
-        print("post Challenge pressed")
+        if upload.thumbnail != nil {
+            if hashtagTextField.text != "" {
+                if captionTextField.text == "Write a caption for your challenge..."{
+                    captionTextField.text = ""
+                }
+                //set textfields to singletons
+                if let hashtag = hashtagTextField.text{
+                    upload.hashtag = hashtag
+                }
+                
+                if let caption = captionTextField.text {
+                    upload.caption = caption
+                }
+                
+                //Instantiate uploading View Controller
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let createVC = storyboard.instantiateViewController(withIdentifier: "createVC") as! CreateViewController
+                present(createVC, animated: true, completion: nil)
+                
+            } else {
+                createAlert(title: "You need to add a Challenge hashtag!", message: "")
+            }
+            
+        } else{
+            createAlert(title: "You need to add a photo!", message: "")
+        }
+        
     }
     
 
@@ -40,6 +72,8 @@ class ChallengeCreateViewController: UITableViewController, UIGestureRecognizerD
         super.viewDidLoad()
         
         imagePicker.delegate = self
+        hashtagTextField.delegate = self
+        captionTextField.delegate = self as? UITextViewDelegate
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(self.photoPreviewPressed(_:)))
         tap.delegate = self
@@ -49,6 +83,16 @@ class ChallengeCreateViewController: UITableViewController, UIGestureRecognizerD
         self.hideKeyboardWhenTappedAround()
         postChallengeButton.layer.cornerRadius = 7
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+         hastagLabel.text = String("#\(hashtagTextField.text!)")
+    }
+  
     
     func photoPreviewPressed(_ sender: UITapGestureRecognizer) {
         let alert = UIAlertController(title: "Choose Image", message: nil, preferredStyle: .actionSheet)
@@ -90,9 +134,34 @@ class ChallengeCreateViewController: UITableViewController, UIGestureRecognizerD
 extension ChallengeCreateViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        let chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage
-        //use choseImage
-        self.photoPreview.image = chosenImage
+        
+        if "public.movie".compare(info[UIImagePickerControllerMediaType] as! String).rawValue == 0 {
+            // for movie
+            let video = info[UIImagePickerControllerMediaURL] as! URL
+            let videoReference = info[UIImagePickerControllerReferenceURL] as! URL
+            
+            upload.media = NSData(contentsOf: video)!
+            upload.type = ".mov"
+            
+            // generate thumbnail
+            let asset = AVAsset(url: videoReference)
+            let imageGenerator = AVAssetImageGenerator(asset: asset)
+            imageGenerator.appliesPreferredTrackTransform = true
+            
+            var time = asset.duration
+            //If possible - take not the first frame (it could be completely black or white on camara's videos)
+            time.value = min(time.value, 2)
+            
+            if let imageRef = try? imageGenerator.copyCGImage(at: time, actualTime: nil) {
+                let image = UIImage(cgImage: imageRef)
+                self.photoPreview.image = image
+                upload.thumbnail = UIImageJPEGRepresentation(image, kJPEGImageQuality) as NSData?
+            }
+        } else {
+            let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+            self.photoPreview.image = image
+            upload.thumbnail = UIImageJPEGRepresentation(image, kJPEGImageQuality) as NSData?
+        }
         
         dismiss(animated: true, completion: nil)
     }
