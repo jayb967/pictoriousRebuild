@@ -63,6 +63,17 @@ class CreateViewController: UIViewController {
                         self.progressView?.isHidden = true
                         self.progressLabel?.text = kMessageUploadingDone
                         
+                        //clearing all media info out for future posts
+                        self.upload.caption = ""
+                        self.upload.hashtag = ""
+                        self.upload.media = nil
+                        self.upload.thumbnail = nil
+                        self.upload.type = ""
+                        self.upload.croppedImage = nil
+                        self.upload.image = nil
+                        
+                        kStoryPostEnabled = true
+                        
                         self.performSegue(withIdentifier: "afterUpload", sender: self)
 
                     }

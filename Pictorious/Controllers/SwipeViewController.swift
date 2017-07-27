@@ -18,6 +18,7 @@ class MySwipeVC: EZSwipeController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.moveToProfileNon), name: Notification.Name("kNavProfileNon"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.moveToHome), name: Notification.Name("kNavHome"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.moveToCamera), name: Notification.Name("kNavCamera"), object: nil)
     }
     
     func moveToProfileNon() {
@@ -27,6 +28,10 @@ class MySwipeVC: EZSwipeController {
     func moveToHome() {
         
         moveToPage(1, animated: true)
+    }
+    
+    func moveToCamera(){
+        moveToPage(0, animated: true)
     }
 }
 

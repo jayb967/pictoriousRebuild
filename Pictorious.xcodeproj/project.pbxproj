@@ -42,6 +42,7 @@
 		282E6EE11F1D2C270003B5DC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 282E6EE01F1D2C270003B5DC /* GoogleService-Info.plist */; };
 		2831D8511F29EC95007789B4 /* ChallengeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2831D8501F29EC95007789B4 /* ChallengeCell.swift */; };
 		2831D8531F29F4F2007789B4 /* UploadMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2831D8521F29F4F1007789B4 /* UploadMedia.swift */; };
+		2831D8551F2A687E007789B4 /* ImageCropperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2831D8541F2A687E007789B4 /* ImageCropperViewController.swift */; };
 		285F483F1F1A691800A8575E /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 285F483E1F1A691800A8575E /* Launch Screen.storyboard */; };
 		28A4E4301F1CC29100B56CB0 /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A4E42F1F1CC29100B56CB0 /* FadeTransition.swift */; };
 		28B119021F1D679C0094A9FF /* CustomCameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B119011F1D679B0094A9FF /* CustomCameraVC.swift */; };
@@ -119,6 +120,7 @@
 		282E6EE01F1D2C270003B5DC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2831D8501F29EC95007789B4 /* ChallengeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChallengeCell.swift; path = Views/ChallengeCell.swift; sourceTree = "<group>"; };
 		2831D8521F29F4F1007789B4 /* UploadMedia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UploadMedia.swift; path = Model/UploadMedia.swift; sourceTree = "<group>"; };
+		2831D8541F2A687E007789B4 /* ImageCropperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageCropperViewController.swift; path = Assets/ImageCropperViewController.swift; sourceTree = "<group>"; };
 		285F483E1F1A691800A8575E /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = "Launch Screen.storyboard"; path = "Assets/Launch Screen.storyboard"; sourceTree = "<group>"; };
 		28A4E42F1F1CC29100B56CB0 /* FadeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FadeTransition.swift; path = Views/FadeTransition.swift; sourceTree = "<group>"; };
 		28B119011F1D679B0094A9FF /* CustomCameraVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomCameraVC.swift; path = Controllers/CustomCameraVC.swift; sourceTree = "<group>"; };
@@ -287,6 +289,7 @@
 		28268A711F1A6548008226F5 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				2831D8541F2A687E007789B4 /* ImageCropperViewController.swift */,
 				28F7C46F1F26CF8D00D39A37 /* PermissionsView.swift */,
 				28F7C4711F26D3B800D39A37 /* UIButtonExtensions.swift */,
 				28F7C46B1F26BEDD00D39A37 /* ImageFetcher.swift */,
@@ -650,6 +653,7 @@
 				28268A5F1F1A634B008226F5 /* EditProfileViewController.swift in Sources */,
 				28F7C4721F26D3B800D39A37 /* UIButtonExtensions.swift in Sources */,
 				28268A461F1A6171008226F5 /* Comment.swift in Sources */,
+				2831D8551F2A687E007789B4 /* ImageCropperViewController.swift in Sources */,
 				28268A571F1A62B5008226F5 /* CommentsTableViewController.swift in Sources */,
 				C0AC662E1F2A50950067EE75 /* PostViewController.swift in Sources */,
 				28F28A5D1F28B7DF00B90F3F /* PostCell.swift in Sources */,
